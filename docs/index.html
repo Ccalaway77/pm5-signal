@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>pm5 — live</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --void:#0A0D12;
+    --surface:#12161D;
+    --surface-hi:#1A1F28;
+    --line:#232A35;
+    --text:#E8ECF1;
+    --muted:#8A93A6;
+    --up:#C6F135;
+    --up-dim:#8FA82A;
+    --down:#FF4D6A;
+    --down-dim:#B23850;
+    --amber:#FFB020;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--void); color:var(--text);
+    font-family:'Manrope',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:40px;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:inherit;}
+
+  /* ---------- header ---------- */
+  header{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 20px 14px; border-bottom:1px solid var(--line);
+    position:sticky; top:0; background:rgba(10,13,18,0.9); backdrop-filter:blur(8px);
+    z-index:10;
+  }
+  .brand{display:flex; align-items:baseline; gap:8px;}
+  .brand .name{font-weight:800; font-size:18px; letter-spacing:-0.02em;}
+  .brand .sub{font-size:11px; color:var(--muted); font-family:'IBM Plex Mono',monospace;}
+
+  /* live pulse badge — the signature element */
+  .pulse-badge{
+    display:flex; align-items:center; gap:8px;
+    background:var(--surface); border:1px solid var(--line);
+    border-radius:999px; padding:6px 12px 6px 10px;
+  }
+  .pulse-badge svg{display:block;}
+  .pulse-label{font-size:11px; font-weight:700; letter-spacing:0.06em; font-family:'IBM Plex Mono',monospace;}
+  .pulse-badge.live .pulse-label{color:var(--up);}
+  .pulse-badge.stale .pulse-label{color:var(--down);}
+  .pulse-path{stroke:var(--up); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round;}
+  .pulse-badge.stale .pulse-path{stroke:var(--down);}
+  .pulse-anim{stroke-dasharray:120; stroke-dashoffset:120; animation:sweep 2.2s linear infinite;}
+  .pulse-badge.stale .pulse-anim{animation:none; stroke-dashoffset:0;}
+  @keyframes sweep{
+    0%{stroke-dashoffset:120;}
+    100%{stroke-dashoffset:-120;}
+  }
+
+  main{max-width:920px; margin:0 auto; padding:20px;}
+
+  /* ---------- current market hero ---------- */
+  .hero{
+    background:var(--surface); border:1px solid var(--line); border-radius:16px;
+    padding:22px; margin-bottom:18px;
+  }
+  .hero-top{display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px;}
+  .hero-eyebrow{font-size:11px; color:var(--muted); font-family:'IBM Plex Mono',monospace; letter-spacing:0.08em; text-transform:uppercase;}
+  .hero-price{font-size:32px; font-weight:600; font-family:'IBM Plex Mono',monospace; margin-top:4px;}
+  .countdown{text-align:right;}
+  .countdown .num{font-size:26px; font-weight:600; font-family:'IBM Plex Mono',monospace;}
+  .countdown .lbl{font-size:11px; color:var(--muted);}
+
+  .side-row{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+  .side-btn{
+    border-radius:12px; padding:16px; border:1px solid var(--line);
+    background:var(--surface-hi); text-align:center; position:relative; overflow:hidden;
+  }
+  .side-btn .side-lbl{font-size:12px; letter-spacing:0.08em; color:var(--muted); font-family:'IBM Plex Mono',monospace;}
+  .side-btn .side-conf{font-size:28px; font-weight:700; font-family:'IBM Plex Mono',monospace; margin-top:4px;}
+  .side-btn.active-up{border-color:var(--up); box-shadow:0 0 0 1px var(--up) inset;}
+  .side-btn.active-up .side-conf{color:var(--up);}
+  .side-btn.active-down{border-color:var(--down); box-shadow:0 0 0 1px var(--down) inset;}
+  .side-btn.active-down .side-conf{color:var(--down);}
+  .conf-bar{height:4px; background:var(--line); border-radius:2px; margin-top:10px; overflow:hidden;}
+  .conf-fill{height:100%; background:var(--amber);}
+
+  /* ---------- stat tiles ---------- */
+  .stats-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:18px;
+  }
+  .stat-tile{
+    background:var(--surface); border:1px solid var(--line); border-radius:12px;
+    padding:14px 12px;
+  }
+  .stat-tile .stat-lbl{font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em;}
+  .stat-tile .stat-val{font-family:'IBM Plex Mono',monospace; font-size:19px; font-weight:600; margin-top:4px;}
+  .stat-val.pos{color:var(--up);}
+  .stat-val.neg{color:var(--down);}
+
+  @media (max-width:560px){
+    .stats-grid{grid-template-columns:repeat(2,1fr);}
+    .hero-price{font-size:26px;}
+  }
+
+  /* ---------- sample-quality banner ---------- */
+  .banner{
+    background:rgba(255,176,32,0.08); border:1px solid rgba(255,176,32,0.35);
+    border-radius:12px; padding:12px 14px; font-size:12.5px; color:var(--amber);
+    margin-bottom:18px; line-height:1.5;
+  }
+  .banner b{color:var(--text);}
+
+  /* ---------- recent trades ---------- */
+  .section-title{font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted); margin:22px 0 10px;}
+  .trade-row{
+    display:grid; grid-template-columns:70px 1fr 90px 90px; gap:8px; align-items:center;
+    padding:10px 4px; border-bottom:1px solid var(--line); font-size:13px;
+  }
+  .trade-row .side-tag{
+    font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:11px;
+    padding:3px 7px; border-radius:6px; text-align:center; width:fit-content;
+  }
+  .side-tag.up{background:rgba(198,241,53,0.12); color:var(--up);}
+  .side-tag.down{background:rgba(255,77,106,0.12); color:var(--down);}
+  .trade-row .slug{color:var(--muted); font-family:'IBM Plex Mono',monospace; font-size:11px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+  .trade-row .fill{font-family:'IBM Plex Mono',monospace; text-align:right; color:var(--muted);}
+  .trade-row .pnl{font-family:'IBM Plex Mono',monospace; text-align:right; font-weight:600;}
+  .pnl.pos{color:var(--up);} .pnl.neg{color:var(--down);} .pnl.pending{color:var(--muted);}
+
+  footer{max-width:920px; margin:20px auto 0; padding:0 20px; color:var(--muted); font-size:11px; font-family:'IBM Plex Mono',monospace;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <span class="name">pm5</span>
+    <span class="sub mono" id="market-label">BTC · 5m</span>
+  </div>
+  <div class="pulse-badge live" id="pulse-badge">
+    <svg width="46" height="20" viewBox="0 0 120 20">
+      <path class="pulse-path" d="M0,10 L30,10 L36,2 L44,18 L50,10 L120,10"/>
+      <path class="pulse-path pulse-anim" d="M0,10 L30,10 L36,2 L44,18 L50,10 L120,10"/>
+    </svg>
+    <span class="pulse-label" id="pulse-label">LIVE</span>
+  </div>
+</header>
+
+<main>
+  <div class="banner" id="sample-banner" style="display:none;">
+    <b>Small sample.</b> <span id="banner-text"></span>
+  </div>
+
+  <div class="hero">
+    <div class="hero-top">
+      <div>
+        <div class="hero-eyebrow" id="slug-label">btc-updown-5m-…</div>
+        <div class="hero-price mono" id="spot-price">—</div>
+      </div>
+      <div class="countdown">
+        <div class="num mono" id="tte">—</div>
+        <div class="lbl">until settle</div>
+      </div>
+    </div>
+    <div class="side-row">
+      <div class="side-btn" id="btn-up">
+        <div class="side-lbl">UP</div>
+        <div class="side-conf mono" id="conf-up">—</div>
+        <div class="conf-bar"><div class="conf-fill" id="fill-up" style="width:0%"></div></div>
+      </div>
+      <div class="side-btn" id="btn-down">
+        <div class="side-lbl">DOWN</div>
+        <div class="side-conf mono" id="conf-down">—</div>
+        <div class="conf-bar"><div class="conf-fill" id="fill-down" style="width:0%"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-tile"><div class="stat-lbl">Bankroll</div><div class="stat-val mono" id="stat-bankroll">—</div></div>
+    <div class="stat-tile"><div class="stat-lbl">PnL</div><div class="stat-val mono" id="stat-pnl">—</div></div>
+    <div class="stat-tile"><div class="stat-lbl">Hit rate</div><div class="stat-val mono" id="stat-hitrate">—</div></div>
+    <div class="stat-tile"><div class="stat-lbl">Settled</div><div class="stat-val mono" id="stat-settled">—</div></div>
+  </div>
+
+  <div class="section-title">Recent trades</div>
+  <div id="trades-list"></div>
+</main>
+
+<footer>
+  updated <span id="updated-at">—</span> · resolved windows: <span id="resolved-windows">—</span> · labeled rows: <span id="labeled-feat">—</span>
+</footer>
+
+<script>
+const STALE_SECONDS = 12 * 60;
+
+// Demo fallback so the page never looks broken while wiring up real data.
+const DEMO = {
+  ok:true, slug:"btc-updown-5m-demo", signal_side:"UP", confidence:0.62,
+  spot: 78041.93, tte: 214, updated: new Date().toISOString(),
+  wins: 8, losses: 3, settle_count: 11, hit_rate: 0.727,
+  bankroll: 1042.30, pnl: 42.30, resolved_windows: 41, labeled_feat: 11,
+  recent_trades: []
+};
+
+async function fetchJSON(path){
+  try{
+    const res = await fetch(path, {cache:"no-store"});
+    if(!res.ok) throw new Error(res.status);
+    return await res.json();
+  }catch(e){ return null; }
+}
+
+function fmtUSD(n){
+  if(n === null || n === undefined) return "—";
+  const sign = n < 0 ? "-" : "+";
+  return sign + "$" + Math.abs(n).toFixed(2);
+}
+
+function setPulse(updatedIso){
+  const badge = document.getElementById("pulse-badge");
+  const label = document.getElementById("pulse-label");
+  const secondsAgo = (Date.now() - new Date(updatedIso).getTime()) / 1000;
+  if(isFinite(secondsAgo) && secondsAgo <= STALE_SECONDS){
+    badge.className = "pulse-badge live";
+    label.textContent = "LIVE";
+  } else {
+    badge.className = "pulse-badge stale";
+    label.textContent = "STALE";
+  }
+}
+
+function render(status){
+  document.getElementById("slug-label").textContent = status.slug || "—";
+  document.getElementById("spot-price").textContent = status.spot ? "$" + Number(status.spot).toLocaleString(undefined,{maximumFractionDigits:2}) : "—";
+  document.getElementById("tte").textContent = status.tte ? Math.max(0, Math.round(status.tte)) + "s" : "—";
+  setPulse(status.updated);
+  document.getElementById("updated-at").textContent = status.updated ? new Date(status.updated).toLocaleTimeString() : "—";
+  document.getElementById("resolved-windows").textContent = status.resolved_windows ?? "—";
+  document.getElementById("labeled-feat").textContent = status.labeled_feat ?? "—";
+
+  const side = status.signal_side;
+  const conf = status.confidence ?? 0;
+  const upBtn = document.getElementById("btn-up");
+  const downBtn = document.getElementById("btn-down");
+  upBtn.className = "side-btn" + (side === "UP" ? " active-up" : "");
+  downBtn.className = "side-btn" + (side === "DOWN" ? " active-down" : "");
+  document.getElementById("conf-up").textContent = side === "UP" ? (conf*100).toFixed(0) + "%" : "—";
+  document.getElementById("conf-down").textContent = side === "DOWN" ? (conf*100).toFixed(0) + "%" : "—";
+  document.getElementById("fill-up").style.width = (side === "UP" ? conf*100 : 0) + "%";
+  document.getElementById("fill-down").style.width = (side === "DOWN" ? conf*100 : 0) + "%";
+
+  document.getElementById("stat-bankroll").textContent = status.bankroll ? "$" + Number(status.bankroll).toFixed(2) : "—";
+  const pnlEl = document.getElementById("stat-pnl");
+  pnlEl.textContent = fmtUSD(status.pnl);
+  pnlEl.className = "stat-val mono " + (status.pnl >= 0 ? "pos" : "neg");
+  document.getElementById("stat-hitrate").textContent = status.hit_rate !== undefined ? (status.hit_rate*100).toFixed(0) + "%" : "—";
+  document.getElementById("stat-settled").textContent = (status.wins ?? 0) + "-" + (status.losses ?? 0);
+
+  // Sample-quality banner — flags small-n so the dashboard never overstates confidence
+  const settled = status.settle_count ?? 0;
+  const banner = document.getElementById("sample-banner");
+  if(settled > 0 && settled < 50){
+    banner.style.display = "block";
+    document.getElementById("banner-text").textContent =
+      `Only ${settled} settled trades so far — hit rate and PnL will swing a lot until this reaches ~50.`;
+  } else {
+    banner.style.display = "none";
+  }
+
+  const list = document.getElementById("trades-list");
+  list.innerHTML = "";
+  (status.recent_trades || []).slice(0, 12).forEach(t => {
+    const row = document.createElement("div");
+    row.className = "trade-row";
+    const pnlClass = t.settled ? (t.pnl >= 0 ? "pos" : "neg") : "pending";
+    const pnlText = t.settled ? fmtUSD(t.pnl) : "open";
+    row.innerHTML = `
+      <span class="side-tag ${t.side === 'UP' ? 'up' : 'down'}">${t.side}</span>
+      <span class="slug">${t.slug}</span>
+      <span class="fill">@${t.fill}</span>
+      <span class="pnl ${pnlClass}">${pnlText}</span>
+    `;
+    list.appendChild(row);
+  });
+}
+
+async function tick(){
+  const status = await fetchJSON("status.json") || DEMO;
+  render(status);
+}
+
+tick();
+setInterval(tick, 15000); // refresh every 15s while the tab is open
+</script>
+
+</body>
+</html>
