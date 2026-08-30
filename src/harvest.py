@@ -102,7 +102,7 @@ def main():
             print(f"[tick:{market_config.key}] error:\n{traceback.format_exc()}")
             pick = {"slug": None, "side": "NO_TRADE", "confidence": 0.0, "error": "exception"}
         try:
-            board.write_outputs(conn, market_config, pick)
+            board.write_outputs(conn, market_config, pick, cfg)
         except Exception:
             print(f"[board:{market_config.key}] error:\n{traceback.format_exc()}")
 
