@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import sys
 import time
+import json
 import traceback
 from pathlib import Path
 
@@ -30,6 +31,28 @@ from online_learner import OnlineLearner
 
 def load_config(path: str = "config.yaml") -> dict:
     return yaml.safe_load(Path(path).read_text())
+
+
+def _extract_first_token_id(market_dict: dict) -> str | None:
+    """
+    Polymarket's Gamma API returns clobTokenIds as a JSON-encoded STRING,
+    e.g. '["71234...", "88765..."]', not an actual list. Indexing [0] on
+    that string (as the earlier version of this function did) grabs the
+    character "[" instead of a real token id — which is exactly the bug
+    that produced a request to .../book?token_id=%5B and a 404. This
+    handles both shapes defensively in case Gamma's format changes again.
+    """
+    raw = market_dict.get("clobTokenIds")
+    if raw is None:
+        return None
+    if isinstance(raw, str):
+        try:
+            raw = json.loads(raw)
+        except (json.JSONDecodeError, TypeError):
+            return None
+    if isinstance(raw, list) and raw:
+        return raw[0]
+    return None
 
 
 def run_market_tick(conn, market_config, cfg):
@@ -66,9 +89,11 @@ def run_market_tick(conn, market_config, cfg):
         market_dict = poly.get_current_market(market_config)
         ask_price = None
         if market_dict:
-            token_id = market_dict.get("clobTokenIds", [None])[0]  # VERIFY field name against real Gamma response
+            token_id = _extract_first_token_id(market_dict)
             if token_id:
                 ask_price = poly.get_best_ask(token_id)
+            else:
+                print(f"[harvest] {market_config.key}: no usable clobTokenIds on market {slug}")
 
         if ask_price is not None:
             bankroll = db.get_bankroll(conn, market_config.key, cfg["paper"]["starting_bankroll"])

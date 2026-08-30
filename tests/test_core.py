@@ -106,6 +106,19 @@ def test_heuristic_signal_matches_feature_direction():
     assert up_conf > 0.5 and down_conf > 0.5
 
 
+def test_extract_first_token_id_handles_gamma_string_encoding():
+    import harvest
+    # Gamma actually returns this field as a JSON-encoded STRING, not a
+    # real list — this is the exact shape that caused the token_id="[" bug.
+    market = {"clobTokenIds": '["71234567890123", "88765432109876"]'}
+    assert harvest._extract_first_token_id(market) == "71234567890123"
+
+
+def test_extract_first_token_id_handles_missing_field():
+    import harvest
+    assert harvest._extract_first_token_id({}) is None
+
+
 def test_db_roundtrip(tmp_path):
     conn = db.get_conn(str(tmp_path / "test.db"))
     db.upsert_window(conn, "slug-1", "btc", 0, 300, start_spot=100.0)
