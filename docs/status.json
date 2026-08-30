@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "market": "btc",
+  "slug": null,
+  "signal_side": "NO_TRADE",
+  "confidence": 0.0,
+  "spot": null,
+  "tte": null,
+  "updated": "2026-08-30T21:06:26Z",
+  "bankroll": 0.0,
+  "settle_count": 0,
+  "open_count": 0,
+  "wins": 0,
+  "losses": 0,
+  "hit_rate": null,
+  "pnl": 0,
+  "fees": 0,
+  "avg_fill": null,
+  "resolved_windows": 0,
+  "labeled_feat": 0,
+  "recent_trades": []
+}
