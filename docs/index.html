@@ -234,10 +234,12 @@ function setPulse(updatedIso){
   }
 }
 
+function hasValue(v){ return v !== null && v !== undefined; }
+
 function render(status){
   document.getElementById("slug-label").textContent = status.slug || "—";
-  document.getElementById("spot-price").textContent = status.spot ? "$" + Number(status.spot).toLocaleString(undefined,{maximumFractionDigits:2}) : "—";
-  document.getElementById("tte").textContent = status.tte ? Math.max(0, Math.round(status.tte)) + "s" : "—";
+  document.getElementById("spot-price").textContent = hasValue(status.spot) ? "$" + Number(status.spot).toLocaleString(undefined,{maximumFractionDigits:2}) : "—";
+  document.getElementById("tte").textContent = hasValue(status.tte) ? Math.max(0, Math.round(status.tte)) + "s" : "—";
   setPulse(status.updated);
   document.getElementById("updated-at").textContent = status.updated ? new Date(status.updated).toLocaleTimeString() : "—";
   document.getElementById("resolved-windows").textContent = status.resolved_windows ?? "—";
@@ -254,11 +256,11 @@ function render(status){
   document.getElementById("fill-up").style.width = (side === "UP" ? conf*100 : 0) + "%";
   document.getElementById("fill-down").style.width = (side === "DOWN" ? conf*100 : 0) + "%";
 
-  document.getElementById("stat-bankroll").textContent = status.bankroll ? "$" + Number(status.bankroll).toFixed(2) : "—";
+  document.getElementById("stat-bankroll").textContent = hasValue(status.bankroll) ? "$" + Number(status.bankroll).toFixed(2) : "—";
   const pnlEl = document.getElementById("stat-pnl");
   pnlEl.textContent = fmtUSD(status.pnl);
   pnlEl.className = "stat-val mono " + (status.pnl >= 0 ? "pos" : "neg");
-  document.getElementById("stat-hitrate").textContent = status.hit_rate !== undefined ? (status.hit_rate*100).toFixed(0) + "%" : "—";
+  document.getElementById("stat-hitrate").textContent = hasValue(status.hit_rate) ? (status.hit_rate*100).toFixed(0) + "%" : "—";
   document.getElementById("stat-settled").textContent = (status.wins ?? 0) + "-" + (status.losses ?? 0);
 
   // Sample-quality banner — flags small-n so the dashboard never overstates confidence
