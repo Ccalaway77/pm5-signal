@@ -1,0 +1,27 @@
+# config.yaml — every tunable constant for pm5-signal lives here.
+# Nothing in src/ should hardcode a threshold; it should read from this file.
+
+paper:
+  starting_bankroll: 1000.0
+  min_stake_pct: 0.01          # smallest stake as a fraction of bankroll
+  max_stake_pct: 0.03          # largest stake as a fraction of bankroll
+  ask_price_cutoff: 0.70       # refuse to buy above this price...
+  ask_price_cutoff_high_conf: 0.80   # ...unless confidence clears this bar
+  high_conf_threshold: 0.80
+  slippage_ticks: 1
+  tick_size: 0.01
+  fee_rate: 0.07                # Polymarket-style taker fee: fee_rate * p * (1-p) * stake
+
+engine:
+  lock_min_conf: 0.52           # below this, signal is forced to NO_TRADE
+  paper_cutoff_sec: 35          # don't open a new paper position inside this many
+                                 # seconds of window close (fill risk too high)
+  kline_lookback_minutes: 20    # how much 1-minute price history to pull per tick
+
+learner:
+  min_rows_before_trusted: 30   # online learner ignored (falls back to heuristic) below this
+  reassess_after_labeled: 30
+  reassess_after_settled: 50
+
+board:
+  stale_after_sec: 720          # 12 minutes — matches the LIVE/STALE badge cutoff

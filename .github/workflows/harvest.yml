@@ -1,0 +1,65 @@
+name: harvest
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # GitHub's own schedule can lag several minutes under load — this is
+    # supplemented by an external cron-job.org ping hitting workflow_dispatch
+    # every 5 minutes too (see README.md for setup). Redundant triggers are
+    # fine: concurrency below prevents overlapping runs.
+    - cron: "*/5 * * * *"
+
+concurrency:
+  group: harvest
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # required to push data/pm5.db to the `data` branch and docs/ to main
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # need history to be able to fetch the data branch below
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: install dependencies
+        run: pip install -r requirements.txt
+
+      - name: restore db from data branch (if it exists)
+        run: |
+          mkdir -p data
+          git fetch origin data:refs/remotes/origin/data 2>/dev/null || true
+          git show origin/data:data/pm5.db > data/pm5.db 2>/dev/null || echo "no prior data branch yet — starting fresh"
+
+      - name: run harvest
+        run: python src/harvest.py
+
+      - name: commit db snapshot to data branch
+        run: |
+          git config user.name "pm5-signal-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git checkout -B data
+          git add -f data/pm5.db data/metrics.jsonl 2>/dev/null || true
+          git commit -m "harvest snapshot $(date -u +%FT%TZ)" || echo "nothing to commit"
+          git push origin data --force
+          git checkout main
+
+      - name: publish dashboard to docs/
+        run: |
+          mkdir -p docs
+          cp dashboard.html docs/index.html
+          cp data/status.json docs/status.json 2>/dev/null || true
+          cp data/stats.json docs/stats.json 2>/dev/null || true
+
+      - name: commit dashboard to main
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "update dashboard"
+          file_pattern: "docs/*"
+          branch: main

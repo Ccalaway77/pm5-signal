@@ -1,0 +1,38 @@
+# markets.yaml — one entry per 5-minute market.
+#
+# BEFORE flipping eth/sol to enabled: confirm Polymarket actually lists a
+# 5-minute Up/Down market for that asset, and confirm the exact Gamma slug
+# format (I've mirrored the BTC pattern below as a guess, not a verified
+# fact). Enable one new market at a time and watch a few harvests go green
+# before adding the next — don't stack untested markets.
+
+markets:
+  - key: btc
+    label: "Bitcoin"
+    enabled: true
+    slug_prefix: "btc-updown-5m-"
+    spot_symbols:
+      - { venue: coinbase, symbol: "BTC-USD" }
+      - { venue: kraken,   symbol: "XBTUSD" }
+      - { venue: bybit,    symbol: "BTCUSDT" }
+    settle_rule: start_vs_end_spot
+
+  - key: eth
+    label: "Ethereum"
+    enabled: false   # verify slug + market existence first
+    slug_prefix: "eth-updown-5m-"
+    spot_symbols:
+      - { venue: coinbase, symbol: "ETH-USD" }
+      - { venue: kraken,   symbol: "ETHUSD" }
+      - { venue: bybit,    symbol: "ETHUSDT" }
+    settle_rule: start_vs_end_spot
+
+  - key: sol
+    label: "Solana"
+    enabled: false   # verify slug + market existence first
+    slug_prefix: "sol-updown-5m-"
+    spot_symbols:
+      - { venue: coinbase, symbol: "SOL-USD" }
+      - { venue: kraken,   symbol: "SOLUSD" }
+      - { venue: bybit,    symbol: "SOLUSDT" }
+    settle_rule: start_vs_end_spot
