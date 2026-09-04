@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788529800",
-  "signal_side": "UP",
-  "confidence": 0.7611312386906012,
-  "spot": 79654.135,
-  "tte": 266.6360192298889,
-  "updated": "2026-09-04T13:50:33Z",
-  "bankroll": 57.61184013322027,
-  "settle_count": 132,
+  "slug": "btc-updown-5m-1788530100",
+  "signal_side": "DOWN",
+  "confidence": 0.9228689098916513,
+  "spot": 79315.93,
+  "tte": 272.9125967025757,
+  "updated": "2026-09-04T13:55:27Z",
+  "bankroll": 54.47316654011202,
+  "settle_count": 133,
   "open_count": 1,
   "wins": 67,
-  "losses": 65,
-  "hit_rate": 0.5075757575757576,
-  "pnl": 260.05369399929936,
-  "fees": 18.8981178711385,
-  "avg_fill": 0.46136363636363636,
-  "resolved_windows": 159,
-  "labeled_feat": 162,
+  "losses": 66,
+  "hit_rate": 0.5037593984962406,
+  "pnl": 258.53860820248906,
+  "fees": 18.921867401186685,
+  "avg_fill": 0.4605263157894737,
+  "resolved_windows": 160,
+  "labeled_feat": 163,
   "recent_trades": [
+    {
+      "id": 134,
+      "slug": "btc-updown-5m-1788530100",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.58,
+      "stake": 1.5963665538221476,
+      "fee": 0.02722124247577527,
+      "ts": 1788530127.5491054,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 133,
       "slug": "btc-updown-5m-1788529800",
@@ -28,8 +40,8 @@
       "stake": 1.491336266762138,
       "fee": 0.02374953004818705,
       "ts": 1788529833.685254,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -1.515085796810325
     },
     {
       "id": 132,
@@ -150,18 +162,6 @@
       "ts": 1788525925.7995284,
       "settled": 1,
       "pnl": -1.5276409186710775
-    },
-    {
-      "id": 122,
-      "slug": "btc-updown-5m-1788525600",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.6900000000000001,
-      "stake": 1.6688825941531498,
-      "fee": 0.02498817908225511,
-      "ts": 1788525635.356321,
-      "settled": 1,
-      "pnl": 0.7247996530735078
     }
   ]
 }
