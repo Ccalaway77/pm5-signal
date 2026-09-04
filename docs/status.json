@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788560100",
-  "signal_side": "DOWN",
-  "confidence": 0.5289237995257929,
-  "spot": 79692.245,
-  "tte": 272.9593939781189,
-  "updated": "2026-09-04T22:15:27Z",
-  "bankroll": 3.808048436923115,
-  "settle_count": 226,
+  "slug": "btc-updown-5m-1788560400",
+  "signal_side": "UP",
+  "confidence": 0.9100406909157637,
+  "spot": 79710.005,
+  "tte": 263.1140365600586,
+  "updated": "2026-09-04T22:20:37Z",
+  "bankroll": 3.619738889497085,
+  "settle_count": 227,
   "open_count": 1,
   "wins": 112,
-  "losses": 114,
-  "hit_rate": 0.49557522123893805,
-  "pnl": 252.34728288030914,
-  "fees": 19.655212522639896,
-  "avg_fill": 0.4920353982300886,
-  "resolved_windows": 260,
-  "labeled_feat": 267,
+  "losses": 115,
+  "hit_rate": 0.4933920704845815,
+  "pnl": 252.2658887835156,
+  "fees": 19.65656781963685,
+  "avg_fill": 0.4916740088105728,
+  "resolved_windows": 261,
+  "labeled_feat": 268,
   "recent_trades": [
+    {
+      "id": 228,
+      "slug": "btc-updown-5m-1788560400",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.45,
+      "stake": 0.10509468521121083,
+      "fee": 0.0018207654212842284,
+      "ts": 1788560437.2718768,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 227,
       "slug": "btc-updown-5m-1788560100",
@@ -28,8 +40,8 @@
       "stake": 0.08003879979657923,
       "fee": 0.001355296996955476,
       "ts": 1788560127.3253438,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.08139409679353471
     },
     {
       "id": 226,
@@ -150,18 +162,6 @@
       "ts": 1788557429.6404517,
       "settled": 1,
       "pnl": -0.1566558799176637
-    },
-    {
-      "id": 216,
-      "slug": "btc-updown-5m-1788557100",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.49,
-      "stake": 0.12619724399123552,
-      "fee": 0.002207568389138683,
-      "ts": 1788557126.2904804,
-      "settled": 1,
-      "pnl": -0.1284048123803742
     }
   ]
 }
