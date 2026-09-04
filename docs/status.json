@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788544500",
-  "signal_side": "DOWN",
-  "confidence": 0.830837036758239,
-  "spot": 79468.235,
-  "tte": 277.10057950019836,
-  "updated": "2026-09-04T17:55:23Z",
-  "bankroll": 15.935286639347353,
-  "settle_count": 178,
+  "slug": "btc-updown-5m-1788544800",
+  "signal_side": "UP",
+  "confidence": 0.8090050460933949,
+  "spot": 79506.925,
+  "tte": 265.90355467796326,
+  "updated": "2026-09-04T18:00:34Z",
+  "bankroll": 15.081392297380656,
+  "settle_count": 179,
   "open_count": 1,
   "wins": 90,
-  "losses": 88,
-  "hit_rate": 0.5056179775280899,
-  "pnl": 253.24353790940634,
-  "fees": 19.473245618775593,
-  "avg_fill": 0.47988764044943827,
-  "resolved_windows": 208,
-  "labeled_feat": 213,
+  "losses": 89,
+  "hit_rate": 0.5027932960893855,
+  "pnl": 252.80040832775958,
+  "fees": 19.48043514221554,
+  "avg_fill": 0.48067039106145265,
+  "resolved_windows": 209,
+  "labeled_feat": 214,
   "recent_trades": [
+    {
+      "id": 180,
+      "slug": "btc-updown-5m-1788544800",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.76,
+      "stake": 0.40558623526802934,
+      "fee": 0.0051785250519021985,
+      "ts": 1788544834.5140991,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 179,
       "slug": "btc-updown-5m-1788544500",
@@ -28,8 +40,8 @@
       "stake": 0.4359400582068177,
       "fee": 0.007189523439946837,
       "ts": 1788544523.1278508,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.4431295816467645
     },
     {
       "id": 178,
@@ -150,18 +162,6 @@
       "ts": 1788541528.4655771,
       "settled": 1,
       "pnl": 0.21989419652089948
-    },
-    {
-      "id": 168,
-      "slug": "btc-updown-5m-1788541200",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.38,
-      "stake": 0.4701967223763602,
-      "fee": 0.007754484345430932,
-      "ts": 1788541235.6861699,
-      "settled": 1,
-      "pnl": -0.4779512067217911
     }
   ]
 }
