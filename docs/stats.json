@@ -1,12 +1,12 @@
 {
   "settle_count": 0,
-  "open_count": 0,
+  "open_count": 1,
   "wins": 0,
   "losses": 0,
   "hit_rate": null,
   "pnl": 0,
   "fees": 0,
   "avg_fill": null,
-  "resolved_windows": 0,
-  "labeled_feat": 0
+  "resolved_windows": 1,
+  "labeled_feat": 1
 }
