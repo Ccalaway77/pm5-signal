@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788547500",
-  "signal_side": "UP",
-  "confidence": 0.7646977977778013,
-  "spot": 79632.005,
-  "tte": 268.7610733509064,
-  "updated": "2026-09-04T18:45:31Z",
-  "bankroll": 14.54265162985625,
-  "settle_count": 184,
+  "slug": "btc-updown-5m-1788547800",
+  "signal_side": "DOWN",
+  "confidence": 0.7466136478886966,
+  "spot": 79599.015,
+  "tte": 270.28979778289795,
+  "updated": "2026-09-04T18:50:30Z",
+  "bankroll": 13.799754585282873,
+  "settle_count": 185,
   "open_count": 1,
   "wins": 94,
-  "losses": 90,
-  "hit_rate": 0.5108695652173914,
-  "pnl": 254.09541040182808,
-  "fees": 19.508926930078488,
-  "avg_fill": 0.4823913043478262,
-  "resolved_windows": 218,
-  "labeled_feat": 223,
+  "losses": 91,
+  "hit_rate": 0.5081081081081081,
+  "pnl": 253.7117033129687,
+  "fees": 19.51508735892984,
+  "avg_fill": 0.4817837837837839,
+  "resolved_windows": 219,
+  "labeled_feat": 224,
   "recent_trades": [
+    {
+      "id": 186,
+      "slug": "btc-updown-5m-1788547800",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.49,
+      "stake": 0.35301467009011717,
+      "fee": 0.00617528562388642,
+      "ts": 1788547830.0901608,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 185,
       "slug": "btc-updown-5m-1788547500",
@@ -28,8 +40,8 @@
       "stake": 0.3775466600080226,
       "fee": 0.0061604288513509055,
       "ts": 1788547531.4803662,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.38370708885937355
     },
     {
       "id": 184,
@@ -150,18 +162,6 @@
       "ts": 1788543607.1515803,
       "settled": 1,
       "pnl": -0.4912872558000079
-    },
-    {
-      "id": 174,
-      "slug": "btc-updown-5m-1788543300",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.59,
-      "stake": 0.45938145419709464,
-      "fee": 0.007778706163919406,
-      "ts": 1788543325.1314814,
-      "settled": 1,
-      "pnl": -0.46716016036101404
     }
   ]
 }
