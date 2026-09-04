@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788553200",
-  "signal_side": "UP",
-  "confidence": 0.6318517276033038,
-  "spot": 79851.565,
-  "tte": 270.6406741142273,
-  "updated": "2026-09-04T20:20:29Z",
-  "bankroll": 8.461740525321195,
-  "settle_count": 203,
+  "slug": "btc-updown-5m-1788553500",
+  "signal_side": "DOWN",
+  "confidence": 0.6142505920836892,
+  "spot": 79764.085,
+  "tte": 275.4344630241394,
+  "updated": "2026-09-04T20:25:24Z",
+  "bankroll": 8.075250017037174,
+  "settle_count": 204,
   "open_count": 1,
   "wins": 103,
-  "losses": 100,
-  "hit_rate": 0.5073891625615764,
-  "pnl": 253.5707276565993,
-  "fees": 19.59877292290278,
-  "avg_fill": 0.48433497536945835,
-  "resolved_windows": 237,
-  "labeled_feat": 243,
+  "losses": 101,
+  "hit_rate": 0.5049019607843137,
+  "pnl": 253.3714017960798,
+  "fees": 19.602037924388274,
+  "avg_fill": 0.4849509803921571,
+  "resolved_windows": 238,
+  "labeled_feat": 244,
   "recent_trades": [
+    {
+      "id": 205,
+      "slug": "btc-updown-5m-1788553500",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.38,
+      "stake": 0.18412800864592468,
+      "fee": 0.0030366391185885897,
+      "ts": 1788553524.7707434,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 204,
       "slug": "btc-updown-5m-1788553200",
@@ -28,8 +40,8 @@
       "stake": 0.19606085903401405,
       "fee": 0.0032650014854934363,
       "ts": 1788553229.7134104,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.1993258605195075
     },
     {
       "id": 203,
@@ -150,18 +162,6 @@
       "ts": 1788550231.1327398,
       "settled": 1,
       "pnl": -0.2612090539159622
-    },
-    {
-      "id": 193,
-      "slug": "btc-updown-5m-1788549900",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.44,
-      "stake": 0.2791559229354036,
-      "fee": 0.004814881358789842,
-      "ts": 1788549929.0680015,
-      "settled": 1,
-      "pnl": -0.2839708042941934
     }
   ]
 }
