@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788563400",
-  "signal_side": "UP",
-  "confidence": 0.5653580397188194,
-  "spot": 79663.915,
-  "tte": 274.99582052230835,
-  "updated": "2026-09-04T23:10:25Z",
-  "bankroll": 2.9990828469568775,
-  "settle_count": 236,
+  "slug": "btc-updown-5m-1788563700",
+  "signal_side": "DOWN",
+  "confidence": 0.8894696648617864,
+  "spot": 79637.505,
+  "tte": 274.30593824386597,
+  "updated": "2026-09-04T23:15:25Z",
+  "bankroll": 2.8499502311051415,
+  "settle_count": 237,
   "open_count": 1,
   "wins": 117,
-  "losses": 119,
-  "hit_rate": 0.4957627118644068,
-  "pnl": 252.38009773174073,
-  "fees": 19.668976771473226,
-  "avg_fill": 0.49152542372881364,
-  "resolved_windows": 271,
-  "labeled_feat": 278,
+  "losses": 120,
+  "hit_rate": 0.4936708860759494,
+  "pnl": 252.31365952860364,
+  "fees": 19.670097424677426,
+  "avg_fill": 0.4918565400843882,
+  "resolved_windows": 272,
+  "labeled_feat": 279,
   "recent_trades": [
+    {
+      "id": 238,
+      "slug": "btc-updown-5m-1788563700",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.7,
+      "stake": 0.08149641540813966,
+      "fee": 0.0011979973064996533,
+      "ts": 1788563725.8919055,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 237,
       "slug": "btc-updown-5m-1788563400",
@@ -28,8 +40,8 @@
       "stake": 0.06531754993289786,
       "fee": 0.0011206532041987286,
       "ts": 1788563425.2959638,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.06643820313709659
     },
     {
       "id": 236,
@@ -150,18 +162,6 @@
       "ts": 1788560127.3253438,
       "settled": 1,
       "pnl": -0.08139409679353471
-    },
-    {
-      "id": 226,
-      "slug": "btc-updown-5m-1788559800",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.58,
-      "stake": 0.08834701914565478,
-      "fee": 0.0015064933704717056,
-      "ts": 1788559830.45843,
-      "settled": 1,
-      "pnl": -0.08985351251612649
     }
   ]
 }
