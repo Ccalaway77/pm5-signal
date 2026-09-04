@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788533400",
-  "signal_side": "DOWN",
-  "confidence": 0.8352888958173833,
-  "spot": 78711.81,
-  "tte": 267.1297433376312,
-  "updated": "2026-09-04T14:50:33Z",
-  "bankroll": 38.86768103842472,
-  "settle_count": 142,
+  "slug": "btc-updown-5m-1788533700",
+  "signal_side": "UP",
+  "confidence": 0.636877646732235,
+  "spot": 78846.735,
+  "tte": 273.65204763412476,
+  "updated": "2026-09-04T14:55:26Z",
+  "bankroll": 36.91114624622428,
+  "settle_count": 143,
   "open_count": 1,
   "wins": 70,
-  "losses": 72,
-  "hit_rate": 0.49295774647887325,
-  "pnl": 253.13702619265922,
-  "fees": 19.09469754161897,
-  "avg_fill": 0.462605633802817,
-  "resolved_windows": 171,
-  "labeled_feat": 175,
+  "losses": 73,
+  "hit_rate": 0.48951048951048953,
+  "pnl": 252.05309634375124,
+  "fees": 19.111688542769507,
+  "avg_fill": 0.463916083916084,
+  "resolved_windows": 172,
+  "labeled_feat": 176,
   "recent_trades": [
+    {
+      "id": 144,
+      "slug": "btc-updown-5m-1788533700",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.66,
+      "stake": 0.8591100427410813,
+      "fee": 0.013494900551376905,
+      "ts": 1788533726.5329835,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 143,
       "slug": "btc-updown-5m-1788533400",
@@ -28,8 +40,8 @@
       "stake": 1.0669388477574444,
       "fee": 0.016991001150537303,
       "ts": 1788533433.187341,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -1.0839298489079816
     },
     {
       "id": 142,
@@ -150,18 +162,6 @@
       "ts": 1788529833.685254,
       "settled": 1,
       "pnl": -1.515085796810325
-    },
-    {
-      "id": 132,
-      "slug": "btc-updown-5m-1788528900",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.35000000000000003,
-      "stake": 1.2909928474808643,
-      "fee": 0.020559061096132765,
-      "ts": 1788528926.339696,
-      "settled": 1,
-      "pnl": 2.376999084225472
     }
   ]
 }
