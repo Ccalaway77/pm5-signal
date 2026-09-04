@@ -34,8 +34,13 @@ jobs:
       - name: restore db from data branch (if it exists)
         run: |
           mkdir -p data
-          git fetch origin data:refs/remotes/origin/data 2>/dev/null || true
-          git show origin/data:data/pm5.db > data/pm5.db 2>/dev/null || echo "no prior data branch yet — starting fresh"
+          git fetch origin data:refs/remotes/origin/data 2>&1 || echo "no data branch to fetch yet"
+          if git show origin/data:data/pm5.db > data/pm5.db 2>/dev/null; then
+            echo "restored data/pm5.db ($(wc -c < data/pm5.db) bytes)"
+          else
+            echo "no prior data/pm5.db on data branch — starting fresh"
+            rm -f data/pm5.db
+          fi
 
       - name: run harvest
         run: python src/harvest.py
@@ -45,7 +50,28 @@ jobs:
           git config user.name "pm5-signal-bot"
           git config user.email "bot@users.noreply.github.com"
           git checkout -B data
-          git add -f data/pm5.db data/metrics.jsonl 2>/dev/null || true
+
+          # Add each file separately and check it actually exists first.
+          # BUG THAT COST US ~1200 RUNS: `git add -f fileA fileB` fails
+          # ATOMICALLY — stages NEITHER file — if even one of them doesn't
+          # exist yet. data/metrics.jsonl only gets created after the first
+          # window ever resolves, so that combined command silently failed
+          # on every single run, and data/pm5.db was never actually
+          # committed anywhere. Separate commands avoid that trap.
+          if [ -f data/pm5.db ]; then
+            echo "staging data/pm5.db ($(wc -c < data/pm5.db) bytes)"
+            git add -f data/pm5.db
+          else
+            echo "WARNING: data/pm5.db missing at commit time — nothing to stage"
+          fi
+
+          if [ -f data/metrics.jsonl ]; then
+            echo "staging data/metrics.jsonl"
+            git add -f data/metrics.jsonl
+          else
+            echo "data/metrics.jsonl doesn't exist yet (no resolved windows so far) — skipping, not an error"
+          fi
+
           git commit -m "harvest snapshot $(date -u +%FT%TZ)" || echo "nothing to commit"
           git push origin data --force
           git checkout main
