@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788521700",
-  "signal_side": "DOWN",
-  "confidence": 0.7240384665967815,
-  "spot": 81249.38,
-  "tte": 276.03204107284546,
-  "updated": "2026-09-04T11:35:24Z",
-  "bankroll": 96.72103547417784,
-  "settle_count": 110,
+  "slug": "btc-updown-5m-1788522000",
+  "signal_side": "UP",
+  "confidence": 0.7619062786808837,
+  "spot": 81284.985,
+  "tte": 272.39768266677856,
+  "updated": "2026-09-04T11:40:27Z",
+  "bankroll": 91.83142297329579,
+  "settle_count": 111,
   "open_count": 1,
   "wins": 56,
-  "losses": 54,
-  "hit_rate": 0.509090909090909,
-  "pnl": 260.0121781499173,
-  "fees": 18.280874275828193,
-  "avg_fill": 0.4585454545454546,
-  "resolved_windows": 132,
-  "labeled_feat": 135,
+  "losses": 55,
+  "hit_rate": 0.5045045045045045,
+  "pnl": 257.54154779620796,
+  "fees": 18.323216338754577,
+  "avg_fill": 0.4586486486486487,
+  "resolved_windows": 133,
+  "labeled_feat": 136,
   "recent_trades": [
+    {
+      "id": 112,
+      "slug": "btc-updown-5m-1788522000",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.41000000000000003,
+      "stake": 2.3787035597947224,
+      "fee": 0.040278587378004035,
+      "ts": 1788522027.7853277,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 111,
       "slug": "btc-updown-5m-1788521700",
@@ -28,8 +40,8 @@
       "stake": 2.4282882907829473,
       "fee": 0.04234206292638226,
       "ts": 1788521724.3097239,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -2.4706303537093297
     },
     {
       "id": 110,
@@ -150,18 +162,6 @@
       "ts": 1788517833.124965,
       "settled": 1,
       "pnl": 2.8768497535611854
-    },
-    {
-      "id": 100,
-      "slug": "btc-updown-5m-1788517500",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.61,
-      "stake": 2.566150379493724,
-      "fee": 0.04273410226970899,
-      "ts": 1788517526.963433,
-      "settled": 1,
-      "pnl": 1.5979194190459505
     }
   ]
 }
