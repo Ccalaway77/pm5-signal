@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788557700",
-  "signal_side": "UP",
-  "confidence": 0.7977035557077182,
-  "spot": 79814.155,
-  "tte": 274.4212529659271,
-  "updated": "2026-09-04T21:35:25Z",
-  "bankroll": 4.878056912047608,
-  "settle_count": 217,
+  "slug": "btc-updown-5m-1788558000",
+  "signal_side": "DOWN",
+  "confidence": 0.5322263490781872,
+  "spot": 79817.935,
+  "tte": 267.3080310821533,
+  "updated": "2026-09-04T21:40:32Z",
+  "bankroll": 4.882140767816105,
+  "settle_count": 218,
   "open_count": 1,
-  "wins": 107,
+  "wins": 108,
   "losses": 110,
-  "hit_rate": 0.4930875576036866,
-  "pnl": 252.44056610253025,
-  "fees": 19.63905611375922,
-  "avg_fill": 0.48737327188940105,
-  "resolved_windows": 252,
-  "labeled_feat": 258,
+  "hit_rate": 0.4954128440366973,
+  "pnl": 252.54907908678376,
+  "fees": 19.641317234796414,
+  "avg_fill": 0.4876146788990828,
+  "resolved_windows": 253,
+  "labeled_feat": 259,
   "recent_trades": [
+    {
+      "id": 219,
+      "slug": "btc-updown-5m-1788558000",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.71,
+      "stake": 0.10294537676964215,
+      "fee": 0.0014837517153808524,
+      "ts": 1788558032.9625669,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 218,
       "slug": "btc-updown-5m-1788557700",
@@ -28,8 +40,8 @@
       "stake": 0.13003916708040308,
       "fee": 0.002261121037194049,
       "ts": 1788557725.7926185,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 0.10851298425351967
     },
     {
       "id": 217,
@@ -150,18 +162,6 @@
       "ts": 1788554435.610604,
       "settled": 1,
       "pnl": -0.2338635996226151
-    },
-    {
-      "id": 207,
-      "slug": "btc-updown-5m-1788554100",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.5,
-      "stake": 0.18897745437412652,
-      "fee": 0.0033071054515472144,
-      "ts": 1788554123.7142131,
-      "settled": 1,
-      "pnl": 0.1856703489225793
     }
   ]
 }
