@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788629700",
-  "signal_side": "UP",
-  "confidence": 0.8562537801641736,
-  "spot": 80062.375,
-  "tte": 275.0899181365967,
-  "updated": "2026-09-05T17:35:25Z",
-  "bankroll": 0.10067197734511217,
-  "settle_count": 417,
+  "slug": "btc-updown-5m-1788630000",
+  "signal_side": "DOWN",
+  "confidence": 0.95,
+  "spot": 80010.185,
+  "tte": 274.11204743385315,
+  "updated": "2026-09-05T17:40:26Z",
+  "bankroll": 0.09494378848192835,
+  "settle_count": 418,
   "open_count": 1,
   "wins": 208,
-  "losses": 209,
-  "hit_rate": 0.4988009592326139,
-  "pnl": 253.0158892877025,
-  "fees": 19.725009619392882,
-  "avg_fill": 0.4895683453237411,
-  "resolved_windows": 492,
-  "labeled_feat": 506,
+  "losses": 210,
+  "hit_rate": 0.49760765550239233,
+  "pnl": 253.01304259463063,
+  "fees": 19.725048360703333,
+  "avg_fill": 0.48904306220095706,
+  "resolved_windows": 493,
+  "labeled_feat": 507,
   "recent_trades": [
+    {
+      "id": 419,
+      "slug": "btc-updown-5m-1788630000",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.66,
+      "stake": 0.002836933243924195,
+      "fee": 4.456254739556125e-05,
+      "ts": 1788630026.1477334,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 418,
       "slug": "btc-updown-5m-1788629700",
@@ -28,8 +40,8 @@
       "stake": 0.0028079517614118645,
       "fee": 3.87413104521995e-05,
       "ts": 1788629725.2359555,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.002846693071864064
     },
     {
       "id": 417,
@@ -150,18 +162,6 @@
       "ts": 1788625527.5311666,
       "settled": 1,
       "pnl": 0.002574761563662224
-    },
-    {
-      "id": 407,
-      "slug": "btc-updown-5m-1788624600",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.63,
-      "stake": 0.0038885010827733667,
-      "fee": 6.344867216761303e-05,
-      "ts": 1788624628.76936,
-      "settled": 1,
-      "pnl": -0.003951949754940979
     }
   ]
 }
