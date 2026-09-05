@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788591300",
-  "signal_side": "DOWN",
-  "confidence": 0.5839975589124546,
-  "spot": 79674.985,
-  "tte": 276.5509431362152,
-  "updated": "2026-09-05T06:55:23Z",
-  "bankroll": 0.8666610265391979,
-  "settle_count": 314,
+  "slug": "btc-updown-5m-1788591600",
+  "signal_side": "UP",
+  "confidence": 0.7812833988302526,
+  "spot": 79654.125,
+  "tte": 265.96046113967896,
+  "updated": "2026-09-05T07:00:34Z",
+  "bankroll": 0.856264114698704,
+  "settle_count": 315,
   "open_count": 1,
-  "wins": 155,
+  "wins": 156,
   "losses": 159,
-  "hit_rate": 0.49363057324840764,
-  "pnl": 252.67972344338077,
-  "fees": 19.70754284369852,
-  "avg_fill": 0.4921974522292992,
-  "resolved_windows": 364,
-  "labeled_feat": 374,
+  "hit_rate": 0.49523809523809526,
+  "pnl": 252.69220913459563,
+  "fees": 19.707865617004444,
+  "avg_fill": 0.4925396825396824,
+  "resolved_windows": 365,
+  "labeled_feat": 375,
   "recent_trades": [
+    {
+      "id": 316,
+      "slug": "btc-updown-5m-1788591600",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.34,
+      "stake": 0.022528721891887905,
+      "fee": 0.00035388116347777527,
+      "ts": 1788591634.402792,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 315,
       "slug": "btc-updown-5m-1788591300",
@@ -28,8 +40,8 @@
       "stake": 0.019212696781193913,
       "fee": 0.0003227733059240578,
       "ts": 1788591323.641854,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 0.012485691214871886
     },
     {
       "id": 314,
@@ -150,18 +162,6 @@
       "ts": 1788587054.5249505,
       "settled": 1,
       "pnl": 0.5152671535679011
-    },
-    {
-      "id": 304,
-      "slug": "btc-updown-5m-1788586800",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.35000000000000003,
-      "stake": 0.009830148560219501,
-      "fee": 0.00015654511582149558,
-      "ts": 1788586828.1816318,
-      "settled": 1,
-      "pnl": 0.01809944506744329
     }
   ]
 }
