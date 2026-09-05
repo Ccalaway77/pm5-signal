@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788642000",
-  "signal_side": "DOWN",
-  "confidence": 0.5959393016344827,
-  "spot": 79748.765,
-  "tte": 265.22653889656067,
-  "updated": "2026-09-05T21:00:35Z",
-  "bankroll": 0.046081041008690156,
-  "settle_count": 447,
+  "slug": "btc-updown-5m-1788642300",
+  "signal_side": "UP",
+  "confidence": 0.6537433547707032,
+  "spot": 79733.395,
+  "tte": 272.4308166503906,
+  "updated": "2026-09-05T21:05:28Z",
+  "bankroll": 0.04616622203093182,
+  "settle_count": 448,
   "open_count": 1,
-  "wins": 223,
+  "wins": 224,
   "losses": 224,
-  "hit_rate": 0.4988814317673378,
-  "pnl": 253.01038342218965,
-  "fees": 19.725792652328956,
-  "avg_fill": 0.48863534675615217,
-  "resolved_windows": 533,
-  "labeled_feat": 548,
+  "hit_rate": 0.5,
+  "pnl": 253.0115782027973,
+  "fees": 19.725810615489653,
+  "avg_fill": 0.4885714285714286,
+  "resolved_windows": 534,
+  "labeled_feat": 549,
   "recent_trades": [
+    {
+      "id": 449,
+      "slug": "btc-updown-5m-1788642300",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.43,
+      "stake": 0.0010908833006236472,
+      "fee": 1.871628478879992e-05,
+      "ts": 1788642328.0187507,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 448,
       "slug": "btc-updown-5m-1788642000",
@@ -28,8 +40,8 @@
       "stake": 0.0010330780248915322,
       "fee": 1.7963160696813966e-05,
       "ts": 1788642035.1684716,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 0.001194780607654115
     },
     {
       "id": 447,
@@ -150,18 +162,6 @@
       "ts": 1788637826.058246,
       "settled": 1,
       "pnl": -0.0015845730738880842
-    },
-    {
-      "id": 437,
-      "slug": "btc-updown-5m-1788637500",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.2,
-      "stake": 0.0016777320293157123,
-      "fee": 1.879059872833598e-05,
-      "ts": 1788637565.03307,
-      "settled": 1,
-      "pnl": -0.0016965226280440484
     }
   ]
 }
