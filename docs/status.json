@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788576300",
-  "signal_side": "UP",
-  "confidence": 0.6704121045689193,
-  "spot": 79633.495,
-  "tte": 272.66498923301697,
-  "updated": "2026-09-05T02:45:27Z",
-  "bankroll": 0.9938929842935613,
-  "settle_count": 273,
+  "slug": "btc-updown-5m-1788576600",
+  "signal_side": "DOWN",
+  "confidence": 0.8536982126039898,
+  "spot": 79565.645,
+  "tte": 272.7420768737793,
+  "updated": "2026-09-05T02:50:29Z",
+  "bankroll": 0.9431415730312768,
+  "settle_count": 274,
   "open_count": 1,
   "wins": 134,
-  "losses": 139,
-  "hit_rate": 0.4908424908424908,
-  "pnl": 252.062533902328,
-  "fees": 19.69596839213169,
-  "avg_fill": 0.49655677655677655,
-  "resolved_windows": 314,
-  "labeled_feat": 323,
+  "losses": 140,
+  "hit_rate": 0.48905109489051096,
+  "pnl": 252.0384084597584,
+  "fees": 19.696263812911813,
+  "avg_fill": 0.4955839416058394,
+  "resolved_windows": 315,
+  "labeled_feat": 324,
   "recent_trades": [
+    {
+      "id": 275,
+      "slug": "btc-updown-5m-1788576600",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.28,
+      "stake": 0.02625545175746123,
+      "fee": 0.0003705169352012929,
+      "ts": 1788576627.6832676,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 274,
       "slug": "btc-updown-5m-1788576300",
@@ -28,8 +40,8 @@
       "stake": 0.02383002178949758,
       "fee": 0.00029542078012440156,
       "ts": 1788576327.5248148,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.02412544256962198
     },
     {
       "id": 273,
@@ -150,18 +162,6 @@
       "ts": 1788573324.3237786,
       "settled": 1,
       "pnl": 0.060767850000233076
-    },
-    {
-      "id": 263,
-      "slug": "btc-updown-5m-1788573000",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.33,
-      "stake": 0.027362068615866462,
-      "fee": 0.00042348273596776523,
-      "ts": 1788573027.9218543,
-      "settled": 1,
-      "pnl": -0.027785551351834227
     }
   ]
 }
