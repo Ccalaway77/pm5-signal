@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788634800",
-  "signal_side": "UP",
-  "confidence": 0.9165076601718046,
-  "spot": 79970.005,
-  "tte": 264.03505849838257,
-  "updated": "2026-09-05T19:00:36Z",
-  "bankroll": 0.06829763419508435,
-  "settle_count": 430,
+  "slug": "btc-updown-5m-1788635100",
+  "signal_side": "DOWN",
+  "confidence": 0.95,
+  "spot": 79934.985,
+  "tte": 273.3451657295227,
+  "updated": "2026-09-05T19:05:26Z",
+  "bankroll": 0.06433178208563703,
+  "settle_count": 431,
   "open_count": 1,
   "wins": 213,
-  "losses": 217,
-  "hit_rate": 0.49534883720930234,
-  "pnl": 253.00944464258427,
-  "fees": 19.72543377886813,
-  "avg_fill": 0.48800000000000016,
-  "resolved_windows": 509,
-  "labeled_feat": 523,
+  "losses": 218,
+  "hit_rate": 0.494199535962877,
+  "pnl": 253.00743309911158,
+  "fees": 19.725453452565898,
+  "avg_fill": 0.48726218097447804,
+  "resolved_windows": 510,
+  "labeled_feat": 524,
   "recent_trades": [
+    {
+      "id": 432,
+      "slug": "btc-updown-5m-1788635100",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.61,
+      "stake": 0.001922296630949057,
+      "fee": 3.201200579519465e-05,
+      "ts": 1788635126.932365,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 431,
       "slug": "btc-updown-5m-1788634800",
@@ -28,8 +40,8 @@
       "stake": 0.001991869774936025,
       "fee": 1.9673697767043123e-05,
       "ts": 1788634836.198139,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.002011543472703068
     },
     {
       "id": 430,
@@ -150,18 +162,6 @@
       "ts": 1788630930.103063,
       "settled": 1,
       "pnl": -0.002049337813195104
-    },
-    {
-      "id": 420,
-      "slug": "btc-updown-5m-1788630300",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.56,
-      "stake": 0.002669806488027649,
-      "fee": 4.604882230550089e-05,
-      "ts": 1788630325.826405,
-      "settled": 1,
-      "pnl": -0.00271585531033315
     }
   ]
 }
