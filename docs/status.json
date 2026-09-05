@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788569700",
-  "signal_side": "UP",
-  "confidence": 0.8913798439844722,
-  "spot": 79667.985,
-  "tte": 268.163289308548,
-  "updated": "2026-09-05T00:55:32Z",
-  "bankroll": 1.7452484052523223,
-  "settle_count": 253,
+  "slug": "btc-updown-5m-1788570000",
+  "signal_side": "DOWN",
+  "confidence": 0.945746480132599,
+  "spot": 79605.505,
+  "tte": 268.28210973739624,
+  "updated": "2026-09-05T01:00:31Z",
+  "bankroll": 1.6448694261315935,
+  "settle_count": 254,
   "open_count": 1,
   "wins": 124,
-  "losses": 129,
-  "hit_rate": 0.4901185770750988,
-  "pnl": 252.16181641671935,
-  "fees": 19.685851901647954,
-  "avg_fill": 0.49241106719367594,
-  "resolved_windows": 292,
-  "labeled_feat": 300,
+  "losses": 130,
+  "hit_rate": 0.4881889763779528,
+  "pnl": 252.11107713000297,
+  "fees": 19.686613166871336,
+  "avg_fill": 0.49173228346456693,
+  "resolved_windows": 293,
+  "labeled_feat": 301,
   "recent_trades": [
+    {
+      "id": 255,
+      "slug": "btc-updown-5m-1788570000",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.75,
+      "stake": 0.04899661187351892,
+      "fee": 0.0006430805308399359,
+      "ts": 1788570031.8968744,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 254,
       "slug": "btc-updown-5m-1788569700",
@@ -28,8 +40,8 @@
       "stake": 0.04997802149298862,
       "fee": 0.0007612652233812027,
       "ts": 1788569732.1804323,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.05073928671636982
     },
     {
       "id": 253,
@@ -150,18 +162,6 @@
       "ts": 1788565825.5575547,
       "settled": 1,
       "pnl": 0.108447676444063
-    },
-    {
-      "id": 243,
-      "slug": "btc-updown-5m-1788565500",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.56,
-      "stake": 0.05613325790745261,
-      "fee": 0.0009681864323877426,
-      "ts": 1788565527.7028034,
-      "settled": 1,
-      "pnl": 0.04313651620918216
     }
   ]
 }
