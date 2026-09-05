@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788575100",
-  "signal_side": "UP",
-  "confidence": 0.5509307496240669,
-  "spot": 79609.725,
-  "tte": 274.4101095199585,
-  "updated": "2026-09-05T02:25:25Z",
-  "bankroll": 1.1107184002731934,
-  "settle_count": 269,
+  "slug": "btc-updown-5m-1788575400",
+  "signal_side": "DOWN",
+  "confidence": 0.95,
+  "spot": 79543.275,
+  "tte": 270.1654644012451,
+  "updated": "2026-09-05T02:30:30Z",
+  "bankroll": 1.0545957839898636,
+  "settle_count": 270,
   "open_count": 1,
   "wins": 132,
-  "losses": 137,
-  "hit_rate": 0.49070631970260226,
-  "pnl": 252.07162833006868,
-  "fees": 19.69440181678718,
-  "avg_fill": 0.49483271375464677,
-  "resolved_windows": 310,
-  "labeled_feat": 319,
+  "losses": 138,
+  "hit_rate": 0.4888888888888889,
+  "pnl": 252.04736581533768,
+  "fees": 19.694808604641874,
+  "avg_fill": 0.4951481481481481,
+  "resolved_windows": 311,
+  "labeled_feat": 320,
   "recent_trades": [
+    {
+      "id": 271,
+      "slug": "btc-updown-5m-1788575400",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.8,
+      "stake": 0.031507220680724146,
+      "fee": 0.0003528808716241104,
+      "ts": 1788575430.0548544,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 270,
       "slug": "btc-updown-5m-1788575100",
@@ -28,8 +40,8 @@
       "stake": 0.023855726876286936,
       "fee": 0.0004067878546944449,
       "ts": 1788575125.9603426,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.024262514730981382
     },
     {
       "id": 269,
@@ -150,18 +162,6 @@
       "ts": 1788571525.7306592,
       "settled": 1,
       "pnl": 0.01710880477715119
-    },
-    {
-      "id": 259,
-      "slug": "btc-updown-5m-1788571200",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.66,
-      "stake": 0.031232330967535922,
-      "fee": 0.0004905974548380542,
-      "ts": 1788571221.5969229,
-      "settled": 1,
-      "pnl": 0.015598785164801659
     }
   ]
 }
