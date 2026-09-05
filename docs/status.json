@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788599700",
-  "signal_side": "UP",
-  "confidence": 0.8485376264629427,
-  "spot": 79723.925,
-  "tte": 273.60305070877075,
-  "updated": "2026-09-05T09:15:26Z",
-  "bankroll": 0.6406133353122919,
-  "settle_count": 336,
+  "slug": "btc-updown-5m-1788600000",
+  "signal_side": "DOWN",
+  "confidence": 0.8852616919488847,
+  "spot": 79697.245,
+  "tte": 275.2848608493805,
+  "updated": "2026-09-05T09:20:25Z",
+  "bankroll": 0.6051055340643795,
+  "settle_count": 337,
   "open_count": 1,
   "wins": 167,
-  "losses": 169,
-  "hit_rate": 0.49702380952380953,
-  "pnl": 252.8985692903771,
-  "fees": 19.7145209739451,
-  "avg_fill": 0.48720238095238094,
-  "resolved_windows": 392,
-  "labeled_feat": 402,
+  "losses": 170,
+  "hit_rate": 0.49554896142433236,
+  "pnl": 252.8805932750254,
+  "fees": 19.714734338901646,
+  "avg_fill": 0.4864094955489614,
+  "resolved_windows": 393,
+  "labeled_feat": 403,
   "recent_trades": [
+    {
+      "id": 338,
+      "slug": "btc-updown-5m-1788600000",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.63,
+      "stake": 0.01725031254638227,
+      "fee": 0.00028147334981931953,
+      "ts": 1788600025.064923,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 337,
       "slug": "btc-updown-5m-1788599700",
@@ -28,8 +40,8 @@
       "stake": 0.017762650395164097,
       "fee": 0.00021336495654671118,
       "ts": 1788599726.5663695,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.017976015351710808
     },
     {
       "id": 336,
@@ -150,18 +162,6 @@
       "ts": 1788595826.464797,
       "settled": 1,
       "pnl": -0.020058957578260955
-    },
-    {
-      "id": 326,
-      "slug": "btc-updown-5m-1788595500",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.27,
-      "stake": 0.02550454743918771,
-      "fee": 0.00035188624101847285,
-      "ts": 1788595526.3290186,
-      "settled": 1,
-      "pnl": -0.02585643368020618
     }
   ]
 }
