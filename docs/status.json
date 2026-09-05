@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788570900",
-  "signal_side": "UP",
-  "confidence": 0.8688366976488346,
-  "spot": 79649.985,
-  "tte": 275.11871433258057,
-  "updated": "2026-09-05T01:15:25Z",
-  "bankroll": 1.4501695435476476,
-  "settle_count": 257,
+  "slug": "btc-updown-5m-1788571200",
+  "signal_side": "DOWN",
+  "confidence": 0.5598102560939914,
+  "spot": 79706.505,
+  "tte": 278.69219756126404,
+  "updated": "2026-09-05T01:20:21Z",
+  "bankroll": 1.441763990011732,
+  "settle_count": 258,
   "open_count": 1,
-  "wins": 125,
+  "wins": 126,
   "losses": 132,
-  "hit_rate": 0.48638132295719844,
-  "pnl": 252.03903996259513,
-  "fees": 19.688501191671676,
-  "avg_fill": 0.49408560311284055,
-  "resolved_windows": 296,
-  "labeled_feat": 305,
+  "hit_rate": 0.4883720930232558,
+  "pnl": 252.0623573374816,
+  "fees": 19.689167531209527,
+  "avg_fill": 0.49461240310077526,
+  "resolved_windows": 297,
+  "labeled_feat": 306,
   "recent_trades": [
+    {
+      "id": 259,
+      "slug": "btc-updown-5m-1788571200",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.66,
+      "stake": 0.031232330967535922,
+      "fee": 0.0004905974548380542,
+      "ts": 1788571221.5969229,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 258,
       "slug": "btc-updown-5m-1788570900",
@@ -28,8 +40,8 @@
       "stake": 0.04083713537112054,
       "fee": 0.0006663395378505739,
       "ts": 1788570925.0932267,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 0.023317374886458315
     },
     {
       "id": 257,
@@ -150,18 +162,6 @@
       "ts": 1788567329.0448897,
       "settled": 1,
       "pnl": -0.06592533887628114
-    },
-    {
-      "id": 247,
-      "slug": "btc-updown-5m-1788566700",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.55,
-      "stake": 0.054577962631167085,
-      "fee": 0.0009455632025849697,
-      "ts": 1788566724.447789,
-      "settled": 1,
-      "pnl": -0.05552352583375206
     }
   ]
 }
