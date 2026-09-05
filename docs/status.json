@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788581400",
-  "signal_side": "UP",
-  "confidence": 0.7651053189037726,
-  "spot": 79568.215,
-  "tte": 273.83008456230164,
-  "updated": "2026-09-05T04:10:26Z",
-  "bankroll": 0.7025487738575008,
-  "settle_count": 286,
+  "slug": "btc-updown-5m-1788581700",
+  "signal_side": "DOWN",
+  "confidence": 0.8579449161188462,
+  "spot": 79553.845,
+  "tte": 274.2652282714844,
+  "updated": "2026-09-05T04:15:25Z",
+  "bankroll": 0.6651462185129159,
+  "settle_count": 287,
   "open_count": 1,
   "wins": 140,
-  "losses": 146,
-  "hit_rate": 0.48951048951048953,
-  "pnl": 252.02508242931788,
-  "fees": 19.70004989326497,
-  "avg_fill": 0.49493006993007,
-  "resolved_windows": 331,
-  "labeled_feat": 340,
+  "losses": 147,
+  "hit_rate": 0.4878048780487805,
+  "pnl": 252.0065808766243,
+  "fees": 19.70030735389221,
+  "avg_fill": 0.4941811846689896,
+  "resolved_windows": 332,
+  "labeled_feat": 341,
   "recent_trades": [
+    {
+      "id": 288,
+      "slug": "btc-updown-5m-1788581700",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.54,
+      "stake": 0.018577968927295352,
+      "fee": 0.0003230337237078116,
+      "ts": 1788581725.9770262,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 287,
       "slug": "btc-updown-5m-1788581400",
@@ -28,8 +40,8 @@
       "stake": 0.018244092066341533,
       "fee": 0.00025746062724021175,
       "ts": 1788581426.4870849,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.018501552693581745
     },
     {
       "id": 286,
@@ -150,18 +162,6 @@
       "ts": 1788577826.802447,
       "settled": 1,
       "pnl": -0.023307001864164806
-    },
-    {
-      "id": 276,
-      "slug": "btc-updown-5m-1788577500",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.51,
-      "stake": 0.021747715021495164,
-      "fee": 0.00038043277887101493,
-      "ts": 1788577524.0228539,
-      "settled": 1,
-      "pnl": 0.02051443067315375
     }
   ]
 }
