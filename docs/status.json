@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788644700",
-  "signal_side": "UP",
-  "confidence": 0.6454534434461235,
-  "spot": 79902.015,
-  "tte": 273.46235632896423,
-  "updated": "2026-09-05T21:45:27Z",
-  "bankroll": 1394.005345611306,
-  "settle_count": 456,
+  "slug": "btc-updown-5m-1788645000",
+  "signal_side": "DOWN",
+  "confidence": 0.7250930168232159,
+  "spot": 79914.245,
+  "tte": 274.8310356140137,
+  "updated": "2026-09-05T21:50:25Z",
+  "bankroll": 1416.5863925278538,
+  "settle_count": 457,
   "open_count": 1,
-  "wins": 230,
+  "wins": 231,
   "losses": 226,
-  "hit_rate": 0.5043859649122807,
-  "pnl": 394.00534561130644,
-  "fees": 22.43065178407124,
-  "avg_fill": 0.48850877192982467,
-  "resolved_windows": 542,
-  "labeled_feat": 559,
+  "hit_rate": 0.5054704595185996,
+  "pnl": 416.58639252785423,
+  "fees": 22.97521361894983,
+  "avg_fill": 0.48870897155361065,
+  "resolved_windows": 543,
+  "labeled_feat": 560,
   "recent_trades": [
+    {
+      "id": 458,
+      "slug": "btc-updown-5m-1788645000",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.58,
+      "stake": 34.70900194425329,
+      "fee": 0.5918579011534072,
+      "ts": 1788645025.429827,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 457,
       "slug": "btc-updown-5m-1788644700",
@@ -28,8 +40,8 @@
       "stake": 31.93536446625548,
       "fee": 0.5445618348785886,
       "ts": 1788644726.8999295,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 22.581046916547795
     },
     {
       "id": 456,
@@ -150,18 +162,6 @@
       "ts": 1788641727.174662,
       "settled": 1,
       "pnl": 0.0006504834483218777
-    },
-    {
-      "id": 446,
-      "slug": "btc-updown-5m-1788641400",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.67,
-      "stake": 0.0010994240370222762,
-      "fee": 1.7015785820993768e-05,
-      "ts": 1788641427.869966,
-      "settled": 1,
-      "pnl": 0.0005244915756974407
     }
   ]
 }
