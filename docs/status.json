@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788645300",
-  "signal_side": "DOWN",
-  "confidence": 0.5825296987596701,
-  "spot": 79897.515,
-  "tte": 272.97568917274475,
-  "updated": "2026-09-05T21:55:27Z",
-  "bankroll": 1441.128639482884,
-  "settle_count": 458,
+  "slug": "btc-updown-5m-1788645600",
+  "signal_side": "UP",
+  "confidence": 0.5603183985692549,
+  "spot": 79919.995,
+  "tte": 266.2156970500946,
+  "updated": "2026-09-05T22:00:34Z",
+  "bankroll": 1409.3953040286121,
+  "settle_count": 459,
   "open_count": 1,
   "wins": 232,
-  "losses": 226,
-  "hit_rate": 0.5065502183406113,
-  "pnl": 441.12863948288424,
-  "fees": 23.567071520103237,
-  "avg_fill": 0.4889082969432316,
-  "resolved_windows": 544,
-  "labeled_feat": 561,
+  "losses": 227,
+  "hit_rate": 0.5054466230936819,
+  "pnl": 409.3953040286125,
+  "fees": 24.099115934908227,
+  "avg_fill": 0.48875816993464066,
+  "resolved_windows": 545,
+  "labeled_feat": 562,
   "recent_trades": [
+    {
+      "id": 460,
+      "slug": "btc-updown-5m-1788645600",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.42,
+      "stake": 29.888155434372923,
+      "fee": 0.5096528264669272,
+      "ts": 1788645634.1029592,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 459,
       "slug": "btc-updown-5m-1788645300",
@@ -28,8 +40,8 @@
       "stake": 31.20129103946679,
       "fee": 0.5320444148049879,
       "ts": 1788645327.2760756,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -31.733335454271778
     },
     {
       "id": 458,
@@ -150,18 +162,6 @@
       "ts": 1788642328.0187507,
       "settled": 1,
       "pnl": 0.0014273383230146393
-    },
-    {
-      "id": 448,
-      "slug": "btc-updown-5m-1788642000",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.46,
-      "stake": 0.0010330780248915322,
-      "fee": 1.7963160696813966e-05,
-      "ts": 1788642035.1684716,
-      "settled": 1,
-      "pnl": 0.001194780607654115
     }
   ]
 }
