@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788579000",
-  "signal_side": "DOWN",
-  "confidence": 0.5637800328822807,
-  "spot": 79605.735,
-  "tte": 270.33515095710754,
-  "updated": "2026-09-05T03:30:30Z",
-  "bankroll": 0.7696557491483338,
-  "settle_count": 279,
+  "slug": "btc-updown-5m-1788579300",
+  "signal_side": "UP",
+  "confidence": 0.5721190624903257,
+  "spot": 79617.155,
+  "tte": 275.1246848106384,
+  "updated": "2026-09-05T03:35:25Z",
+  "bankroll": 0.7362166950600944,
+  "settle_count": 280,
   "open_count": 1,
   "wins": 135,
-  "losses": 144,
-  "hit_rate": 0.4838709677419355,
-  "pnl": 251.96818507842713,
-  "fees": 19.698029615789558,
-  "avg_fill": 0.49369175627240147,
-  "resolved_windows": 323,
-  "labeled_feat": 332,
+  "losses": 145,
+  "hit_rate": 0.48214285714285715,
+  "pnl": 251.95116262698758,
+  "fees": 19.698315015987333,
+  "avg_fill": 0.49400000000000005,
+  "resolved_windows": 324,
+  "labeled_feat": 333,
   "recent_trades": [
+    {
+      "id": 281,
+      "slug": "btc-updown-5m-1788579300",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.56,
+      "stake": 0.016138250110770695,
+      "fee": 0.0002783525379105729,
+      "ts": 1788579325.2976847,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 280,
       "slug": "btc-updown-5m-1788579000",
@@ -28,8 +40,8 @@
       "stake": 0.01673705124178322,
       "fee": 0.00028540019777488756,
       "ts": 1788579030.0692897,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.01702245143955811
     },
     {
       "id": 279,
@@ -150,18 +162,6 @@
       "ts": 1788575125.9603426,
       "settled": 1,
       "pnl": -0.024262514730981382
-    },
-    {
-      "id": 269,
-      "slug": "btc-updown-5m-1788574800",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.34,
-      "stake": 0.023222063736160557,
-      "fee": 0.0003647721771676101,
-      "ts": 1788574829.9926188,
-      "settled": 1,
-      "pnl": 0.04471335154596758
     }
   ]
 }
