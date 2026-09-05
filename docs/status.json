@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788602400",
-  "signal_side": "DOWN",
-  "confidence": 0.7682860119342814,
-  "spot": 79634.995,
-  "tte": 267.1767113208771,
-  "updated": "2026-09-05T10:00:33Z",
-  "bankroll": 0.6784792121319343,
-  "settle_count": 344,
+  "slug": "btc-updown-5m-1788602700",
+  "signal_side": "UP",
+  "confidence": 0.7675899396242927,
+  "spot": 79643.815,
+  "tte": 275.6868665218353,
+  "updated": "2026-09-05T10:05:24Z",
+  "bankroll": 0.6435544029743305,
+  "settle_count": 345,
   "open_count": 1,
   "wins": 173,
-  "losses": 171,
-  "hit_rate": 0.502906976744186,
-  "pnl": 253.0691843904464,
-  "fees": 19.71648402258762,
-  "avg_fill": 0.48499999999999993,
-  "resolved_windows": 401,
-  "labeled_feat": 412,
+  "losses": 172,
+  "hit_rate": 0.5014492753623189,
+  "pnl": 253.051230617831,
+  "fees": 19.716772270946905,
+  "avg_fill": 0.48542028985507235,
+  "resolved_windows": 402,
+  "labeled_feat": 413,
   "recent_trades": [
+    {
+      "id": 346,
+      "slug": "btc-updown-5m-1788602700",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.26,
+      "stake": 0.01674550803994197,
+      "fee": 0.00022552850228193847,
+      "ts": 1788602724.56917,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 345,
       "slug": "btc-updown-5m-1788602400",
@@ -28,8 +40,8 @@
       "stake": 0.017665524256093183,
       "fee": 0.0002882483592866725,
       "ts": 1788602433.061115,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.017953772615379854
     },
     {
       "id": 344,
@@ -150,18 +162,6 @@
       "ts": 1788598840.9904325,
       "settled": 1,
       "pnl": 0.0263345240835109
-    },
-    {
-      "id": 334,
-      "slug": "btc-updown-5m-1788598500",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.51,
-      "stake": 0.017576673759194947,
-      "fee": 0.00030746875406959727,
-      "ts": 1788598524.9234405,
-      "settled": 1,
-      "pnl": 0.016579923681235353
     }
   ]
 }
