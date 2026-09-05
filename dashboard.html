@@ -284,7 +284,7 @@ function render(status){
     row.innerHTML = `
       <span class="side-tag ${t.side === 'UP' ? 'up' : 'down'}">${t.side}</span>
       <span class="slug">${t.slug}</span>
-      <span class="fill">@${t.fill}</span>
+      <span class="fill">@${Number(t.fill_price).toFixed(2)}</span>
       <span class="pnl ${pnlClass}">${pnlText}</span>
     `;
     list.appendChild(row);

@@ -84,8 +84,14 @@ def run_market_tick(conn, market_config, cfg):
 
     tte = window_end - time.time()
     pick = {"slug": slug, "side": side, "confidence": conf, "spot": spot_now, "tte": tte}
+    print(f"[harvest] {market_config.key} {slug}: signal={side} conf={conf:.3f} spot={spot_now} tte={tte:.0f}s "
+          f"learner_trusted={learner.is_trusted()}")
 
-    if side != "NO_TRADE" and tte > cfg["engine"]["paper_cutoff_sec"]:
+    if side == "NO_TRADE":
+        print(f"[harvest] {market_config.key}: NO_TRADE this tick, skipping Polymarket lookup")
+    elif tte <= cfg["engine"]["paper_cutoff_sec"]:
+        print(f"[harvest] {market_config.key}: only {tte:.0f}s left in window, too late to enter, skipping")
+    else:
         market_dict = poly.get_current_market(market_config)
         ask_price = None
         if market_dict:
@@ -96,14 +102,20 @@ def run_market_tick(conn, market_config, cfg):
                 print(f"[harvest] {market_config.key}: no usable clobTokenIds on market {slug}")
 
         if ask_price is not None:
-            bankroll = db.get_bankroll(conn, market_config.key, cfg["paper"]["starting_bankroll"])
-            sized = risk.decide_size(ask_price, conf, bankroll, cfg)
-            if sized:
-                db.insert_trade(
-                    conn, slug, market_config.key, side,
-                    sized["fill_price"], sized["stake"], sized["fee"],
-                )
-                db.adjust_bankroll(conn, market_config.key, -sized["stake"] - sized["fee"])
+            if db.has_any_trade_for_slug(conn, slug):
+                print(f"[harvest] {market_config.key}: already traded {slug} this window — skipping duplicate")
+            else:
+                bankroll = db.compute_bankroll(conn, market_config.key, cfg["paper"]["starting_bankroll"])
+                sized = risk.decide_size(ask_price, conf, bankroll, cfg)
+                if sized:
+                    db.insert_trade(
+                        conn, slug, market_config.key, side,
+                        sized["fill_price"], sized["stake"], sized["fee"],
+                    )
+                    print(f"[harvest] {market_config.key}: TRADE placed — {side} @ {sized['fill_price']:.3f}, "
+                          f"stake ${sized['stake']:.2f}")
+                else:
+                    print(f"[harvest] {market_config.key}: ask {ask_price} rejected by risk.decide_size (too expensive)")
 
     if features is not None:
         db.insert_feat_row(conn, slug, market_config.key, features)

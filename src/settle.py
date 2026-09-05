@@ -39,13 +39,9 @@ def _settle_trades_for_slug(conn, market_config, cfg, slug, outcome):
         won = t["side"] == outcome
         pnl = risk.settle_pnl(t["fill_price"], t["stake"], t["fee"], won)
         db.settle_trade(conn, t["id"], pnl)
-        db.adjust_bankroll(conn, market_config.key, pnl)
 
 
 def _train_learner_for_slug(conn, market_config, cfg, slug, label):
-    row = db.unlabeled_feat_row_for_slug(conn, slug)
-    # NOTE: row will already be labeled by this point (label_feat_rows_for_slug
-    # ran above) — re-fetch by slug directly instead if you need the features.
     feat_row = conn.execute(
         "SELECT * FROM feat_rows WHERE slug=? ORDER BY id DESC LIMIT 1", (slug,)
     ).fetchone()

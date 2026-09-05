@@ -119,6 +119,54 @@ def test_extract_first_token_id_handles_missing_field():
     assert harvest._extract_first_token_id({}) is None
 
 
+def test_has_any_trade_for_slug(tmp_path):
+    conn = db.get_conn(str(tmp_path / "test2.db"))
+    assert db.has_any_trade_for_slug(conn, "slug-x") is False
+    db.insert_trade(conn, "slug-x", "btc", "UP", 0.5, 20, 0.5, ts=1)
+    assert db.has_any_trade_for_slug(conn, "slug-x") is True
+    # a settled trade should still count — the guard is "any trade ever", not "any open trade"
+    trades = db.open_trades_for_slug(conn, "slug-x")
+    db.settle_trade(conn, trades[0]["id"], pnl=5.0)
+    assert db.has_any_trade_for_slug(conn, "slug-x") is True
+
+
+def test_recent_trades_includes_fill_price_field(tmp_path):
+    conn = db.get_conn(str(tmp_path / "test3.db"))
+    db.insert_trade(conn, "slug-y", "btc", "DOWN", 0.61, 25, 0.4, ts=1)
+    trades = db.recent_trades(conn, "btc")
+    assert len(trades) == 1
+    # dashboard.html reads t.fill_price — this locks that field name in place
+    assert "fill_price" in trades[0]
+    assert trades[0]["fill_price"] == 0.61
+
+
+def test_compute_bankroll_matches_pnl_exactly(tmp_path):
+    """
+    Regression test for the double-counting bug: bankroll used to be
+    adjusted once at trade-open (-stake-fee) AND once at settlement
+    (+pnl, which already nets out stake and fee), silently charging every
+    trade's stake twice. compute_bankroll derives the balance fresh from
+    settled trade history instead, so it can never drift from starting + pnl.
+    """
+    conn = db.get_conn(str(tmp_path / "bankroll_test.db"))
+    starting = 1000.0
+
+    db.insert_trade(conn, "s1", "btc", "UP", 0.5, 30, 1.0, ts=1)
+    t1 = db.open_trades_for_slug(conn, "s1")[0]
+    pnl1 = risk.settle_pnl(t1["fill_price"], t1["stake"], t1["fee"], won=True)
+    db.settle_trade(conn, t1["id"], pnl1)
+
+    db.insert_trade(conn, "s2", "btc", "DOWN", 0.4, 20, 0.8, ts=2)
+    t2 = db.open_trades_for_slug(conn, "s2")[0]
+    pnl2 = risk.settle_pnl(t2["fill_price"], t2["stake"], t2["fee"], won=False)
+    db.settle_trade(conn, t2["id"], pnl2)
+
+    stats = db.stats_for_market(conn, "btc")
+    bankroll = db.compute_bankroll(conn, "btc", starting)
+    assert abs(bankroll - (starting + stats["pnl"])) < 1e-9
+    assert abs(bankroll - (starting + pnl1 + pnl2)) < 1e-9
+
+
 def test_db_roundtrip(tmp_path):
     conn = db.get_conn(str(tmp_path / "test.db"))
     db.upsert_window(conn, "slug-1", "btc", 0, 300, start_spot=100.0)

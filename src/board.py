@@ -16,7 +16,7 @@ def write_outputs(conn, market_config, current_pick: dict, cfg: dict, out_dir: s
     Path(out_dir).mkdir(parents=True, exist_ok=True)
     stats = db.stats_for_market(conn, market_config.key)
     starting_bankroll = cfg["paper"]["starting_bankroll"]
-    bankroll = db.get_bankroll(conn, market_config.key, starting=starting_bankroll)
+    bankroll = db.compute_bankroll(conn, market_config.key, starting_bankroll)
 
     status = {
         "ok": True,

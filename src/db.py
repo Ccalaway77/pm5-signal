@@ -66,6 +66,8 @@ def get_conn(path: str = "data/pm5.db") -> sqlite3.Connection:
 
 
 def get_bankroll(conn, market_key: str, starting: float) -> float:
+    # NOTE: kept for backward compatibility but no longer used for the
+    # live bankroll figure — see compute_bankroll() below.
     row = conn.execute("SELECT balance FROM bankroll WHERE market_key=?", (market_key,)).fetchone()
     if row is None:
         conn.execute("INSERT INTO bankroll(market_key, balance) VALUES (?, ?)", (market_key, starting))
@@ -75,10 +77,34 @@ def get_bankroll(conn, market_key: str, starting: float) -> float:
 
 
 def adjust_bankroll(conn, market_key: str, delta: float):
+    # NOTE: no longer called anywhere — see compute_bankroll() below for why.
     conn.execute(
         "UPDATE bankroll SET balance = balance + ? WHERE market_key=?", (delta, market_key)
     )
     conn.commit()
+
+
+def compute_bankroll(conn, market_key: str, starting: float) -> float:
+    """
+    Bankroll is DERIVED fresh from settled trade history every time it's
+    needed, instead of being tracked as separately mutated state.
+
+    The old approach called adjust_bankroll() once when a trade opened
+    (subtracting stake+fee) AND once when it settled (adding the full pnl
+    — which risk.settle_pnl already computes net of stake and fee). That
+    silently charged every trade's stake twice, draining the balance about
+    twice as fast as reality and eventually toward zero.
+
+    Deriving it fresh from SUM(pnl) of settled trades means there's no
+    running counter left to drift or double-count — and it self-corrects
+    any past corruption in the old `bankroll` table automatically, since
+    that table is simply no longer read.
+    """
+    row = conn.execute(
+        "SELECT SUM(pnl) s FROM trades WHERE market_key=? AND settled=1", (market_key,)
+    ).fetchone()
+    settled_pnl = row["s"] if row["s"] is not None else 0.0
+    return starting + settled_pnl
 
 
 def upsert_window(conn, slug: str, market_key: str, start_ts: float, end_ts: float, start_spot: Optional[float]):
@@ -119,6 +145,18 @@ def insert_trade(conn, slug, market_key, side, fill_price, stake, fee, ts=None):
 
 def open_trades_for_slug(conn, slug: str):
     return conn.execute("SELECT * FROM trades WHERE slug=? AND settled=0", (slug,)).fetchall()
+
+
+def has_any_trade_for_slug(conn, slug: str) -> bool:
+    """
+    Used to prevent placing a second trade on the same window. This matters
+    because two independent triggers (GitHub's own schedule + the
+    cron-job.org backup ping) can occasionally land close enough together
+    that both process the same 5-minute slot — without this check, that
+    would double the stake exposed to a single window's outcome.
+    """
+    row = conn.execute("SELECT 1 FROM trades WHERE slug=? LIMIT 1", (slug,)).fetchone()
+    return row is not None
 
 
 def settle_trade(conn, trade_id: int, pnl: float):
