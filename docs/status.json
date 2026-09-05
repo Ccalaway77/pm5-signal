@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788641700",
+  "slug": "btc-updown-5m-1788642000",
   "signal_side": "DOWN",
-  "confidence": 0.8036170924107497,
-  "spot": 79750.415,
-  "tte": 273.011248588562,
-  "updated": "2026-09-05T20:55:27Z",
-  "bankroll": 0.04648159874595662,
-  "settle_count": 446,
+  "confidence": 0.5959393016344827,
+  "spot": 79748.765,
+  "tte": 265.22653889656067,
+  "updated": "2026-09-05T21:00:35Z",
+  "bankroll": 0.046081041008690156,
+  "settle_count": 447,
   "open_count": 1,
-  "wins": 222,
+  "wins": 223,
   "losses": 224,
-  "hit_rate": 0.4977578475336323,
-  "pnl": 253.00973293874134,
-  "fees": 19.725772827975725,
-  "avg_fill": 0.4882735426008969,
-  "resolved_windows": 532,
-  "labeled_feat": 547,
+  "hit_rate": 0.4988814317673378,
+  "pnl": 253.01038342218965,
+  "fees": 19.725792652328956,
+  "avg_fill": 0.48863534675615217,
+  "resolved_windows": 533,
+  "labeled_feat": 548,
   "recent_trades": [
+    {
+      "id": 448,
+      "slug": "btc-updown-5m-1788642000",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.46,
+      "stake": 0.0010330780248915322,
+      "fee": 1.7963160696813966e-05,
+      "ts": 1788642035.1684716,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 447,
       "slug": "btc-updown-5m-1788641700",
@@ -28,8 +40,8 @@
       "stake": 0.0012448573457409175,
       "fee": 1.9824353230924113e-05,
       "ts": 1788641727.174662,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 0.0006504834483218777
     },
     {
       "id": 446,
@@ -150,18 +162,6 @@
       "ts": 1788637565.03307,
       "settled": 1,
       "pnl": -0.0016965226280440484
-    },
-    {
-      "id": 436,
-      "slug": "btc-updown-5m-1788636900",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.33,
-      "stake": 0.0017223276226727942,
-      "fee": 2.6656464616106835e-05,
-      "ts": 1788636924.0572796,
-      "settled": 1,
-      "pnl": 0.0034701905268710812
     }
   ]
 }
