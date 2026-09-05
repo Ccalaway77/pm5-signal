@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788614100",
-  "signal_side": "UP",
-  "confidence": 0.6920073416873093,
-  "spot": 79729.455,
-  "tte": 272.08087682724,
-  "updated": "2026-09-05T13:15:28Z",
-  "bankroll": 0.2924556812074535,
-  "settle_count": 376,
+  "slug": "btc-updown-5m-1788614400",
+  "signal_side": "DOWN",
+  "confidence": 0.6056645724356103,
+  "spot": 79700.995,
+  "tte": 270.64557909965515,
+  "updated": "2026-09-05T13:20:29Z",
+  "bankroll": 0.27878921151982705,
+  "settle_count": 377,
   "open_count": 1,
   "wins": 186,
-  "losses": 190,
-  "hit_rate": 0.4946808510638298,
-  "pnl": 253.02974212231592,
-  "fees": 19.72207540293652,
-  "avg_fill": 0.48454787234042546,
-  "resolved_windows": 440,
-  "labeled_feat": 452,
+  "losses": 191,
+  "hit_rate": 0.493368700265252,
+  "pnl": 253.02248637207086,
+  "fees": 19.722185988648008,
+  "avg_fill": 0.4850397877984084,
+  "resolved_windows": 441,
+  "labeled_feat": 453,
   "recent_trades": [
+    {
+      "id": 378,
+      "slug": "btc-updown-5m-1788614400",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.62,
+      "stake": 0.006306709194523864,
+      "fee": 0.00010401024803608756,
+      "ts": 1788614429.6587715,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 377,
       "slug": "btc-updown-5m-1788614100",
@@ -28,8 +40,8 @@
       "stake": 0.007145164533580332,
       "fee": 0.00011058571148622279,
       "ts": 1788614128.1711009,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.007255750245066555
     },
     {
       "id": 376,
@@ -150,18 +162,6 @@
       "ts": 1788610529.850527,
       "settled": 1,
       "pnl": 0.008406962293771936
-    },
-    {
-      "id": 366,
-      "slug": "btc-updown-5m-1788610200",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.44,
-      "stake": 0.008971453734948526,
-      "fee": 0.00015473963402039221,
-      "ts": 1788610224.5203028,
-      "settled": 1,
-      "pnl": -0.009126193368968919
     }
   ]
 }
