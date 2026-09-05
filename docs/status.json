@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788580200",
-  "signal_side": "UP",
-  "confidence": 0.5295147599149342,
-  "spot": 79634.045,
-  "tte": 277.1423714160919,
-  "updated": "2026-09-05T03:50:23Z",
-  "bankroll": 0.7237583122370569,
-  "settle_count": 283,
+  "slug": "btc-updown-5m-1788580500",
+  "signal_side": "DOWN",
+  "confidence": 0.9228740918850116,
+  "spot": 79608.285,
+  "tte": 272.600866317749,
+  "updated": "2026-09-05T03:55:27Z",
+  "bankroll": 0.6878036219410034,
+  "settle_count": 284,
   "open_count": 1,
   "wins": 138,
-  "losses": 145,
-  "hit_rate": 0.4876325088339223,
-  "pnl": 251.99190378876372,
-  "fees": 19.699217455817298,
-  "avg_fill": 0.4948409893992934,
-  "resolved_windows": 327,
-  "labeled_feat": 336,
+  "losses": 146,
+  "hit_rate": 0.4859154929577465,
+  "pnl": 251.97642145581827,
+  "fees": 19.699478605655862,
+  "avg_fill": 0.49510563380281697,
+  "resolved_windows": 328,
+  "labeled_feat": 337,
   "recent_trades": [
+    {
+      "id": 285,
+      "slug": "btc-updown-5m-1788580500",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.34,
+      "stake": 0.020155750816770145,
+      "fee": 0.0003166065338298255,
+      "ts": 1788580527.7378247,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 284,
       "slug": "btc-updown-5m-1788580200",
@@ -28,8 +40,8 @@
       "stake": 0.015221183106888666,
       "fee": 0.0002611498385648888,
       "ts": 1788580223.2441144,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.015482332945453554
     },
     {
       "id": 283,
@@ -150,18 +162,6 @@
       "ts": 1788576327.5248148,
       "settled": 1,
       "pnl": -0.02412544256962198
-    },
-    {
-      "id": 273,
-      "slug": "btc-updown-5m-1788576000",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.68,
-      "stake": 0.029115303854640312,
-      "fee": 0.00044348430831388127,
-      "ts": 1788576027.6476645,
-      "settled": 1,
-      "pnl": 0.01325783515269332
     }
   ]
 }
