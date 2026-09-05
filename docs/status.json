@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788585900",
-  "signal_side": "DOWN",
-  "confidence": 0.7455290721896656,
-  "spot": 79547.985,
-  "tte": 271.0219666957855,
-  "updated": "2026-09-05T05:25:29Z",
-  "bankroll": 0.48992506133788405,
-  "settle_count": 300,
+  "slug": "btc-updown-5m-1788586200",
+  "signal_side": "UP",
+  "confidence": 0.8538007338273104,
+  "spot": 79605.565,
+  "tte": 267.3171455860138,
+  "updated": "2026-09-05T05:30:33Z",
+  "bankroll": 0.464121409083865,
+  "settle_count": 301,
   "open_count": 1,
   "wins": 147,
-  "losses": 153,
-  "hit_rate": 0.49,
-  "pnl": 252.02713311911668,
-  "fees": 19.703509094280523,
-  "avg_fill": 0.4943999999999998,
-  "resolved_windows": 346,
-  "labeled_feat": 355,
+  "losses": 154,
+  "hit_rate": 0.4883720930232558,
+  "pnl": 252.01441531113403,
+  "fees": 19.703705776129826,
+  "avg_fill": 0.4949501661129566,
+  "resolved_windows": 347,
+  "labeled_feat": 356,
   "recent_trades": [
+    {
+      "id": 302,
+      "slug": "btc-updown-5m-1788586200",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.76,
+      "stake": 0.012920870595600514,
+      "fee": 0.00016497367576462737,
+      "ts": 1788586233.2147102,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 301,
       "slug": "btc-updown-5m-1788585900",
@@ -28,8 +40,8 @@
       "stake": 0.012521126133351218,
       "fee": 0.00019668184930268093,
       "ts": 1788585929.3367305,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.012717807982653899
     },
     {
       "id": 300,
@@ -150,18 +162,6 @@
       "ts": 1788582631.2937243,
       "settled": 1,
       "pnl": 0.04814878111601544
-    },
-    {
-      "id": 290,
-      "slug": "btc-updown-5m-1788582300",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.5,
-      "stake": 0.013712202702617195,
-      "fee": 0.00023996354729580093,
-      "ts": 1788582322.0010908,
-      "settled": 1,
-      "pnl": -0.013952166249912997
     }
   ]
 }
