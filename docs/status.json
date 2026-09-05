@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788612300",
-  "signal_side": "UP",
-  "confidence": 0.8978069047070677,
-  "spot": 79731.875,
-  "tte": 269.1348659992218,
-  "updated": "2026-09-05T12:45:31Z",
-  "bankroll": 0.30614105874508635,
-  "settle_count": 370,
+  "slug": "btc-updown-5m-1788612600",
+  "signal_side": "DOWN",
+  "confidence": 0.648482341554176,
+  "spot": 79736.715,
+  "tte": 271.762748003006,
+  "updated": "2026-09-05T12:50:28Z",
+  "bankroll": 0.3293810882436549,
+  "settle_count": 371,
   "open_count": 1,
-  "wins": 183,
+  "wins": 184,
   "losses": 187,
-  "hit_rate": 0.4945945945945946,
-  "pnl": 252.99824893592316,
-  "fees": 19.721376965966602,
-  "avg_fill": 0.48527027027027014,
-  "resolved_windows": 434,
-  "labeled_feat": 445,
+  "hit_rate": 0.49595687331536387,
+  "pnl": 253.02937046946,
+  "fees": 19.721482764166527,
+  "avg_fill": 0.4845552560646899,
+  "resolved_windows": 435,
+  "labeled_feat": 446,
   "recent_trades": [
+    {
+      "id": 372,
+      "slug": "btc-updown-5m-1788612600",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.46,
+      "stake": 0.007746802634051116,
+      "fee": 0.00013470140420088084,
+      "ts": 1788612628.6503215,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 371,
       "slug": "btc-updown-5m-1788612300",
@@ -28,8 +40,8 @@
       "stake": 0.008807708951389515,
       "fee": 0.00010579819992409087,
       "ts": 1788612331.0865834,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 0.031121533536820557
     },
     {
       "id": 370,
@@ -150,18 +162,6 @@
       "ts": 1788608127.4332922,
       "settled": 1,
       "pnl": -0.013174940697923897
-    },
-    {
-      "id": 360,
-      "slug": "btc-updown-5m-1788607200",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.54,
-      "stake": 0.01106897297377441,
-      "fee": 0.00019246730206798945,
-      "ts": 1788607225.463263,
-      "settled": 1,
-      "pnl": -0.011261440275842399
     }
   ]
 }
