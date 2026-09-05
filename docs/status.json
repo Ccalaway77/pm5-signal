@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788583500",
-  "signal_side": "UP",
-  "confidence": 0.5986745369390282,
-  "spot": 79551.465,
-  "tte": 277.4759497642517,
-  "updated": "2026-09-05T04:45:22Z",
-  "bankroll": 0.6021281425688042,
-  "settle_count": 293,
+  "slug": "btc-updown-5m-1788583800",
+  "signal_side": "DOWN",
+  "confidence": 0.95,
+  "spot": 79556.135,
+  "tte": 270.63816142082214,
+  "updated": "2026-09-05T04:50:29Z",
+  "bankroll": 0.5901614584674845,
+  "settle_count": 294,
   "open_count": 1,
-  "wins": 143,
+  "wins": 144,
   "losses": 150,
-  "hit_rate": 0.4880546075085324,
-  "pnl": 252.03835795151676,
-  "fees": 19.701950487783524,
-  "avg_fill": 0.49344709897610917,
-  "resolved_windows": 338,
-  "labeled_feat": 347,
+  "hit_rate": 0.4897959183673469,
+  "pnl": 252.04423522185945,
+  "fees": 19.702153112444304,
+  "avg_fill": 0.49411564625850335,
+  "resolved_windows": 339,
+  "labeled_feat": 348,
   "recent_trades": [
+    {
+      "id": 295,
+      "slug": "btc-updown-5m-1788583800",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.22,
+      "stake": 0.017632156974433346,
+      "fee": 0.00021179746957689338,
+      "ts": 1788583829.7807693,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 294,
       "slug": "btc-updown-5m-1788583500",
@@ -28,8 +40,8 @@
       "stake": 0.013532669523855286,
       "fee": 0.0002026246607806852,
       "ts": 1788583522.7069054,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 0.005877270342690529
     },
     {
       "id": 293,
@@ -150,18 +162,6 @@
       "ts": 1788580223.2441144,
       "settled": 1,
       "pnl": -0.015482332945453554
-    },
-    {
-      "id": 283,
-      "slug": "btc-updown-5m-1788579900",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.65,
-      "stake": 0.015805314032484828,
-      "fee": 0.0002516996259673209,
-      "ts": 1788579925.6509497,
-      "settled": 1,
-      "pnl": 0.008258854083832201
     }
   ]
 }
