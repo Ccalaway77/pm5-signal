@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788584400",
-  "signal_side": "UP",
-  "confidence": 0.6292224087625817,
-  "spot": 79515.535,
-  "tte": 265.3901388645172,
-  "updated": "2026-09-05T05:00:34Z",
-  "bankroll": 0.558318275386829,
-  "settle_count": 296,
+  "slug": "btc-updown-5m-1788584700",
+  "signal_side": "DOWN",
+  "confidence": 0.95,
+  "spot": 79487.555,
+  "tte": 276.12728452682495,
+  "updated": "2026-09-05T05:05:24Z",
+  "bankroll": 0.5291091748664944,
+  "settle_count": 297,
   "open_count": 1,
   "wins": 145,
-  "losses": 151,
-  "hit_rate": 0.48986486486486486,
-  "pnl": 252.03749452352164,
-  "fees": 19.702570815826764,
-  "avg_fill": 0.49324324324324315,
-  "resolved_windows": 341,
-  "labeled_feat": 350,
+  "losses": 152,
+  "hit_rate": 0.4882154882154882,
+  "pnl": 252.02436870516053,
+  "fees": 19.702790884667586,
+  "avg_fill": 0.4929966329966329,
+  "resolved_windows": 342,
+  "labeled_feat": 351,
   "recent_trades": [
+    {
+      "id": 298,
+      "slug": "btc-updown-5m-1788584700",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.56,
+      "stake": 0.015810581253745428,
+      "fee": 0.00027270090546460115,
+      "ts": 1788584724.0538156,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 297,
       "slug": "btc-updown-5m-1788584400",
@@ -28,8 +40,8 @@
       "stake": 0.01290574952030429,
       "fee": 0.0002200688408202288,
       "ts": 1788584434.892055,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.013125818361124518
     },
     {
       "id": 296,
@@ -150,18 +162,6 @@
       "ts": 1788581426.4870849,
       "settled": 1,
       "pnl": -0.018501552693581745
-    },
-    {
-      "id": 286,
-      "slug": "btc-updown-5m-1788580800",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.6,
-      "stake": 0.015159587814257242,
-      "fee": 0.0002546810752795217,
-      "ts": 1788580830.4583235,
-      "settled": 1,
-      "pnl": 0.009851710800891972
     }
   ]
 }
