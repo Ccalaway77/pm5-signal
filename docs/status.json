@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788619500",
-  "signal_side": "DOWN",
-  "confidence": 0.7714311268998109,
-  "spot": 79740.885,
-  "tte": 275.4209678173065,
-  "updated": "2026-09-05T14:45:24Z",
-  "bankroll": 0.1885836371180144,
-  "settle_count": 391,
+  "slug": "btc-updown-5m-1788619800",
+  "signal_side": "UP",
+  "confidence": 0.6892739953401433,
+  "spot": 79737.115,
+  "tte": 270.9845333099365,
+  "updated": "2026-09-05T14:50:29Z",
+  "bankroll": 0.18591304838421807,
+  "settle_count": 392,
   "open_count": 1,
-  "wins": 193,
+  "wins": 194,
   "losses": 198,
-  "hit_rate": 0.4936061381074169,
-  "pnl": 253.01264814387937,
-  "fees": 19.723498965440815,
-  "avg_fill": 0.4866751918158568,
-  "resolved_windows": 458,
-  "labeled_feat": 470,
+  "hit_rate": 0.49489795918367346,
+  "pnl": 253.0145877534769,
+  "fees": 19.723569911933573,
+  "avg_fill": 0.4872448979591837,
+  "resolved_windows": 459,
+  "labeled_feat": 471,
   "recent_trades": [
+    {
+      "id": 393,
+      "slug": "btc-updown-5m-1788619800",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.55,
+      "stake": 0.004531686856531293,
+      "fee": 7.851147478940464e-05,
+      "ts": 1788619829.3304877,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 392,
       "slug": "btc-updown-5m-1788619500",
@@ -28,8 +40,8 @@
       "stake": 0.004922395945173554,
       "fee": 7.094649275778645e-05,
       "ts": 1788619524.8201687,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 0.0019396095975243695
     },
     {
       "id": 391,
@@ -150,18 +162,6 @@
       "ts": 1788616226.6410172,
       "settled": 1,
       "pnl": -0.006179630767399824
-    },
-    {
-      "id": 381,
-      "slug": "btc-updown-5m-1788615300",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.51,
-      "stake": 0.006937843813506906,
-      "fee": 0.00012136370182967632,
-      "ts": 1788615326.1713629,
-      "settled": 1,
-      "pnl": 0.006544407805265193
     }
   ]
 }
