@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788632400",
-  "signal_side": "UP",
-  "confidence": 0.6589364936683731,
-  "spot": 80018.325,
-  "tte": 238.58416104316711,
-  "updated": "2026-09-05T18:21:01Z",
-  "bankroll": 0.08258568112548806,
-  "settle_count": 423,
+  "slug": "btc-updown-5m-1788632700",
+  "signal_side": "DOWN",
+  "confidence": 0.7964795562869429,
+  "spot": 79998.825,
+  "tte": 275.4501938819885,
+  "updated": "2026-09-05T18:25:24Z",
+  "bankroll": 0.07846814400293443,
+  "settle_count": 424,
   "open_count": 1,
   "wins": 210,
-  "losses": 213,
-  "hit_rate": 0.49645390070921985,
-  "pnl": 253.01106662617283,
-  "fees": 19.72522716226585,
-  "avg_fill": 0.4887943262411349,
-  "resolved_windows": 501,
-  "labeled_feat": 515,
+  "losses": 214,
+  "hit_rate": 0.49528301886792453,
+  "pnl": 253.00907422561335,
+  "fees": 19.725259150316752,
+  "avg_fill": 0.48851415094339634,
+  "resolved_windows": 502,
+  "labeled_feat": 516,
   "recent_trades": [
+    {
+      "id": 425,
+      "slug": "btc-updown-5m-1788632700",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.59,
+      "stake": 0.0020897508125583843,
+      "fee": 3.538575050905113e-05,
+      "ts": 1788632724.7666018,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 424,
       "slug": "btc-updown-5m-1788632400",
@@ -28,8 +40,8 @@
       "stake": 0.0019604125085836257,
       "fee": 3.198805090255902e-05,
       "ts": 1788632461.679342,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.001992400559486185
     },
     {
       "id": 423,
@@ -150,18 +162,6 @@
       "ts": 1788628236.0966887,
       "settled": 1,
       "pnl": -0.0029495184303135313
-    },
-    {
-      "id": 413,
-      "slug": "btc-updown-5m-1788627900",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.37,
-      "stake": 0.002580163923814623,
-      "fee": 4.210053474488321e-05,
-      "ts": 1788627925.7706466,
-      "settled": 1,
-      "pnl": 0.004351151551750285
     }
   ]
 }
