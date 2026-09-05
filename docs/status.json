@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788616200",
-  "signal_side": "UP",
-  "confidence": 0.698728510909935,
-  "spot": 79644.215,
-  "tte": 273.71922850608826,
-  "updated": "2026-09-05T13:50:26Z",
-  "bankroll": 0.24917571489889442,
-  "settle_count": 381,
+  "slug": "btc-updown-5m-1788616500",
+  "signal_side": "DOWN",
+  "confidence": 0.863267334700073,
+  "spot": 79636.585,
+  "tte": 279.9889931678772,
+  "updated": "2026-09-05T13:55:20Z",
+  "bankroll": 0.2362652025956345,
+  "settle_count": 382,
   "open_count": 1,
   "wins": 188,
-  "losses": 193,
-  "hit_rate": 0.49343832020997375,
-  "pnl": 253.02030960179079,
-  "fees": 19.722647685383933,
-  "avg_fill": 0.48524934383202084,
-  "resolved_windows": 447,
-  "labeled_feat": 459,
+  "losses": 194,
+  "hit_rate": 0.49214659685863876,
+  "pnl": 253.01412997102338,
+  "fees": 19.722705281486064,
+  "avg_fill": 0.48439790575916214,
+  "resolved_windows": 448,
+  "labeled_feat": 460,
   "recent_trades": [
+    {
+      "id": 383,
+      "slug": "btc-updown-5m-1788616500",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.65,
+      "stake": 0.006625372479129946,
+      "fee": 0.0001055090567301444,
+      "ts": 1788616520.2356367,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 382,
       "slug": "btc-updown-5m-1788616200",
@@ -28,8 +40,8 @@
       "stake": 0.006122034665268973,
       "fee": 5.7596102130850505e-05,
       "ts": 1788616226.6410172,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.006179630767399824
     },
     {
       "id": 381,
@@ -150,18 +162,6 @@
       "ts": 1788612628.6503215,
       "settled": 1,
       "pnl": -0.007881504038251996
-    },
-    {
-      "id": 371,
-      "slug": "btc-updown-5m-1788612300",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.22,
-      "stake": 0.008807708951389515,
-      "fee": 0.00010579819992409087,
-      "ts": 1788612331.0865834,
-      "settled": 1,
-      "pnl": 0.031121533536820557
     }
   ]
 }
