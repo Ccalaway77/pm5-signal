@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788605400",
-  "signal_side": "DOWN",
-  "confidence": 0.6480391943259186,
-  "spot": 79591.945,
-  "tte": 273.746600151062,
-  "updated": "2026-09-05T10:50:26Z",
-  "bankroll": 0.4974238811653916,
-  "settle_count": 354,
+  "slug": "btc-updown-5m-1788605700",
+  "signal_side": "UP",
+  "confidence": 0.8126306457739941,
+  "spot": 79625.985,
+  "tte": 273.1137502193451,
+  "updated": "2026-09-05T10:55:27Z",
+  "bankroll": 0.4725627277746969,
+  "settle_count": 355,
   "open_count": 1,
   "wins": 177,
-  "losses": 177,
-  "hit_rate": 0.5,
-  "pnl": 253.02788920557975,
-  "fees": 19.718768218546092,
-  "avg_fill": 0.4850847457627117,
-  "resolved_windows": 411,
-  "labeled_feat": 422,
+  "losses": 178,
+  "hit_rate": 0.49859154929577465,
+  "pnl": 253.01599018135144,
+  "fees": 19.718972789615204,
+  "avg_fill": 0.4851549295774646,
+  "resolved_windows": 412,
+  "labeled_feat": 423,
   "recent_trades": [
+    {
+      "id": 356,
+      "slug": "btc-updown-5m-1788605700",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.59,
+      "stake": 0.012746296130012888,
+      "fee": 0.0002158330323695083,
+      "ts": 1788605727.3003852,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 355,
       "slug": "btc-updown-5m-1788605400",
@@ -28,8 +40,8 @@
       "stake": 0.011694453159198478,
       "fee": 0.000204571069113859,
       "ts": 1788605426.4249709,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.011899024228312337
     },
     {
       "id": 354,
@@ -150,18 +162,6 @@
       "ts": 1788602433.061115,
       "settled": 1,
       "pnl": -0.017953772615379854
-    },
-    {
-      "id": 344,
-      "slug": "btc-updown-5m-1788602100",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.41000000000000003,
-      "stake": 0.01430988627980942,
-      "fee": 0.0002423093043760129,
-      "ts": 1788602123.406023,
-      "settled": 1,
-      "pnl": 0.020349966073886318
     }
   ]
 }
