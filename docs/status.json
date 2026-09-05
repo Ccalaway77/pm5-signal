@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788604500",
-  "signal_side": "UP",
-  "confidence": 0.5548293273740362,
-  "spot": 79654.705,
-  "tte": 274.11616706848145,
-  "updated": "2026-09-05T10:35:26Z",
-  "bankroll": 0.52287297094118,
-  "settle_count": 351,
+  "slug": "btc-updown-5m-1788604800",
+  "signal_side": "DOWN",
+  "confidence": 0.7156780930409006,
+  "spot": 79620.755,
+  "tte": 273.13601064682007,
+  "updated": "2026-09-05T10:40:27Z",
+  "bankroll": 0.4988367441169231,
+  "settle_count": 352,
   "open_count": 1,
   "wins": 175,
-  "losses": 176,
-  "hit_rate": 0.4985754985754986,
-  "pnl": 253.01697774568584,
-  "fees": 19.718239642743477,
-  "avg_fill": 0.4856410256410255,
-  "resolved_windows": 408,
-  "labeled_feat": 419,
+  "losses": 177,
+  "hit_rate": 0.4971590909090909,
+  "pnl": 253.0055802236128,
+  "fees": 19.718365881120867,
+  "avg_fill": 0.48482954545454526,
+  "resolved_windows": 409,
+  "labeled_feat": 420,
   "recent_trades": [
+    {
+      "id": 353,
+      "slug": "btc-updown-5m-1788604800",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.63,
+      "stake": 0.012435789966345409,
+      "fee": 0.00020291478488085806,
+      "ts": 1788604827.373155,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 352,
       "slug": "btc-updown-5m-1788604500",
@@ -28,8 +40,8 @@
       "stake": 0.01127128369563949,
       "fee": 0.0001262383773911623,
       "ts": 1788604526.2660396,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.011397522073030653
     },
     {
       "id": 351,
@@ -150,18 +162,6 @@
       "ts": 1788601525.3328714,
       "settled": 1,
       "pnl": 0.02991352400190601
-    },
-    {
-      "id": 341,
-      "slug": "btc-updown-5m-1788601200",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.14,
-      "stake": 0.013362223229158442,
-      "fee": 0.00011261681737534737,
-      "ts": 1788601225.3835633,
-      "settled": 1,
-      "pnl": 0.08196961159031221
     }
   ]
 }
