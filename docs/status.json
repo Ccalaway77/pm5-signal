@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788645600",
-  "signal_side": "UP",
-  "confidence": 0.5603183985692549,
-  "spot": 79919.995,
-  "tte": 266.2156970500946,
-  "updated": "2026-09-05T22:00:34Z",
-  "bankroll": 1409.3953040286121,
-  "settle_count": 459,
+  "slug": "btc-updown-5m-1788645900",
+  "signal_side": "DOWN",
+  "confidence": 0.6341394857382984,
+  "spot": 79879.885,
+  "tte": 275.8354787826538,
+  "updated": "2026-09-05T22:05:24Z",
+  "bankroll": 1378.9974957677723,
+  "settle_count": 460,
   "open_count": 1,
   "wins": 232,
-  "losses": 227,
-  "hit_rate": 0.5054466230936819,
-  "pnl": 409.3953040286125,
-  "fees": 24.099115934908227,
-  "avg_fill": 0.48875816993464066,
-  "resolved_windows": 545,
-  "labeled_feat": 562,
+  "losses": 228,
+  "hit_rate": 0.5043478260869565,
+  "pnl": 378.99749576777265,
+  "fees": 24.608768761375153,
+  "avg_fill": 0.488608695652174,
+  "resolved_windows": 546,
+  "labeled_feat": 563,
   "recent_trades": [
+    {
+      "id": 461,
+      "slug": "btc-updown-5m-1788645900",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.4,
+      "stake": 31.279510213689246,
+      "fee": 0.5254957715899794,
+      "ts": 1788645924.4599037,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 460,
       "slug": "btc-updown-5m-1788645600",
@@ -28,8 +40,8 @@
       "stake": 29.888155434372923,
       "fee": 0.5096528264669272,
       "ts": 1788645634.1029592,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -30.39780826083985
     },
     {
       "id": 459,
@@ -150,18 +162,6 @@
       "ts": 1788642626.101892,
       "settled": 1,
       "pnl": -0.0012577759748350732
-    },
-    {
-      "id": 449,
-      "slug": "btc-updown-5m-1788642300",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.43,
-      "stake": 0.0010908833006236472,
-      "fee": 1.871628478879992e-05,
-      "ts": 1788642328.0187507,
-      "settled": 1,
-      "pnl": 0.0014273383230146393
     }
   ]
 }
