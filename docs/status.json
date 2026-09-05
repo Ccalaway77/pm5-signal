@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788590700",
-  "signal_side": "UP",
-  "confidence": 0.7532051378905267,
-  "spot": 79678.755,
-  "tte": 272.3718092441559,
-  "updated": "2026-09-05T06:45:27Z",
-  "bankroll": 0.862423329537971,
-  "settle_count": 312,
+  "slug": "btc-updown-5m-1788591000",
+  "signal_side": "DOWN",
+  "confidence": 0.6031829814880852,
+  "spot": 79684.995,
+  "tte": 268.83740305900574,
+  "updated": "2026-09-05T06:50:31Z",
+  "bankroll": 0.873914418863592,
+  "settle_count": 313,
   "open_count": 1,
-  "wins": 153,
+  "wins": 154,
   "losses": 159,
-  "hit_rate": 0.49038461538461536,
-  "pnl": 252.63589762426437,
-  "fees": 19.706838782013985,
-  "avg_fill": 0.49208333333333315,
-  "resolved_windows": 362,
-  "labeled_feat": 372,
+  "hit_rate": 0.49201277955271566,
+  "pnl": 252.66744136561803,
+  "fees": 19.707214376842845,
+  "avg_fill": 0.4918210862619806,
+  "resolved_windows": 363,
+  "labeled_feat": 373,
   "recent_trades": [
+    {
+      "id": 314,
+      "slug": "btc-updown-5m-1788591000",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.61,
+      "stake": 0.019724185172368097,
+      "fee": 0.00032846685567544594,
+      "ts": 1788591031.4967797,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 313,
       "slug": "btc-updown-5m-1788590700",
@@ -28,8 +40,8 @@
       "stake": 0.022181233618364327,
       "fee": 0.00037559482885976314,
       "ts": 1788590727.9893153,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 0.03154374135366451
     },
     {
       "id": 312,
@@ -150,18 +162,6 @@
       "ts": 1788586525.543454,
       "settled": 1,
       "pnl": -0.011271692263608782
-    },
-    {
-      "id": 302,
-      "slug": "btc-updown-5m-1788586200",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.76,
-      "stake": 0.012920870595600514,
-      "fee": 0.00016497367576462737,
-      "ts": 1788586233.2147102,
-      "settled": 1,
-      "pnl": -0.013085844271365141
     }
   ]
 }
