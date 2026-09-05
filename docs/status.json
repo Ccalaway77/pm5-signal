@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788620700",
-  "signal_side": "UP",
-  "confidence": 0.8037494188028971,
-  "spot": 79741.755,
-  "tte": 276.09607577323914,
-  "updated": "2026-09-05T15:05:24Z",
-  "bankroll": 0.1845143423664106,
-  "settle_count": 393,
+  "slug": "btc-updown-5m-1788621000",
+  "signal_side": "DOWN",
+  "confidence": 0.5233444530301867,
+  "spot": 79713.6,
+  "tte": 272.0234820842743,
+  "updated": "2026-09-05T15:10:28Z",
+  "bankroll": 0.17574869182568878,
+  "settle_count": 394,
   "open_count": 1,
   "wins": 195,
-  "losses": 198,
-  "hit_rate": 0.4961832061068702,
-  "pnl": 253.0182169857938,
-  "fees": 19.723648423408363,
-  "avg_fill": 0.4874045801526718,
-  "resolved_windows": 462,
-  "labeled_feat": 474,
+  "losses": 199,
+  "hit_rate": 0.4949238578680203,
+  "pnl": 253.01318904745906,
+  "fees": 19.723734048977036,
+  "avg_fill": 0.4875634517766498,
+  "resolved_windows": 463,
+  "labeled_feat": 475,
   "recent_trades": [
+    {
+      "id": 395,
+      "slug": "btc-updown-5m-1788621000",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.48,
+      "stake": 0.003673528319203197,
+      "fee": 6.418388679311826e-05,
+      "ts": 1788621028.331854,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 394,
       "slug": "btc-updown-5m-1788620700",
@@ -28,8 +40,8 @@
       "stake": 0.004942312766053635,
       "fee": 8.562556867187923e-05,
       "ts": 1788620724.246782,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -0.005027938334725515
     },
     {
       "id": 393,
@@ -150,18 +162,6 @@
       "ts": 1788617124.1652246,
       "settled": 1,
       "pnl": 0.004562382642107624
-    },
-    {
-      "id": 383,
-      "slug": "btc-updown-5m-1788616500",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.65,
-      "stake": 0.006625372479129946,
-      "fee": 0.0001055090567301444,
-      "ts": 1788616520.2356367,
-      "settled": 1,
-      "pnl": -0.00673088153586009
     }
   ]
 }
