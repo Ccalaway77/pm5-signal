@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788649500",
-  "signal_side": "DOWN",
-  "confidence": 0.892610092718445,
-  "spot": 79756.415,
-  "tte": 275.3529725074768,
-  "updated": "2026-09-05T23:05:24Z",
-  "bankroll": 1328.670686639157,
-  "settle_count": 471,
+  "slug": "btc-updown-5m-1788649800",
+  "signal_side": "UP",
+  "confidence": 0.6210900492401834,
+  "spot": 79759.325,
+  "tte": 274.309805393219,
+  "updated": "2026-09-05T23:10:25Z",
+  "bankroll": 1291.01692944889,
+  "settle_count": 472,
   "open_count": 1,
   "wins": 237,
-  "losses": 234,
-  "hit_rate": 0.5031847133757962,
-  "pnl": 328.67068663915757,
-  "fees": 30.517492597042157,
-  "avg_fill": 0.4884713375796178,
-  "resolved_windows": 558,
-  "labeled_feat": 576,
+  "losses": 235,
+  "hit_rate": 0.5021186440677966,
+  "pnl": 291.0169294488905,
+  "fees": 31.164845625052514,
+  "avg_fill": 0.48851694915254235,
+  "resolved_windows": 559,
+  "labeled_feat": 577,
   "recent_trades": [
+    {
+      "id": 473,
+      "slug": "btc-updown-5m-1788649800",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.44,
+      "stake": 28.946924660115332,
+      "fee": 0.49927655653766934,
+      "ts": 1788649825.9906368,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 472,
       "slug": "btc-updown-5m-1788649500",
@@ -28,8 +40,8 @@
       "stake": 37.00640416225672,
       "fee": 0.6473530280103569,
       "ts": 1788649524.8498712,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -37.65375719026708
     },
     {
       "id": 471,
@@ -150,18 +162,6 @@
       "ts": 1788646226.6862442,
       "settled": 1,
       "pnl": -29.532540606934962
-    },
-    {
-      "id": 461,
-      "slug": "btc-updown-5m-1788645900",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.4,
-      "stake": 31.279510213689246,
-      "fee": 0.5254957715899794,
-      "ts": 1788645924.4599037,
-      "settled": 1,
-      "pnl": -31.805005985279227
     }
   ]
 }
