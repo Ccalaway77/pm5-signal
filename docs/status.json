@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788700500",
-  "signal_side": "UP",
-  "confidence": 0.9997346682842334,
-  "spot": 79890.015,
-  "tte": 271.08913254737854,
-  "updated": "2026-09-06T13:15:29Z",
-  "bankroll": 3876.30528501209,
-  "settle_count": 628,
+  "slug": "btc-updown-5m-1788700800",
+  "signal_side": "DOWN",
+  "confidence": 0.9999971144926888,
+  "spot": 79830.025,
+  "tte": 272.94386172294617,
+  "updated": "2026-09-06T13:20:27Z",
+  "bankroll": 3758.0418764249207,
+  "settle_count": 629,
   "open_count": 1,
   "wins": 328,
-  "losses": 300,
-  "hit_rate": 0.5222929936305732,
-  "pnl": 2876.30528501209,
-  "fees": 174.5376899175411,
-  "avg_fill": 0.4888694267515925,
-  "resolved_windows": 728,
-  "labeled_feat": 753,
+  "losses": 301,
+  "hit_rate": 0.5214626391096979,
+  "pnl": 2758.0418764249207,
+  "fees": 176.5325100889896,
+  "avg_fill": 0.4887758346581878,
+  "resolved_windows": 729,
+  "labeled_feat": 754,
   "recent_trades": [
+    {
+      "id": 630,
+      "slug": "btc-updown-5m-1788700800",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.29000000000000004,
+      "stake": 112.7410394156014,
+      "fee": 1.6249366010970636,
+      "ts": 1788700827.4314137,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 629,
       "slug": "btc-updown-5m-1788700500",
@@ -28,8 +40,8 @@
       "stake": 116.26858841572054,
       "fee": 1.9948201714485176,
       "ts": 1788700529.212192,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -118.26340858716907
     },
     {
       "id": 628,
@@ -150,18 +162,6 @@
       "ts": 1788697526.0989175,
       "settled": 1,
       "pnl": -116.38797358228459
-    },
-    {
-      "id": 618,
-      "slug": "btc-updown-5m-1788697200",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.41000000000000003,
-      "stake": 116.6296315042613,
-      "fee": 1.9748895502616566,
-      "ts": 1788697227.1443748,
-      "settled": 1,
-      "pnl": -118.60452105452295
     }
   ]
 }
