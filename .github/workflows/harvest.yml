@@ -44,6 +44,23 @@ jobs:
       - name: run harvest
         run: python src/harvest.py
 
+      - name: publish dashboard to docs/
+        run: |
+          # This MUST run before the "commit data snapshot" step below.
+          # That step ends with `git checkout main`, which — once
+          # data/status.json and data/stats.json become tracked on the
+          # `data` branch — deletes the entire data/ directory from the
+          # working tree (git removes files tracked on the branch you're
+          # leaving but absent from the branch you're switching to). If
+          # this step ran after that, it would silently copy nothing,
+          # freezing the dashboard forever at whatever it last managed to
+          # publish. Publishing first, while data/ still has this run's
+          # fresh output, sidesteps the whole problem.
+          mkdir -p docs
+          cp dashboard.html docs/index.html
+          cp data/status.json docs/status.json 2>/dev/null || true
+          cp data/stats.json docs/stats.json 2>/dev/null || true
+
       - name: commit data snapshot to data branch
         run: |
           git config user.name "pm5-signal-bot"
@@ -70,13 +87,6 @@ jobs:
           git commit -m "harvest snapshot $(date -u +%FT%TZ)" || echo "nothing to commit"
           git push origin data --force
           git checkout main
-
-      - name: publish dashboard to docs/
-        run: |
-          mkdir -p docs
-          cp dashboard.html docs/index.html
-          cp data/status.json docs/status.json 2>/dev/null || true
-          cp data/stats.json docs/stats.json 2>/dev/null || true
 
       - name: commit dashboard to main
         uses: stefanzweifel/git-auto-commit-action@v5
