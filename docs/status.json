@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788737400",
-  "signal_side": "UP",
-  "confidence": 0.8311173619036472,
-  "spot": 80140.485,
-  "tte": 271.92597556114197,
-  "updated": "2026-09-06T23:30:28Z",
-  "bankroll": 4130.813206767062,
-  "settle_count": 745,
+  "slug": "btc-updown-5m-1788737700",
+  "signal_side": "DOWN",
+  "confidence": 0.7384912094182468,
+  "spot": 80228.715,
+  "tte": 272.02798414230347,
+  "updated": "2026-09-06T23:35:28Z",
+  "bankroll": 4215.322937772138,
+  "settle_count": 746,
   "open_count": 1,
-  "wins": 387,
+  "wins": 388,
   "losses": 358,
-  "hit_rate": 0.5194630872483221,
-  "pnl": 3130.8132067670604,
-  "fees": 420.9143975262136,
-  "avg_fill": 0.49418791946308765,
-  "resolved_windows": 851,
-  "labeled_feat": 881,
+  "hit_rate": 0.5201072386058981,
+  "pnl": 3215.3229377721364,
+  "fees": 422.81119360884287,
+  "avg_fill": 0.49427613941018805,
+  "resolved_windows": 852,
+  "labeled_feat": 882,
   "recent_trades": [
+    {
+      "id": 747,
+      "slug": "btc-updown-5m-1788737700",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.35000000000000003,
+      "stake": 104.41280806579783,
+      "fee": 1.6627739684478307,
+      "ts": 1788737728.148996,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 746,
       "slug": "btc-updown-5m-1788737400",
@@ -28,8 +40,8 @@
       "stake": 109.97194356617032,
       "fee": 1.8967960826293058,
       "ts": 1788737428.3880553,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 84.50973100507592
     },
     {
       "id": 745,
@@ -150,18 +162,6 @@
       "ts": 1788734427.1528246,
       "settled": 1,
       "pnl": -100.73448732540642
-    },
-    {
-      "id": 735,
-      "slug": "btc-updown-5m-1788734100",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.78,
-      "stake": 113.09545416406958,
-      "fee": 1.3585025954188037,
-      "ts": 1788734124.8060274,
-      "settled": 1,
-      "pnl": -114.45395675948838
     }
   ]
 }
