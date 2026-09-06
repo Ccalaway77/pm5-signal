@@ -82,17 +82,31 @@ def blend(
     cfg: dict,
 ) -> tuple[str, float]:
     """
-    Once the online learner has seen enough rows (learner_trusted), its
-    output overrides the heuristic. Below that, fall back to the heuristic
-    so the system still generates signal (and therefore labeled data)
-    during the cold-start period.
+    Cold-start: use the heuristic so we still collect labeled data.
+
+    Once trusted: soft-blend learner P(up) with the heuristic instead of a
+    hard override, then cap confidence so ~1.0 SGD outputs cannot always
+    max stake / raise the high-conf ask cutoff.
     """
+    eng = cfg.get("engine", {})
     if learner_trusted and learner_p_up is not None:
-        side = "UP" if learner_p_up >= 0.5 else "DOWN"
-        conf = max(learner_p_up, 1 - learner_p_up)
+        # Heuristic as a rough P(up): conf above 0.5 on UP, below on DOWN.
+        if engine_side == "UP":
+            heur_p_up = 0.5 + 0.5 * max(0.0, min(1.0, (engine_conf - 0.5) / 0.5))
+        elif engine_side == "DOWN":
+            heur_p_up = 0.5 - 0.5 * max(0.0, min(1.0, (engine_conf - 0.5) / 0.5))
+        else:
+            heur_p_up = 0.5
+        w = float(eng.get("learner_blend_weight", 0.7))
+        w = max(0.0, min(1.0, w))
+        p_up = w * float(learner_p_up) + (1.0 - w) * heur_p_up
+        side = "UP" if p_up >= 0.5 else "DOWN"
+        conf = max(p_up, 1.0 - p_up)
+        cap = float(eng.get("learner_conf_cap", 0.85))
+        conf = min(conf, cap)
     else:
         side, conf = engine_side, engine_conf
 
-    if conf < cfg["engine"]["lock_min_conf"]:
+    if conf < eng["lock_min_conf"]:
         return "NO_TRADE", conf
     return side, conf

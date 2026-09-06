@@ -17,6 +17,8 @@ engine:
   paper_cutoff_sec: 35          # don't open a new paper position inside this many
                                  # seconds of window close (fill risk too high)
   kline_lookback_minutes: 20    # how much 1-minute price history to pull per tick
+  learner_blend_weight: 0.7     # trusted: weight on learner P(up) vs heuristic
+  learner_conf_cap: 0.85        # cap blended confidence so ~1.0 never maxes stake
 
 learner:
   min_rows_before_trusted: 30   # online learner ignored (falls back to heuristic) below this

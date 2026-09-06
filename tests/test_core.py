@@ -62,10 +62,23 @@ def test_engine_no_trade_below_confidence_floor():
 
 
 def test_engine_trusts_learner_when_available():
-    cfg = {"engine": {"lock_min_conf": 0.5}}
+    # Soft blend: learner 0.8 @ weight 0.7 with strong DOWN heuristic pulls p_up down a bit.
+    cfg = {"engine": {"lock_min_conf": 0.5, "learner_blend_weight": 0.7, "learner_conf_cap": 0.85}}
     side, conf = engine.blend("DOWN", 0.9, learner_p_up=0.8, learner_trusted=True, cfg=cfg)
     assert side == "UP"
-    assert conf == 0.8
+    assert 0.5 < conf <= 0.85
+    # With neutral heuristic, blended conf tracks learner but stays under cap.
+    # weight 0.7 * 0.8 + 0.3 * 0.5 = 0.71
+    side2, conf2 = engine.blend("NO_TRADE", 0.5, learner_p_up=0.8, learner_trusted=True, cfg=cfg)
+    assert side2 == "UP"
+    assert abs(conf2 - 0.71) < 1e-9
+
+
+def test_engine_caps_extreme_learner_confidence():
+    cfg = {"engine": {"lock_min_conf": 0.5, "learner_blend_weight": 1.0, "learner_conf_cap": 0.85}}
+    side, conf = engine.blend("UP", 0.6, learner_p_up=0.999, learner_trusted=True, cfg=cfg)
+    assert side == "UP"
+    assert conf == 0.85
 
 
 def test_compute_features_needs_minimum_history():
@@ -117,6 +130,28 @@ def test_extract_first_token_id_handles_gamma_string_encoding():
 def test_extract_first_token_id_handles_missing_field():
     import harvest
     assert harvest._extract_first_token_id({}) is None
+
+
+def test_token_id_for_side_maps_up_and_down():
+    import harvest
+    market = {
+        "outcomes": '["Up", "Down"]',
+        "clobTokenIds": '["tok-up", "tok-down"]',
+    }
+    assert harvest.token_id_for_side(market, "UP") == "tok-up"
+    assert harvest.token_id_for_side(market, "DOWN") == "tok-down"
+    # list shape (not JSON string) also works
+    market2 = {"outcomes": ["Up", "Down"], "clobTokenIds": ["a", "b"]}
+    assert harvest.token_id_for_side(market2, "DOWN") == "b"
+
+
+def test_token_id_for_side_refuses_unmapped():
+    import harvest
+    assert harvest.token_id_for_side({}, "UP") is None
+    assert harvest.token_id_for_side({"outcomes": ["Up"], "clobTokenIds": ["a", "b"]}, "UP") is None
+    assert harvest.token_id_for_side(
+        {"outcomes": ["Yes", "No"], "clobTokenIds": ["a", "b"]}, "DOWN"
+    ) is None
 
 
 def test_has_any_trade_for_slug(tmp_path):

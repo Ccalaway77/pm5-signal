@@ -33,16 +33,8 @@ def load_config(path: str = "config.yaml") -> dict:
     return yaml.safe_load(Path(path).read_text())
 
 
-def _extract_first_token_id(market_dict: dict) -> str | None:
-    """
-    Polymarket's Gamma API returns clobTokenIds as a JSON-encoded STRING,
-    e.g. '["71234...", "88765..."]', not an actual list. Indexing [0] on
-    that string (as the earlier version of this function did) grabs the
-    character "[" instead of a real token id — which is exactly the bug
-    that produced a request to .../book?token_id=%5B and a 404. This
-    handles both shapes defensively in case Gamma's format changes again.
-    """
-    raw = market_dict.get("clobTokenIds")
+def _parse_gamma_list(raw):
+    """Gamma often returns list fields as JSON-encoded strings."""
     if raw is None:
         return None
     if isinstance(raw, str):
@@ -50,8 +42,40 @@ def _extract_first_token_id(market_dict: dict) -> str | None:
             raw = json.loads(raw)
         except (json.JSONDecodeError, TypeError):
             return None
-    if isinstance(raw, list) and raw:
-        return raw[0]
+    if isinstance(raw, list):
+        return raw
+    return None
+
+
+def token_id_for_side(market_dict: dict, side: str) -> str | None:
+    """
+    Map signal side UP/DOWN to the matching CLOB token id using Gamma
+    outcomes + clobTokenIds. Refuse (return None) if unmapped.
+
+    Polymarket's Gamma API often returns clobTokenIds / outcomes as a
+    JSON-encoded STRING, e.g. '["71234...", "88765..."]', not a real list.
+    Indexing [0] on that string grabs '[' — the old bug that 404'd books.
+    Always taking [0] without checking side was the CRITICAL fill bug:
+    Down signals were priced off the Up book.
+    """
+    if side not in ("UP", "DOWN"):
+        return None
+    tokens = _parse_gamma_list(market_dict.get("clobTokenIds"))
+    outcomes = _parse_gamma_list(market_dict.get("outcomes"))
+    if not tokens or not outcomes or len(tokens) != len(outcomes):
+        return None
+    want = side.upper()
+    for outcome, token_id in zip(outcomes, tokens):
+        if str(outcome).strip().upper() == want:
+            return str(token_id) if token_id is not None else None
+    return None
+
+
+def _extract_first_token_id(market_dict: dict) -> str | None:
+    """Deprecated helper kept for older tests; prefer token_id_for_side."""
+    tokens = _parse_gamma_list(market_dict.get("clobTokenIds"))
+    if tokens:
+        return str(tokens[0])
     return None
 
 
@@ -95,11 +119,11 @@ def run_market_tick(conn, market_config, cfg):
         market_dict = poly.get_current_market(market_config)
         ask_price = None
         if market_dict:
-            token_id = _extract_first_token_id(market_dict)
+            token_id = token_id_for_side(market_dict, side)
             if token_id:
                 ask_price = poly.get_best_ask(token_id)
             else:
-                print(f"[harvest] {market_config.key}: no usable clobTokenIds on market {slug}")
+                print(f"[harvest] {market_config.key}: no token mapped for side={side} on {slug} — refusing trade")
 
         if ask_price is not None:
             if db.has_any_trade_for_slug(conn, slug):
