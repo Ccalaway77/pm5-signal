@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788713700",
-  "signal_side": "DOWN",
-  "confidence": 0.9999415305605993,
-  "spot": 79680.325,
-  "tte": 277.43729043006897,
-  "updated": "2026-09-06T16:55:22Z",
-  "bankroll": 4691.059806719008,
-  "settle_count": 671,
+  "slug": "btc-updown-5m-1788714000",
+  "signal_side": "UP",
+  "confidence": 0.9999999994788922,
+  "spot": 79679.225,
+  "tte": 270.50036549568176,
+  "updated": "2026-09-06T17:00:29Z",
+  "bankroll": 4987.959669211257,
+  "settle_count": 672,
   "open_count": 1,
-  "wins": 350,
+  "wins": 351,
   "losses": 321,
-  "hit_rate": 0.5216095380029806,
-  "pnl": 3691.059806719007,
-  "fees": 273.59229896820676,
-  "avg_fill": 0.48874813710879306,
-  "resolved_windows": 772,
-  "labeled_feat": 798,
+  "hit_rate": 0.5223214285714286,
+  "pnl": 3987.9596692112564,
+  "fees": 275.7358420997179,
+  "avg_fill": 0.48849702380952403,
+  "resolved_windows": 773,
+  "labeled_feat": 799,
   "recent_trades": [
+    {
+      "id": 673,
+      "slug": "btc-updown-5m-1788714000",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.39,
+      "stake": 149.63879002435243,
+      "fee": 2.4919347702755412,
+      "ts": 1788714029.8659062,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 672,
       "slug": "btc-updown-5m-1788713700",
@@ -28,8 +40,8 @@
       "stake": 140.72630852882833,
       "fee": 2.1435431315111133,
       "ts": 1788713722.9788318,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 296.89986249224904
     },
     {
       "id": 671,
@@ -150,18 +162,6 @@
       "ts": 1788710731.3224857,
       "settled": 1,
       "pnl": 118.98574060445384
-    },
-    {
-      "id": 661,
-      "slug": "btc-updown-5m-1788710400",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.47000000000000003,
-      "stake": 153.2521145828033,
-      "fee": 2.672257121980342,
-      "ts": 1788710431.3174365,
-      "settled": 1,
-      "pnl": -155.92437170478365
     }
   ]
 }
