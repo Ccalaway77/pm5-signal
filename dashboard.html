@@ -208,11 +208,18 @@ const DEMO = {
 };
 
 async function fetchJSON(path){
-  try{
-    const res = await fetch(path, {cache:"no-store"});
-    if(!res.ok) throw new Error(res.status);
-    return await res.json();
-  }catch(e){ return null; }
+  // Retry once after a short delay before giving up — a single transient
+  // network blip or CDN hiccup shouldn't be enough to fall back to demo data.
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try{
+      const res = await fetch(path, {cache:"no-store"});
+      if(!res.ok) throw new Error(res.status);
+      return await res.json();
+    }catch(e){
+      if (attempt === 0) await new Promise(r => setTimeout(r, 1500));
+    }
+  }
+  return null;
 }
 
 function fmtUSD(n){
@@ -221,9 +228,16 @@ function fmtUSD(n){
   return sign + "$" + Math.abs(n).toFixed(2);
 }
 
-function setPulse(updatedIso){
+function setPulse(updatedIso, isDemo){
   const badge = document.getElementById("pulse-badge");
   const label = document.getElementById("pulse-label");
+  if(isDemo){
+    // Unmistakably different from LIVE/STALE — this is placeholder data,
+    // not a real (if outdated) reading, and should never be confused for one.
+    badge.className = "pulse-badge stale";
+    label.textContent = "OFFLINE — DEMO DATA";
+    return;
+  }
   const secondsAgo = (Date.now() - new Date(updatedIso).getTime()) / 1000;
   if(isFinite(secondsAgo) && secondsAgo <= STALE_SECONDS){
     badge.className = "pulse-badge live";
@@ -236,11 +250,11 @@ function setPulse(updatedIso){
 
 function hasValue(v){ return v !== null && v !== undefined; }
 
-function render(status){
-  document.getElementById("slug-label").textContent = status.slug || "—";
+function render(status, isDemo){
+  document.getElementById("slug-label").textContent = isDemo ? "no connection to status.json" : (status.slug || "—");
   document.getElementById("spot-price").textContent = hasValue(status.spot) ? "$" + Number(status.spot).toLocaleString(undefined,{maximumFractionDigits:2}) : "—";
   document.getElementById("tte").textContent = hasValue(status.tte) ? Math.max(0, Math.round(status.tte)) + "s" : "—";
-  setPulse(status.updated);
+  setPulse(status.updated, isDemo);
   document.getElementById("updated-at").textContent = status.updated ? new Date(status.updated).toLocaleTimeString() : "—";
   document.getElementById("resolved-windows").textContent = status.resolved_windows ?? "—";
   document.getElementById("labeled-feat").textContent = status.labeled_feat ?? "—";
@@ -292,8 +306,8 @@ function render(status){
 }
 
 async function tick(){
-  const status = await fetchJSON("status.json") || DEMO;
-  render(status);
+  const fetched = await fetchJSON("status.json");
+  render(fetched || DEMO, fetched === null);
 }
 
 tick();
