@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788659400",
-  "signal_side": "DOWN",
-  "confidence": 0.6831880315646673,
-  "spot": 79943.115,
-  "tte": 271.19199562072754,
-  "updated": "2026-09-06T01:50:29Z",
-  "bankroll": 1258.91366078682,
-  "settle_count": 501,
+  "slug": "btc-updown-5m-1788659700",
+  "signal_side": "UP",
+  "confidence": 0.7851372262107613,
+  "spot": 79971.245,
+  "tte": 275.29055547714233,
+  "updated": "2026-09-06T01:55:24Z",
+  "bankroll": 1228.6019017452404,
+  "settle_count": 502,
   "open_count": 1,
   "wins": 249,
-  "losses": 252,
-  "hit_rate": 0.49700598802395207,
-  "pnl": 258.9136607868203,
-  "fees": 44.97100618174451,
-  "avg_fill": 0.4885429141716568,
-  "resolved_windows": 591,
-  "labeled_feat": 610,
+  "losses": 253,
+  "hit_rate": 0.4960159362549801,
+  "pnl": 228.60190174524075,
+  "fees": 45.49213369899952,
+  "avg_fill": 0.48854581673306785,
+  "resolved_windows": 592,
+  "labeled_feat": 611,
   "recent_trades": [
+    {
+      "id": 503,
+      "slug": "btc-updown-5m-1788659700",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.35000000000000003,
+      "stake": 31.57844080252289,
+      "fee": 0.502886669780177,
+      "ts": 1788659724.9388402,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 502,
       "slug": "btc-updown-5m-1788659400",
@@ -28,8 +40,8 @@
       "stake": 29.79063152432453,
       "fee": 0.521127517255009,
       "ts": 1788659429.3221738,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -30.311759041579542
     },
     {
       "id": 501,
@@ -150,18 +162,6 @@
       "ts": 1788655828.284512,
       "settled": 1,
       "pnl": 51.333307823070314
-    },
-    {
-      "id": 491,
-      "slug": "btc-updown-5m-1788655500",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.29000000000000004,
-      "stake": 25.73346280722536,
-      "fee": 0.37089639944053926,
-      "ts": 1788655526.1125236,
-      "settled": 1,
-      "pnl": 62.631719438938774
     }
   ]
 }
