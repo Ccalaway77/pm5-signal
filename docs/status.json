@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788655500",
-  "signal_side": "DOWN",
-  "confidence": 0.6226005526935343,
-  "spot": 79891.985,
-  "tte": 60.38234186172485,
-  "updated": "2026-09-06T00:49:00Z",
-  "bankroll": 1146.1540235964278,
-  "settle_count": 490,
+  "slug": "btc-updown-5m-1788655800",
+  "signal_side": "UP",
+  "confidence": 0.5538586693113103,
+  "spot": 79872.445,
+  "tte": 272.12293791770935,
+  "updated": "2026-09-06T00:50:28Z",
+  "bankroll": 1208.7857430353665,
+  "settle_count": 491,
   "open_count": 1,
-  "wins": 243,
+  "wins": 244,
   "losses": 247,
-  "hit_rate": 0.4959183673469388,
-  "pnl": 146.15402359642823,
-  "fees": 39.68959848300749,
-  "avg_fill": 0.48985714285714294,
-  "resolved_windows": 578,
-  "labeled_feat": 596,
+  "hit_rate": 0.4969450101832994,
+  "pnl": 208.785743035367,
+  "fees": 40.060494882448026,
+  "avg_fill": 0.4894501018329939,
+  "resolved_windows": 579,
+  "labeled_feat": 598,
   "recent_trades": [
+    {
+      "id": 492,
+      "slug": "btc-updown-5m-1788655800",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.33,
+      "stake": 25.477786692754695,
+      "fee": 0.39431970464376437,
+      "ts": 1788655828.284512,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 491,
       "slug": "btc-updown-5m-1788655500",
@@ -28,8 +40,8 @@
       "stake": 25.73346280722536,
       "fee": 0.37089639944053926,
       "ts": 1788655526.1125236,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 62.631719438938774
     },
     {
       "id": 490,
@@ -150,18 +162,6 @@
       "ts": 1788652225.6222026,
       "settled": 1,
       "pnl": 74.50909718239417
-    },
-    {
-      "id": 480,
-      "slug": "btc-updown-5m-1788651900",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.6900000000000001,
-      "stake": 25.730499850391034,
-      "fee": 0.38526277425990496,
-      "ts": 1788651927.4800453,
-      "settled": 1,
-      "pnl": -26.115762624650937
     }
   ]
 }
