@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788711600",
-  "signal_side": "UP",
-  "confidence": 0.9862616119373824,
-  "spot": 79705.355,
-  "tte": 269.9682343006134,
-  "updated": "2026-09-06T16:20:30Z",
-  "bankroll": 5302.552380685724,
-  "settle_count": 664,
+  "slug": "btc-updown-5m-1788711900",
+  "signal_side": "DOWN",
+  "confidence": 0.9999999994361565,
+  "spot": 79644.915,
+  "tte": 275.48512983322144,
+  "updated": "2026-09-06T16:25:24Z",
+  "bankroll": 5142.390690787208,
+  "settle_count": 665,
   "open_count": 1,
   "wins": 348,
-  "losses": 316,
-  "hit_rate": 0.5240963855421686,
-  "pnl": 4302.552380685723,
-  "fees": 257.80378760988106,
-  "avg_fill": 0.48908132530120507,
-  "resolved_windows": 765,
-  "labeled_feat": 791,
+  "losses": 317,
+  "hit_rate": 0.5233082706766917,
+  "pnl": 4142.390690787207,
+  "fees": 260.34587653438984,
+  "avg_fill": 0.48930827067669197,
+  "resolved_windows": 766,
+  "labeled_feat": 792,
   "recent_trades": [
+    {
+      "id": 666,
+      "slug": "btc-updown-5m-1788711900",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.29000000000000004,
+      "stake": 154.27172066562613,
+      "fee": 2.22351830995367,
+      "ts": 1788711924.8736212,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 665,
       "slug": "btc-updown-5m-1788711600",
@@ -28,8 +40,8 @@
       "stake": 157.61960097400734,
       "fee": 2.542088924508791,
       "ts": 1788711630.2819927,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -160.16168989851613
     },
     {
       "id": 664,
@@ -150,18 +162,6 @@
       "ts": 1788708630.2352264,
       "settled": 1,
       "pnl": -153.10985972108148
-    },
-    {
-      "id": 654,
-      "slug": "btc-updown-5m-1788708300",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.5,
-      "stake": 155.41368785284976,
-      "fee": 2.719739537424871,
-      "ts": 1788708331.3884654,
-      "settled": 1,
-      "pnl": 152.6939483154249
     }
   ]
 }
