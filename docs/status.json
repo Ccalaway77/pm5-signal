@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788708000",
-  "signal_side": "DOWN",
-  "confidence": 0.999999999999285,
-  "spot": 79619.985,
-  "tte": 274.781058549881,
-  "updated": "2026-09-06T15:20:25Z",
-  "bankroll": 5342.956458629211,
-  "settle_count": 652,
+  "slug": "btc-updown-5m-1788708300",
+  "signal_side": "UP",
+  "confidence": 0.9999999999997216,
+  "spot": 79627.035,
+  "tte": 269.05936098098755,
+  "updated": "2026-09-06T15:25:31Z",
+  "bankroll": 5180.456261762621,
+  "settle_count": 653,
   "open_count": 1,
   "wins": 342,
-  "losses": 310,
-  "hit_rate": 0.5245398773006135,
-  "pnl": 4342.95645862921,
-  "fees": 228.42913662298818,
-  "avg_fill": 0.48808282208588977,
-  "resolved_windows": 753,
-  "labeled_feat": 778,
+  "losses": 311,
+  "hit_rate": 0.5237366003062787,
+  "pnl": 4180.45626176262,
+  "fees": 230.64063973077833,
+  "avg_fill": 0.48845329249617175,
+  "resolved_windows": 754,
+  "labeled_feat": 779,
   "recent_trades": [
+    {
+      "id": 654,
+      "slug": "btc-updown-5m-1788708300",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.5,
+      "stake": 155.41368785284976,
+      "fee": 2.719739537424871,
+      "ts": 1788708331.3884654,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 653,
       "slug": "btc-updown-5m-1788708000",
@@ -28,8 +40,8 @@
       "stake": 160.28869375879992,
       "fee": 2.211503107790163,
       "ts": 1788708025.4250803,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -162.50019686659007
     },
     {
       "id": 652,
@@ -150,18 +162,6 @@
       "ts": 1788704723.5352213,
       "settled": 1,
       "pnl": 111.18275639078057
-    },
-    {
-      "id": 642,
-      "slug": "btc-updown-5m-1788704400",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.2,
-      "stake": 140.4357007828558,
-      "fee": 1.5728798487679851,
-      "ts": 1788704427.7956693,
-      "settled": 1,
-      "pnl": 560.1699232826552
     }
   ]
 }
