@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788818700",
-  "signal_side": "UP",
-  "confidence": 0.7149999999999999,
-  "spot": 79184.235,
-  "tte": 273.684739112854,
-  "updated": "2026-09-07T22:05:26Z",
-  "bankroll": 2811.3469313358405,
-  "settle_count": 1003,
+  "slug": "btc-updown-5m-1788819000",
+  "signal_side": "DOWN",
+  "confidence": 0.8254400640582109,
+  "spot": 79190.985,
+  "tte": 238.95670866966248,
+  "updated": "2026-09-07T22:11:01Z",
+  "bankroll": 2852.0911998643314,
+  "settle_count": 1004,
   "open_count": 1,
-  "wins": 505,
+  "wins": 506,
   "losses": 498,
-  "hit_rate": 0.5034895314057827,
-  "pnl": 1811.3469313358373,
-  "fees": 806.7542597953093,
-  "avg_fill": 0.49493519441675,
-  "resolved_windows": 1122,
-  "labeled_feat": 1157,
+  "hit_rate": 0.5039840637450199,
+  "pnl": 1852.091199864328,
+  "fees": 807.8809228215849,
+  "avg_fill": 0.49505976095617554,
+  "resolved_windows": 1123,
+  "labeled_feat": 1158,
   "recent_trades": [
+    {
+      "id": 1005,
+      "slug": "btc-updown-5m-1788819000",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.39,
+      "stake": 75.60551885296077,
+      "fee": 1.2590587054583557,
+      "ts": 1788819061.3374972,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1004,
       "slug": "btc-updown-5m-1788818700",
@@ -28,8 +40,8 @@
       "stake": 68.3157304314609,
       "fee": 1.1266630262756532,
       "ts": 1788818726.59114,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 40.74426852849071
     },
     {
       "id": 1003,
@@ -150,18 +162,6 @@
       "ts": 1788815128.1627815,
       "settled": 1,
       "pnl": 52.81754722516588
-    },
-    {
-      "id": 993,
-      "slug": "btc-updown-5m-1788814800",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.6900000000000001,
-      "stake": 85.24750318113801,
-      "fee": 1.2764108651311794,
-      "ts": 1788814831.2374763,
-      "settled": 1,
-      "pnl": -86.5239140462692
     }
   ]
 }
