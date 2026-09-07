@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788813300",
-  "signal_side": "UP",
-  "confidence": 0.8427230128682306,
-  "spot": 79211.085,
-  "tte": 271.82035088539124,
-  "updated": "2026-09-07T20:35:28Z",
-  "bankroll": 3183.876809798927,
-  "settle_count": 987,
+  "slug": "btc-updown-5m-1788813600",
+  "signal_side": "DOWN",
+  "confidence": 0.8104318696521124,
+  "spot": 79204.065,
+  "tte": 271.4646739959717,
+  "updated": "2026-09-07T20:40:28Z",
+  "bankroll": 3096.8816379501186,
+  "settle_count": 988,
   "open_count": 1,
   "wins": 499,
-  "losses": 488,
-  "hit_rate": 0.5055724417426545,
-  "pnl": 2183.876809798923,
-  "fees": 786.3934995077193,
-  "avg_fill": 0.4938500506585614,
-  "resolved_windows": 1104,
-  "labeled_feat": 1139,
+  "losses": 489,
+  "hit_rate": 0.5050607287449392,
+  "pnl": 2096.881637950115,
+  "fees": 787.8873781034373,
+  "avg_fill": 0.4938765182186236,
+  "resolved_windows": 1105,
+  "labeled_feat": 1140,
   "recent_trades": [
+    {
+      "id": 989,
+      "slug": "btc-updown-5m-1788813600",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.47000000000000003,
+      "stake": 81.16504789820539,
+      "fee": 1.4152749402010076,
+      "ts": 1788813628.9006214,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 988,
       "slug": "btc-updown-5m-1788813300",
@@ -28,8 +40,8 @@
       "stake": 85.50129325309011,
       "fee": 1.4938785957179905,
       "ts": 1788813328.5522711,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -86.9951718488081
     },
     {
       "id": 987,
@@ -150,18 +162,6 @@
       "ts": 1788810025.6058161,
       "settled": 1,
       "pnl": -107.68435623174351
-    },
-    {
-      "id": 977,
-      "slug": "btc-updown-5m-1788809700",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.5,
-      "stake": 97.71827783012972,
-      "fee": 1.7100698620272703,
-      "ts": 1788809723.7285464,
-      "settled": 1,
-      "pnl": -99.42834769215699
     }
   ]
 }
