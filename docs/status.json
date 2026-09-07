@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788771300",
-  "signal_side": "UP",
-  "confidence": 0.8289774119951498,
-  "spot": 79410.115,
-  "tte": 276.37744092941284,
-  "updated": "2026-09-07T08:55:23Z",
-  "bankroll": 3786.778685059742,
-  "settle_count": 854,
+  "slug": "btc-updown-5m-1788771600",
+  "signal_side": "DOWN",
+  "confidence": 0.8279854001077863,
+  "spot": 79437.085,
+  "tte": 267.45335125923157,
+  "updated": "2026-09-07T09:00:32Z",
+  "bankroll": 3889.7770648235355,
+  "settle_count": 855,
   "open_count": 1,
-  "wins": 437,
+  "wins": 438,
   "losses": 417,
-  "hit_rate": 0.5117096018735363,
-  "pnl": 2786.7786850597395,
-  "fees": 582.5275213331863,
-  "avg_fill": 0.4940632318501175,
-  "resolved_windows": 964,
-  "labeled_feat": 996,
+  "hit_rate": 0.512280701754386,
+  "pnl": 2889.7770648235332,
+  "fees": 584.2882069449533,
+  "avg_fill": 0.49405847953216414,
+  "resolved_windows": 965,
+  "labeled_feat": 997,
   "recent_trades": [
+    {
+      "id": 856,
+      "slug": "btc-updown-5m-1788771600",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.54,
+      "stake": 103.31134303519545,
+      "fee": 1.7963776326959786,
+      "ts": 1788771632.8905926,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 855,
       "slug": "btc-updown-5m-1788771300",
@@ -28,8 +40,8 @@
       "stake": 100.65086673338185,
       "fee": 1.7606856117670489,
       "ts": 1788771323.8779318,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 102.99837976379365
     },
     {
       "id": 854,
@@ -150,18 +162,6 @@
       "ts": 1788768035.235155,
       "settled": 1,
       "pnl": 148.09276655045377
-    },
-    {
-      "id": 844,
-      "slug": "btc-updown-5m-1788767700",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.47000000000000003,
-      "stake": 86.79379123256354,
-      "fee": 1.5134233377222108,
-      "ts": 1788767723.370407,
-      "settled": 1,
-      "pnl": -88.30721457028575
     }
   ]
 }
