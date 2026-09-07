@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788753600",
-  "signal_side": "UP",
-  "confidence": 0.7792955499665257,
-  "spot": 79576.505,
-  "tte": 268.79805397987366,
-  "updated": "2026-09-07T04:00:31Z",
-  "bankroll": 3509.740667886411,
-  "settle_count": 798,
+  "slug": "btc-updown-5m-1788753900",
+  "signal_side": "DOWN",
+  "confidence": 0.8477202642696506,
+  "spot": 79613.985,
+  "tte": 239.34101676940918,
+  "updated": "2026-09-07T04:06:01Z",
+  "bankroll": 3587.8087113596175,
+  "settle_count": 799,
   "open_count": 1,
-  "wins": 410,
+  "wins": 411,
   "losses": 388,
-  "hit_rate": 0.5137844611528822,
-  "pnl": 2509.740667886409,
-  "fees": 502.38256901960074,
-  "avg_fill": 0.4935839598997498,
-  "resolved_windows": 905,
-  "labeled_feat": 936,
+  "hit_rate": 0.5143929912390488,
+  "pnl": 2587.8087113596157,
+  "fees": 503.94841009140936,
+  "avg_fill": 0.4936295369211518,
+  "resolved_windows": 906,
+  "labeled_feat": 937,
   "recent_trades": [
+    {
+      "id": 800,
+      "slug": "btc-updown-5m-1788753900",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.5,
+      "stake": 96.70725009245075,
+      "fee": 1.6923768766178884,
+      "ts": 1788753961.0049057,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 799,
       "slug": "btc-updown-5m-1788753600",
@@ -28,8 +40,8 @@
       "stake": 89.79991235927253,
       "fee": 1.565841071808635,
       "ts": 1788753631.4154122,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 78.06804347320663
     },
     {
       "id": 798,
@@ -150,18 +162,6 @@
       "ts": 1788750640.5722485,
       "settled": 1,
       "pnl": -82.67135778001895
-    },
-    {
-      "id": 788,
-      "slug": "btc-updown-5m-1788750300",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.47000000000000003,
-      "stake": 92.82980627776661,
-      "fee": 1.6186733320654167,
-      "ts": 1788750343.4443364,
-      "settled": 1,
-      "pnl": -94.44847960983202
     }
   ]
 }
