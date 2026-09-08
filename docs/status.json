@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788903000",
-  "signal_side": "UP",
-  "confidence": 0.78,
-  "spot": 78537.225,
-  "tte": 260.9863350391388,
-  "updated": "2026-09-08T21:30:39Z",
-  "bankroll": 2816.332924458846,
-  "settle_count": 1164,
+  "slug": "btc-updown-5m-1788903300",
+  "signal_side": "DOWN",
+  "confidence": 0.6933055399768249,
+  "spot": 78510.425,
+  "tte": 275.2009696960449,
+  "updated": "2026-09-08T21:35:25Z",
+  "bankroll": 2786.9889884523236,
+  "settle_count": 1165,
   "open_count": 1,
   "wins": 576,
-  "losses": 588,
-  "hit_rate": 0.4948453608247423,
-  "pnl": 1816.3329244588429,
-  "fees": 906.8429372637595,
-  "avg_fill": 0.4890292096219939,
-  "resolved_windows": 1402,
-  "labeled_feat": 1445,
+  "losses": 589,
+  "hit_rate": 0.4944206008583691,
+  "pnl": 1786.9889884523213,
+  "fees": 907.3476241238225,
+  "avg_fill": 0.48903862660944286,
+  "resolved_windows": 1403,
+  "labeled_feat": 1446,
   "recent_trades": [
+    {
+      "id": 1166,
+      "slug": "btc-updown-5m-1788903300",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.41000000000000003,
+      "stake": 26.605835198196523,
+      "fee": 0.45051660741106175,
+      "ts": 1788903325.0181353,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1165,
       "slug": "btc-updown-5m-1788903000",
@@ -28,8 +40,8 @@
       "stake": 28.839249146458585,
       "fee": 0.5046868600630253,
       "ts": 1788903039.3579102,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -29.34393600652161
     },
     {
       "id": 1164,
@@ -150,18 +162,6 @@
       "ts": 1788897329.1987512,
       "settled": 1,
       "pnl": -29.179145444697465
-    },
-    {
-      "id": 1154,
-      "slug": "btc-updown-5m-1788895500",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.27,
-      "stake": 23.238531032299836,
-      "fee": 0.3206220126526409,
-      "ts": 1788895525.8503387,
-      "settled": 1,
-      "pnl": 62.50948040800987
     }
   ]
 }
