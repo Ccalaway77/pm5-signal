@@ -9,7 +9,7 @@ import time
 
 import db
 import risk
-from online_learner import OnlineLearner
+from online_learner import OnlineLearner, learner_from_cfg
 
 
 def settle_due(conn, market_config, cfg, spot_fetcher):
@@ -50,9 +50,8 @@ def _train_learner_for_slug(conn, market_config, cfg, slug, label):
     import json
 
     features = json.loads(feat_row["features_json"])
-    learner = OnlineLearner(
-        model_path=f"data/model_{market_config.key}.json",
-        metrics_path="data/metrics.jsonl",
-        min_rows_before_trusted=cfg["learner"]["min_rows_before_trusted"],
-    )
-    learner.observe(features, label, market_key=market_config.key)
+    v1 = learner_from_cfg(market_config.key, cfg, suffix="")
+    v1.observe(features, label, market_key=market_config.key)
+    v2_suffix = cfg.get("learner", {}).get("v2_suffix", "_v2")
+    v2 = learner_from_cfg(market_config.key, cfg, suffix=v2_suffix)
+    v2.observe(features, label, market_key=market_config.key)
