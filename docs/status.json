@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788864600",
-  "signal_side": "DOWN",
-  "confidence": 0.766607843769626,
-  "spot": 78636.935,
-  "tte": 275.8049955368042,
-  "updated": "2026-09-08T10:50:24Z",
-  "bankroll": 2858.6872132129,
-  "settle_count": 1100,
+  "slug": "btc-updown-5m-1788864900",
+  "signal_side": "UP",
+  "confidence": 0.6896549910314985,
+  "spot": 78608.705,
+  "tte": 274.6516025066376,
+  "updated": "2026-09-08T10:55:25Z",
+  "bankroll": 2882.8588649011754,
+  "settle_count": 1101,
   "open_count": 1,
-  "wins": 551,
+  "wins": 552,
   "losses": 549,
-  "hit_rate": 0.5009090909090909,
-  "pnl": 1858.6872132128965,
-  "fees": 878.4182353064642,
-  "avg_fill": 0.4924909090909099,
-  "resolved_windows": 1274,
-  "labeled_feat": 1314,
+  "hit_rate": 0.5013623978201635,
+  "pnl": 1882.858864901172,
+  "fees": 878.9219080283239,
+  "avg_fill": 0.49253405994550487,
+  "resolved_windows": 1275,
+  "labeled_feat": 1315,
   "recent_trades": [
+    {
+      "id": 1102,
+      "slug": "btc-updown-5m-1788864900",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.5700000000000001,
+      "stake": 27.436859496552675,
+      "fee": 0.4707341983823542,
+      "ts": 1788864925.677065,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1101,
       "slug": "btc-updown-5m-1788864600",
@@ -28,8 +40,8 @@
       "stake": 28.966685177115142,
       "fee": 0.5036727218596782,
       "ts": 1788864624.527833,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 24.171651688275436
     },
     {
       "id": 1100,
@@ -150,18 +162,6 @@
       "ts": 1788858631.2945795,
       "settled": 1,
       "pnl": -28.78087186907522
-    },
-    {
-      "id": 1090,
-      "slug": "btc-updown-5m-1788858300",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.5,
-      "stake": 29.2676276961307,
-      "fee": 0.5121834846822872,
-      "ts": 1788858325.2205772,
-      "settled": 1,
-      "pnl": -29.779811180812985
     }
   ]
 }
