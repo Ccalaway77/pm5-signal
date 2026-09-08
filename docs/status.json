@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788873000",
-  "signal_side": "UP",
-  "confidence": 0.5935838670462733,
-  "spot": 78483.895,
-  "tte": 272.48450660705566,
-  "updated": "2026-09-08T13:10:27Z",
-  "bankroll": 2778.3852416464088,
-  "settle_count": 1118,
+  "slug": "btc-updown-5m-1788873300",
+  "signal_side": "DOWN",
+  "confidence": 0.5863873284708957,
+  "spot": 78439.86,
+  "tte": 270.80448508262634,
+  "updated": "2026-09-08T13:15:29Z",
+  "bankroll": 2753.681443205865,
+  "settle_count": 1119,
   "open_count": 1,
   "wins": 558,
-  "losses": 560,
-  "hit_rate": 0.4991055456171735,
-  "pnl": 1778.3852416464056,
-  "fees": 886.290878731836,
-  "avg_fill": 0.4912969588550993,
-  "resolved_windows": 1302,
-  "labeled_feat": 1342,
+  "losses": 561,
+  "hit_rate": 0.49865951742627346,
+  "pnl": 1753.681443205862,
+  "fees": 886.6874989587478,
+  "avg_fill": 0.49118856121537174,
+  "resolved_windows": 1303,
+  "labeled_feat": 1343,
   "recent_trades": [
+    {
+      "id": 1120,
+      "slug": "btc-updown-5m-1788873300",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.43,
+      "stake": 23.932517012354403,
+      "fee": 0.4106101943809645,
+      "ts": 1788873329.5342677,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1119,
       "slug": "btc-updown-5m-1788873000",
@@ -28,8 +40,8 @@
       "stake": 24.307178213631794,
       "fee": 0.39662022691183,
       "ts": 1788873027.7553363,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -24.703798440543622
     },
     {
       "id": 1118,
@@ -150,18 +162,6 @@
       "ts": 1788868846.6901114,
       "settled": 1,
       "pnl": -28.9845334126239
-    },
-    {
-      "id": 1108,
-      "slug": "btc-updown-5m-1788868500",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.35000000000000003,
-      "stake": 28.523868797020395,
-      "fee": 0.45424261059254983,
-      "ts": 1788868525.1838264,
-      "settled": 1,
-      "pnl": -28.978111407612946
     }
   ]
 }
