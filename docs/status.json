@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788839100",
-  "signal_side": "UP",
-  "confidence": 0.6407344265125923,
-  "spot": 78930.285,
-  "tte": 272.8062229156494,
-  "updated": "2026-09-08T03:45:27Z",
-  "bankroll": 2539.8496712386345,
-  "settle_count": 1057,
+  "slug": "btc-updown-5m-1788839400",
+  "signal_side": "DOWN",
+  "confidence": 0.6981857528513492,
+  "spot": 78893.565,
+  "tte": 273.1575198173523,
+  "updated": "2026-09-08T03:50:27Z",
+  "bankroll": 2516.2697546308464,
+  "settle_count": 1058,
   "open_count": 1,
   "wins": 528,
-  "losses": 529,
-  "hit_rate": 0.49952696310312206,
-  "pnl": 1539.849671238632,
-  "fees": 859.4096522009066,
-  "avg_fill": 0.49447492904446566,
-  "resolved_windows": 1190,
-  "labeled_feat": 1227,
+  "losses": 530,
+  "hit_rate": 0.499054820415879,
+  "pnl": 1516.2697546308439,
+  "fees": 859.811217143506,
+  "avg_fill": 0.49443289224952763,
+  "resolved_windows": 1191,
+  "labeled_feat": 1228,
   "recent_trades": [
+    {
+      "id": 1059,
+      "slug": "btc-updown-5m-1788839400",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.28,
+      "stake": 24.119668562635525,
+      "fee": 0.34037676275591255,
+      "ts": 1788839427.2550037,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1058,
       "slug": "btc-updown-5m-1788839100",
@@ -28,8 +40,8 @@
       "stake": 23.178351665188796,
       "fee": 0.40156494259939607,
       "ts": 1788839127.5340345,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -23.579916607788192
     },
     {
       "id": 1057,
@@ -150,18 +162,6 @@
       "ts": 1788834324.1011481,
       "settled": 1,
       "pnl": -26.40470225218989
-    },
-    {
-      "id": 1047,
-      "slug": "btc-updown-5m-1788833700",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.45,
-      "stake": 25.652839699216,
-      "fee": 0.44443544778891736,
-      "ts": 1788833726.624146,
-      "settled": 1,
-      "pnl": -26.097275147004915
     }
   ]
 }
