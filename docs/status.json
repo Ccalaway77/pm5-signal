@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788864000",
-  "signal_side": "UP",
-  "confidence": 0.7522032950338606,
-  "spot": 78684.455,
-  "tte": 275.5340030193329,
-  "updated": "2026-09-08T10:40:24Z",
-  "bankroll": 2860.5583127639447,
-  "settle_count": 1098,
+  "slug": "btc-updown-5m-1788864300",
+  "signal_side": "DOWN",
+  "confidence": 0.7259436885567856,
+  "spot": 78648.775,
+  "tte": 274.08607292175293,
+  "updated": "2026-09-08T10:45:26Z",
+  "bankroll": 2831.4040378011136,
+  "settle_count": 1099,
   "open_count": 1,
   "wins": 550,
-  "losses": 548,
-  "hit_rate": 0.5009107468123861,
-  "pnl": 1860.5583127639413,
-  "fees": 877.4340048352838,
-  "avg_fill": 0.4925136612021866,
-  "resolved_windows": 1272,
-  "labeled_feat": 1312,
+  "losses": 549,
+  "hit_rate": 0.5004549590536852,
+  "pnl": 1831.4040378011102,
+  "fees": 877.9322754390787,
+  "avg_fill": 0.49248407643312186,
+  "resolved_windows": 1273,
+  "labeled_feat": 1313,
   "recent_trades": [
+    {
+      "id": 1100,
+      "slug": "btc-updown-5m-1788864300",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.5,
+      "stake": 27.76913527917179,
+      "fee": 0.48595986738550634,
+      "ts": 1788864326.3178394,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1099,
       "slug": "btc-updown-5m-1788864000",
@@ -28,8 +40,8 @@
       "stake": 28.656004359036096,
       "fee": 0.4982706037949198,
       "ts": 1788864024.8792665,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -29.154274962831018
     },
     {
       "id": 1098,
@@ -150,18 +162,6 @@
       "ts": 1788858037.3943174,
       "settled": 1,
       "pnl": 60.44211150236111
-    },
-    {
-      "id": 1088,
-      "slug": "btc-updown-5m-1788857100",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.48,
-      "stake": 27.416840590010693,
-      "fee": 0.47902703878866687,
-      "ts": 1788857137.6394336,
-      "settled": 1,
-      "pnl": 29.222550267056253
     }
   ]
 }
