@@ -51,8 +51,6 @@ def compute_features(klines: list[dict]) -> Optional[dict]:
 
     momentum_5m = (last - p5) / p5 if p5 else 0.0
     momentum_15m = (last - p15) / p15 if p15 else 0.0
-    # A rough Sharpe-like z-score: how big is the recent move relative to
-    # how noisy this asset has been over the same window.
     z_5m = momentum_5m / realized_vol if realized_vol > 1e-9 else 0.0
 
     return {
@@ -67,8 +65,6 @@ def heuristic_signal(feats: Optional[dict]) -> tuple[str, float]:
     if feats is None:
         return "NO_TRADE", 0.5
     z = feats["z_5m"]
-    # Unvalidated squashing of the z-score into a confidence score — a
-    # starting point for the heuristic, not a tuned model.
     conf = min(0.95, 0.5 + min(abs(z), 3.0) * 0.15)
     side = "UP" if z >= 0 else "DOWN"
     return side, conf
@@ -81,16 +77,8 @@ def blend(
     learner_trusted: bool,
     cfg: dict,
 ) -> tuple[str, float]:
-    """
-    Cold-start: use the heuristic so we still collect labeled data.
-
-    Once trusted: soft-blend learner P(up) with the heuristic instead of a
-    hard override, then cap confidence so ~1.0 SGD outputs cannot always
-    max stake / raise the high-conf ask cutoff.
-    """
     eng = cfg.get("engine", {})
     if learner_trusted and learner_p_up is not None:
-        # Heuristic as a rough P(up): conf above 0.5 on UP, below on DOWN.
         if engine_side == "UP":
             heur_p_up = 0.5 + 0.5 * max(0.0, min(1.0, (engine_conf - 0.5) / 0.5))
         elif engine_side == "DOWN":
@@ -110,3 +98,23 @@ def blend(
     if conf < eng["lock_min_conf"]:
         return "NO_TRADE", conf
     return side, conf
+
+
+def blended_p_up(engine_side: str, engine_conf: float, learner_p_up, learner_trusted: bool, cfg: dict) -> float:
+    """Same mix as blend(), but always returns P(up) in [0,1] (uncapped side prob)."""
+    eng = cfg.get("engine", {})
+    if learner_trusted and learner_p_up is not None:
+        if engine_side == "UP":
+            heur_p_up = 0.5 + 0.5 * max(0.0, min(1.0, (engine_conf - 0.5) / 0.5))
+        elif engine_side == "DOWN":
+            heur_p_up = 0.5 - 0.5 * max(0.0, min(1.0, (engine_conf - 0.5) / 0.5))
+        else:
+            heur_p_up = 0.5
+        w = float(eng.get("learner_blend_weight", 0.7))
+        w = max(0.0, min(1.0, w))
+        return w * float(learner_p_up) + (1.0 - w) * heur_p_up
+    if engine_side == "UP":
+        return 0.5 + 0.5 * max(0.0, min(1.0, (engine_conf - 0.5) / 0.5))
+    if engine_side == "DOWN":
+        return 0.5 - 0.5 * max(0.0, min(1.0, (engine_conf - 0.5) / 0.5))
+    return 0.5
