@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788888300",
-  "signal_side": "UP",
-  "confidence": 0.5607233224695497,
-  "spot": 78568.315,
-  "tte": 273.75860476493835,
-  "updated": "2026-09-08T17:25:26Z",
-  "bankroll": 2835.870054993122,
-  "settle_count": 1140,
+  "slug": "btc-updown-5m-1788888600",
+  "signal_side": "DOWN",
+  "confidence": 0.5717408280299576,
+  "spot": 78582.915,
+  "tte": 258.3717725276947,
+  "updated": "2026-09-08T17:30:42Z",
+  "bankroll": 2882.2056605499365,
+  "settle_count": 1141,
   "open_count": 1,
-  "wins": 567,
+  "wins": 568,
   "losses": 573,
-  "hit_rate": 0.49736842105263157,
-  "pnl": 1835.870054993119,
-  "fees": 896.4134767870034,
-  "avg_fill": 0.490394736842106,
-  "resolved_windows": 1353,
-  "labeled_feat": 1394,
+  "hit_rate": 0.49780893952673094,
+  "pnl": 1882.2056605499336,
+  "fees": 896.791483336165,
+  "avg_fill": 0.49026292725679305,
+  "resolved_windows": 1354,
+  "labeled_feat": 1395,
   "recent_trades": [
+    {
+      "id": 1142,
+      "slug": "btc-updown-5m-1788888600",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.53,
+      "stake": 24.71181984952336,
+      "fee": 0.4309000027161388,
+      "ts": 1788888641.9559798,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1141,
       "slug": "btc-updown-5m-1788888300",
@@ -28,8 +40,8 @@
       "stake": 24.06458805459367,
       "fee": 0.37800654916155746,
       "ts": 1788888326.5500472,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 46.335605556814386
     },
     {
       "id": 1140,
@@ -150,18 +162,6 @@
       "ts": 1788881437.2400582,
       "settled": 1,
       "pnl": -27.224678798488558
-    },
-    {
-      "id": 1130,
-      "slug": "btc-updown-5m-1788880800",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.48,
-      "stake": 23.52688797960259,
-      "fee": 0.4110617867796165,
-      "ts": 1788880830.0525553,
-      "settled": 1,
-      "pnl": -23.937949766382207
     }
   ]
 }
