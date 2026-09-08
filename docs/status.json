@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788908400",
-  "signal_side": "UP",
-  "confidence": 0.7128104427030917,
-  "spot": 78545.515,
-  "tte": 261.30605936050415,
-  "updated": "2026-09-08T23:00:39Z",
-  "bankroll": 2694.910263872842,
-  "settle_count": 1177,
+  "slug": "btc-updown-5m-1788908700",
+  "signal_side": "DOWN",
+  "confidence": 0.6121310866008431,
+  "spot": 78513.325,
+  "tte": 275.1056628227234,
+  "updated": "2026-09-08T23:05:25Z",
+  "bankroll": 2668.3060953730655,
+  "settle_count": 1178,
   "open_count": 1,
   "wins": 580,
-  "losses": 597,
-  "hit_rate": 0.4927782497875956,
-  "pnl": 1694.9102638728396,
-  "fees": 912.5510642481152,
-  "avg_fill": 0.48842820730671266,
-  "resolved_windows": 1420,
-  "labeled_feat": 1464,
+  "losses": 598,
+  "hit_rate": 0.4923599320882852,
+  "pnl": 1668.306095373063,
+  "fees": 913.0079102665098,
+  "avg_fill": 0.48842105263157964,
+  "resolved_windows": 1421,
+  "labeled_feat": 1465,
   "recent_trades": [
+    {
+      "id": 1179,
+      "slug": "btc-updown-5m-1788908700",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.52,
+      "stake": 23.740049257847204,
+      "fee": 0.41478614063310637,
+      "ts": 1788908725.087112,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1178,
       "slug": "btc-updown-5m-1788908400",
@@ -28,8 +40,8 @@
       "stake": 26.147322481381813,
       "fee": 0.45684601839470307,
       "ts": 1788908439.0293748,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -26.604168499776517
     },
     {
       "id": 1177,
@@ -150,18 +162,6 @@
       "ts": 1788904230.511028,
       "settled": 1,
       "pnl": 21.998229002371676
-    },
-    {
-      "id": 1167,
-      "slug": "btc-updown-5m-1788903900",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.53,
-      "stake": 26.46834065655824,
-      "fee": 0.4615284560284061,
-      "ts": 1788903928.1211107,
-      "settled": 1,
-      "pnl": -26.929869112586648
     }
   ]
 }
