@@ -1,12 +1,12 @@
 {
-  "settle_count": 1083,
-  "open_count": 1,
+  "settle_count": 1084,
+  "open_count": 0,
   "wins": 542,
-  "losses": 541,
-  "hit_rate": 0.5004616805170822,
-  "pnl": 1753.0416785768282,
-  "fees": 870.2859579214453,
-  "avg_fill": 0.49320406278855095,
-  "resolved_windows": 1244,
-  "labeled_feat": 1283
+  "losses": 542,
+  "hit_rate": 0.5,
+  "pnl": 1725.5293221371983,
+  "fees": 870.7583993170937,
+  "avg_fill": 0.4931918819188198,
+  "resolved_windows": 1245,
+  "labeled_feat": 1284
 }
