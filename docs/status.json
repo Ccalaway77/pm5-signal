@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788838800",
-  "signal_side": "DOWN",
-  "confidence": 0.7253128867102827,
-  "spot": 78910.725,
-  "tte": 273.96861720085144,
-  "updated": "2026-09-08T03:40:26Z",
-  "bankroll": 2565.4196842074407,
-  "settle_count": 1056,
+  "slug": "btc-updown-5m-1788839100",
+  "signal_side": "UP",
+  "confidence": 0.6407344265125923,
+  "spot": 78930.285,
+  "tte": 272.8062229156494,
+  "updated": "2026-09-08T03:45:27Z",
+  "bankroll": 2539.8496712386345,
+  "settle_count": 1057,
   "open_count": 1,
   "wins": 528,
-  "losses": 528,
-  "hit_rate": 0.5,
-  "pnl": 1565.4196842074382,
-  "fees": 858.9871736231372,
-  "avg_fill": 0.49456439393939416,
-  "resolved_windows": 1189,
-  "labeled_feat": 1226,
+  "losses": 529,
+  "hit_rate": 0.49952696310312206,
+  "pnl": 1539.849671238632,
+  "fees": 859.4096522009066,
+  "avg_fill": 0.49447492904446566,
+  "resolved_windows": 1190,
+  "labeled_feat": 1227,
   "recent_trades": [
+    {
+      "id": 1058,
+      "slug": "btc-updown-5m-1788839100",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.45,
+      "stake": 23.178351665188796,
+      "fee": 0.40156494259939607,
+      "ts": 1788839127.5340345,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1057,
       "slug": "btc-updown-5m-1788838800",
@@ -28,8 +40,8 @@
       "stake": 25.14753439103681,
       "fee": 0.4224785777694185,
       "ts": 1788838826.2629313,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -25.57001296880623
     },
     {
       "id": 1056,
@@ -150,18 +162,6 @@
       "ts": 1788833726.624146,
       "settled": 1,
       "pnl": -26.097275147004915
-    },
-    {
-      "id": 1046,
-      "slug": "btc-updown-5m-1788832800",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.41000000000000003,
-      "stake": 26.52910046326754,
-      "fee": 0.44921725814450925,
-      "ts": 1788832835.1186485,
-      "settled": 1,
-      "pnl": -26.978317721412047
     }
   ]
 }
