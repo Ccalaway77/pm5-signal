@@ -3,27 +3,32 @@
 
 paper:
   starting_bankroll: 1000.0
-  min_stake_pct: 0.01          # smallest stake as a fraction of bankroll
-  max_stake_pct: 0.03          # largest stake as a fraction of bankroll
-  ask_price_cutoff: 0.70       # refuse to buy above this price...
-  ask_price_cutoff_high_conf: 0.80   # ...unless confidence clears this bar
+  min_stake_pct: 0.004         # was 0.01 — stop 3% tickets on a swollen book
+  max_stake_pct: 0.012         # was 0.03
+  ask_price_cutoff: 0.58       # was 0.70 — 0.50–0.70 bucket ate the peak
+  ask_price_cutoff_high_conf: 0.58  # do not raise cutoff just because conf is high
   high_conf_threshold: 0.80
   slippage_ticks: 1
   tick_size: 0.01
   fee_rate: 0.07                # Polymarket-style taker fee: fee_rate * p * (1-p) * stake
+  min_ev_per_stake: 0.05        # skip unless E[PnL]/stake >= 5% after fees
 
 engine:
-  lock_min_conf: 0.52           # below this, signal is forced to NO_TRADE
-  paper_cutoff_sec: 35          # don't open a new paper position inside this many
-                                 # seconds of window close (fill risk too high)
-  kline_lookback_minutes: 20    # how much 1-minute price history to pull per tick
-  learner_blend_weight: 0.7     # trusted: weight on learner P(up) vs heuristic
-  learner_conf_cap: 0.85        # cap blended confidence so ~1.0 never maxes stake
+  lock_min_conf: 0.55           # was 0.52
+  paper_cutoff_sec: 35
+  kline_lookback_minutes: 20
+  learner_blend_weight: 0.55    # was 0.7 — dampen the overfit v1 book
+  learner_conf_cap: 0.78        # was 0.85
 
 learner:
-  min_rows_before_trusted: 30   # online learner ignored (falls back to heuristic) below this
+  min_rows_before_trusted: 30
   reassess_after_labeled: 30
   reassess_after_settled: 50
+  sgd_alpha: 0.01               # L2; old default 1e-4 let coef explode
+  feature_clip: 8.0
+  p_clip_low: 0.12
+  p_clip_high: 0.88
+  v2_suffix: "_v2"              # fresh regularized model; do not wipe model_btc.json
 
 board:
-  stale_after_sec: 720          # 12 minutes — matches the LIVE/STALE badge cutoff
+  stale_after_sec: 720
