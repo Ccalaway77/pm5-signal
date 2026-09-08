@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788879300",
-  "signal_side": "DOWN",
-  "confidence": 0.672004487840431,
-  "spot": 78489.155,
-  "tte": 262.34670519828796,
-  "updated": "2026-09-08T14:55:37Z",
-  "bankroll": 2854.9712771701243,
-  "settle_count": 1127,
+  "slug": "btc-updown-5m-1788879600",
+  "signal_side": "UP",
+  "confidence": 0.745714539670725,
+  "spot": 78535.895,
+  "tte": 263.3431134223938,
+  "updated": "2026-09-08T15:00:36Z",
+  "bankroll": 2827.746510697515,
+  "settle_count": 1128,
   "open_count": 1,
   "wins": 562,
-  "losses": 565,
-  "hit_rate": 0.4986690328305235,
-  "pnl": 1854.9712771701218,
-  "fees": 890.3347028339545,
-  "avg_fill": 0.49067435669920223,
-  "resolved_windows": 1323,
-  "labeled_feat": 1364,
+  "losses": 566,
+  "hit_rate": 0.49822695035460995,
+  "pnl": 1827.7465106975123,
+  "fees": 890.7911561105725,
+  "avg_fill": 0.4907535460992916,
+  "resolved_windows": 1324,
+  "labeled_feat": 1365,
   "recent_trades": [
+    {
+      "id": 1129,
+      "slug": "btc-updown-5m-1788879600",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.48,
+      "stake": 28.180519543032432,
+      "fee": 0.49237003745586266,
+      "ts": 1788879636.9507384,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1128,
       "slug": "btc-updown-5m-1788879300",
@@ -28,8 +40,8 @@
       "stake": 26.7683131959913,
       "fee": 0.4564532766180438,
       "ts": 1788879337.9538665,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -27.224766472609346
     },
     {
       "id": 1127,
@@ -150,18 +162,6 @@
       "ts": 1788872725.6498718,
       "settled": 1,
       "pnl": 20.370755582394782
-    },
-    {
-      "id": 1117,
-      "slug": "btc-updown-5m-1788871800",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.55,
-      "stake": 24.627638622504293,
-      "fee": 0.4266738391348869,
-      "ts": 1788871827.8388598,
-      "settled": 1,
-      "pnl": -25.054312461639178
     }
   ]
 }
