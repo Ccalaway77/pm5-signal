@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788939000",
-  "signal_side": "DOWN",
-  "confidence": 0.5938904408443741,
-  "spot": 79279.785,
-  "tte": 266.59228801727295,
-  "updated": "2026-09-09T07:30:33Z",
-  "bankroll": 3187.9007102143605,
-  "settle_count": 1239,
+  "slug": "btc-updown-5m-1788939300",
+  "signal_side": "UP",
+  "confidence": 0.6040096915090007,
+  "spot": 79209.965,
+  "tte": 238.4564185142517,
+  "updated": "2026-09-09T07:36:01Z",
+  "bankroll": 3239.266477390546,
+  "settle_count": 1240,
   "open_count": 1,
-  "wins": 612,
+  "wins": 613,
   "losses": 627,
-  "hit_rate": 0.4939467312348668,
-  "pnl": 2187.9007102143587,
-  "fees": 941.7631029537758,
-  "avg_fill": 0.48586763518966947,
-  "resolved_windows": 1521,
-  "labeled_feat": 1567,
+  "hit_rate": 0.49435483870967745,
+  "pnl": 2239.266477390544,
+  "fees": 942.2073740318058,
+  "avg_fill": 0.4857580645161294,
+  "resolved_windows": 1522,
+  "labeled_feat": 1568,
   "recent_trades": [
+    {
+      "id": 1241,
+      "slug": "btc-updown-5m-1788939300",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.46,
+      "stake": 28.60945267535507,
+      "fee": 0.49746116311907407,
+      "ts": 1788939361.8530078,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1240,
       "slug": "btc-updown-5m-1788939000",
@@ -28,8 +40,8 @@
       "stake": 27.897712906115842,
       "fee": 0.44427107802989485,
       "ts": 1788939033.8767726,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 51.36576717618524
     },
     {
       "id": 1239,
@@ -150,18 +162,6 @@
       "ts": 1788934525.5633152,
       "settled": 1,
       "pnl": 22.154924221460114
-    },
-    {
-      "id": 1229,
-      "slug": "btc-updown-5m-1788933900",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.32,
-      "stake": 26.831841102270207,
-      "fee": 0.40870260366977984,
-      "ts": 1788933924.5152578,
-      "settled": 1,
-      "pnl": -27.240543705939988
     }
   ]
 }
