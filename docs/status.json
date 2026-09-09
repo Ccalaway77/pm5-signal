@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788975000",
-  "signal_side": "UP",
-  "confidence": 0.78,
-  "spot": 78827.185,
-  "tte": 265.8984045982361,
-  "updated": "2026-09-09T17:30:34Z",
-  "bankroll": 3520.3664693937612,
-  "settle_count": 1290,
+  "slug": "btc-updown-5m-1788975300",
+  "signal_side": "DOWN",
+  "confidence": 0.6471014710313169,
+  "spot": 78792.995,
+  "tte": 274.70542216300964,
+  "updated": "2026-09-09T17:35:25Z",
+  "bankroll": 3483.6994317294116,
+  "settle_count": 1291,
   "open_count": 1,
   "wins": 639,
-  "losses": 651,
-  "hit_rate": 0.49534883720930234,
-  "pnl": 2520.3664693937603,
-  "fees": 969.8914273123744,
-  "avg_fill": 0.48441085271317874,
-  "resolved_windows": 1641,
-  "labeled_feat": 1690,
+  "losses": 652,
+  "hit_rate": 0.4949651432997676,
+  "pnl": 2483.6994317294107,
+  "fees": 970.509912330132,
+  "avg_fill": 0.4843687064291251,
+  "resolved_windows": 1642,
+  "labeled_feat": 1691,
   "recent_trades": [
+    {
+      "id": 1292,
+      "slug": "btc-updown-5m-1788975300",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.49,
+      "stake": 31.96925394214217,
+      "fee": 0.5592381592098931,
+      "ts": 1788975325.479533,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1291,
       "slug": "btc-updown-5m-1788975000",
@@ -28,8 +40,8 @@
       "stake": 36.04855264659212,
       "fee": 0.6184850177575811,
       "ts": 1788975034.5270755,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -36.6670376643497
     },
     {
       "id": 1290,
@@ -150,18 +162,6 @@
       "ts": 1788967229.3027797,
       "settled": 1,
       "pnl": -36.5735628158757
-    },
-    {
-      "id": 1280,
-      "slug": "btc-updown-5m-1788966900",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.47000000000000003,
-      "stake": 35.60095721739009,
-      "fee": 0.6207738909996311,
-      "ts": 1788966931.5289917,
-      "settled": 1,
-      "pnl": -36.22173110838972
     }
   ]
 }
