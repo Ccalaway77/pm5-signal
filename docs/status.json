@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788948600",
-  "signal_side": "DOWN",
-  "confidence": 0.6165823916004991,
-  "spot": 78936.815,
-  "tte": 272.07673597335815,
-  "updated": "2026-09-09T10:10:28Z",
-  "bankroll": 3455.150803292031,
-  "settle_count": 1254,
+  "slug": "btc-updown-5m-1788948900",
+  "signal_side": "UP",
+  "confidence": 0.6480450151317123,
+  "spot": 79006.975,
+  "tte": 270.89479398727417,
+  "updated": "2026-09-09T10:15:29Z",
+  "bankroll": 3423.802312159576,
+  "settle_count": 1255,
   "open_count": 1,
   "wins": 623,
-  "losses": 631,
-  "hit_rate": 0.49681020733652315,
-  "pnl": 2455.15080329203,
-  "fees": 949.9446425943565,
-  "avg_fill": 0.48598086124401946,
-  "resolved_windows": 1553,
-  "labeled_feat": 1600,
+  "losses": 632,
+  "hit_rate": 0.4964143426294821,
+  "pnl": 2423.802312159575,
+  "fees": 950.42944934857,
+  "avg_fill": 0.4858645418326697,
+  "resolved_windows": 1554,
+  "labeled_feat": 1601,
   "recent_trades": [
+    {
+      "id": 1256,
+      "slug": "btc-updown-5m-1788948900",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.5,
+      "stake": 31.44543341816986,
+      "fee": 0.5502950848179726,
+      "ts": 1788948929.390778,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1255,
       "slug": "btc-updown-5m-1788948600",
@@ -28,8 +40,8 @@
       "stake": 30.86368437824161,
       "fee": 0.48480675421341934,
       "ts": 1788948628.3660564,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -31.34849113245503
     },
     {
       "id": 1254,
@@ -150,18 +162,6 @@
       "ts": 1788940525.2466958,
       "settled": 1,
       "pnl": 25.74250201209032
-    },
-    {
-      "id": 1244,
-      "slug": "btc-updown-5m-1788940200",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.5700000000000001,
-      "stake": 33.57847408162997,
-      "fee": 0.5761058798185253,
-      "ts": 1788940227.65283,
-      "settled": 1,
-      "pnl": -34.1545799614485
     }
   ]
 }
