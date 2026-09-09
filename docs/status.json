@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788927900",
-  "signal_side": "DOWN",
-  "confidence": 0.7485083516837059,
-  "spot": 78904.59,
-  "tte": 267.4967665672302,
-  "updated": "2026-09-09T04:25:32Z",
-  "bankroll": 3007.3947231687125,
-  "settle_count": 1215,
+  "slug": "btc-updown-5m-1788928200",
+  "signal_side": "UP",
+  "confidence": 0.7577410122867383,
+  "spot": 78860.005,
+  "tte": 265.8023142814636,
+  "updated": "2026-09-09T04:30:34Z",
+  "bankroll": 3042.1344911564,
+  "settle_count": 1216,
   "open_count": 1,
-  "wins": 600,
+  "wins": 601,
   "losses": 615,
-  "hit_rate": 0.49382716049382713,
-  "pnl": 2007.3947231687112,
-  "fees": 929.7614045320746,
-  "avg_fill": 0.486757201646091,
-  "resolved_windows": 1484,
-  "labeled_feat": 1529,
+  "hit_rate": 0.4942434210526316,
+  "pnl": 2042.134491156399,
+  "fees": 930.2837063094345,
+  "avg_fill": 0.4867351973684215,
+  "resolved_windows": 1485,
+  "labeled_feat": 1530,
   "recent_trades": [
+    {
+      "id": 1217,
+      "slug": "btc-updown-5m-1788928200",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.29000000000000004,
+      "stake": 30.609738515355616,
+      "fee": 0.44117816122182063,
+      "ts": 1788928234.6154437,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1216,
       "slug": "btc-updown-5m-1788927900",
@@ -28,8 +40,8 @@
       "stake": 30.038059429485152,
       "fee": 0.5223017773598879,
       "ts": 1788927932.7498286,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": 34.739767987687905
     },
     {
       "id": 1215,
@@ -150,18 +162,6 @@
       "ts": 1788922528.4118745,
       "settled": 1,
       "pnl": -26.08427875765379
-    },
-    {
-      "id": 1205,
-      "slug": "btc-updown-5m-1788921000",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.36,
-      "stake": 31.697244251512064,
-      "fee": 0.5112131552883866,
-      "ts": 1788921029.7205267,
-      "settled": 1,
-      "pnl": -32.20845740680045
     }
   ]
 }
