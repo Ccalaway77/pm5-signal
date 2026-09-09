@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1788972300",
-  "signal_side": "UP",
-  "confidence": 0.5934661569144091,
-  "spot": 78759.155,
-  "tte": 270.2173879146576,
-  "updated": "2026-09-09T16:45:29Z",
-  "bankroll": 3426.248146812125,
-  "settle_count": 1286,
+  "slug": "btc-updown-5m-1788972600",
+  "signal_side": "DOWN",
+  "confidence": 0.6530840964271564,
+  "spot": 78742.545,
+  "tte": 269.6502239704132,
+  "updated": "2026-09-09T16:50:30Z",
+  "bankroll": 3395.752586780117,
+  "settle_count": 1287,
   "open_count": 1,
   "wins": 636,
-  "losses": 650,
-  "hit_rate": 0.49455676516329705,
-  "pnl": 2426.248146812124,
-  "fees": 967.7622235419029,
-  "avg_fill": 0.4845023328149305,
-  "resolved_windows": 1632,
-  "labeled_feat": 1680,
+  "losses": 651,
+  "hit_rate": 0.49417249417249415,
+  "pnl": 2395.752586780116,
+  "fees": 968.2858924240729,
+  "avg_fill": 0.484529914529915,
+  "resolved_windows": 1633,
+  "labeled_feat": 1681,
   "recent_trades": [
+    {
+      "id": 1288,
+      "slug": "btc-updown-5m-1788972600",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.41000000000000003,
+      "stake": 31.32470642574024,
+      "fee": 0.5304212539070594,
+      "ts": 1788972630.641144,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1287,
       "slug": "btc-updown-5m-1788972300",
@@ -28,8 +40,8 @@
       "stake": 29.97189114983816,
       "fee": 0.5236688821699724,
       "ts": 1788972329.9759462,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -30.495560032008132
     },
     {
       "id": 1286,
@@ -150,18 +162,6 @@
       "ts": 1788963935.154817,
       "settled": 1,
       "pnl": -36.05867495632065
-    },
-    {
-      "id": 1276,
-      "slug": "btc-updown-5m-1788963300",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.54,
-      "stake": 32.03892932566544,
-      "fee": 0.5570929031146707,
-      "ts": 1788963330.4723756,
-      "settled": 1,
-      "pnl": -32.596022228780114
     }
   ]
 }
