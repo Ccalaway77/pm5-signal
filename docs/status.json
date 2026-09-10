@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1789003500",
-  "signal_side": "UP",
-  "confidence": 0.5873815939699168,
-  "spot": 78212.745,
-  "tte": 272.0678584575653,
-  "updated": "2026-09-10T01:25:28Z",
-  "bankroll": 4116.53709576248,
-  "settle_count": 1337,
+  "slug": "btc-updown-5m-1789003800",
+  "signal_side": "DOWN",
+  "confidence": 0.78,
+  "spot": 78144.605,
+  "tte": 269.2771062850952,
+  "updated": "2026-09-10T01:30:31Z",
+  "bankroll": 4080.136544331369,
+  "settle_count": 1338,
   "open_count": 1,
   "wins": 667,
-  "losses": 670,
-  "hit_rate": 0.4988780852655198,
-  "pnl": 3116.5370957624796,
-  "fees": 997.5269639560528,
-  "avg_fill": 0.48270007479431604,
-  "resolved_windows": 1736,
-  "labeled_feat": 1788,
+  "losses": 671,
+  "hit_rate": 0.49850523168908817,
+  "pnl": 3080.1365443313694,
+  "fees": 998.1175420365511,
+  "avg_fill": 0.48262331838565065,
+  "resolved_windows": 1737,
+  "labeled_feat": 1789,
   "recent_trades": [
+    {
+      "id": 1339,
+      "slug": "btc-updown-5m-1789003800",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.37,
+      "stake": 41.78059821395322,
+      "fee": 0.6817340210570747,
+      "ts": 1789003831.0025966,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1338,
       "slug": "btc-updown-5m-1789003500",
@@ -28,8 +40,8 @@
       "stake": 35.809973350611976,
       "fee": 0.5905780804982927,
       "ts": 1789003528.2320552,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -36.400551431110266
     },
     {
       "id": 1337,
@@ -150,18 +162,6 @@
       "ts": 1788996327.6659887,
       "settled": 1,
       "pnl": -35.04826203461755
-    },
-    {
-      "id": 1327,
-      "slug": "btc-updown-5m-1788994500",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.5700000000000001,
-      "stake": 36.888339627246545,
-      "fee": 0.6328932429846689,
-      "ts": 1788994526.1914473,
-      "settled": 1,
-      "pnl": 27.19515244072763
     }
   ]
 }
