@@ -1,12 +1,12 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1789069800",
+  "slug": "btc-updown-5m-1789070100",
   "signal_side": "NO_TRADE",
-  "confidence": 0.5049778958568422,
-  "spot": 77091.055,
-  "tte": 266.0300416946411,
-  "updated": "2026-09-10T19:50:33Z",
+  "confidence": 0.5065000000000001,
+  "spot": 77059.345,
+  "tte": 275.0862305164337,
+  "updated": "2026-09-10T19:55:24Z",
   "bankroll": 4088.7033092720003,
   "settle_count": 1449,
   "open_count": 0,
@@ -16,8 +16,8 @@
   "pnl": 3088.703309272,
   "fees": 1070.214813510576,
   "avg_fill": 0.47749482401656335,
-  "resolved_windows": 1957,
-  "labeled_feat": 2014,
+  "resolved_windows": 1958,
+  "labeled_feat": 2015,
   "recent_trades": [
     {
       "id": 1449,
