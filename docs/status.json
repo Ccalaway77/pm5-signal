@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1789045500",
-  "signal_side": "UP",
-  "confidence": 0.78,
-  "spot": 76979.965,
-  "tte": 273.5488975048065,
-  "updated": "2026-09-10T13:05:26Z",
-  "bankroll": 4044.8281933762023,
-  "settle_count": 1406,
+  "slug": "btc-updown-5m-1789045800",
+  "signal_side": "DOWN",
+  "confidence": 0.6318176049502007,
+  "spot": 76973.525,
+  "tte": 269.89746046066284,
+  "updated": "2026-09-10T13:10:30Z",
+  "bankroll": 4002.694757062033,
+  "settle_count": 1407,
   "open_count": 1,
   "wins": 696,
-  "losses": 710,
-  "hit_rate": 0.4950213371266003,
-  "pnl": 3044.8281933762028,
-  "fees": 1042.0291936873314,
-  "avg_fill": 0.4800711237553346,
-  "resolved_windows": 1876,
-  "labeled_feat": 1931,
+  "losses": 711,
+  "hit_rate": 0.4946695095948827,
+  "pnl": 3002.6947570620337,
+  "fees": 1042.743589301328,
+  "avg_fill": 0.4800426439232413,
+  "resolved_windows": 1877,
+  "labeled_feat": 1932,
   "recent_trades": [
+    {
+      "id": 1408,
+      "slug": "btc-updown-5m-1789045800",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.3,
+      "stake": 36.24256314627741,
+      "fee": 0.532765678250278,
+      "ts": 1789045830.334986,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1407,
       "slug": "btc-updown-5m-1789045500",
@@ -28,8 +40,8 @@
       "stake": 41.41904070017232,
       "fee": 0.7143956139965723,
       "ts": 1789045526.7882144,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -42.13343631416889
     },
     {
       "id": 1406,
@@ -150,18 +162,6 @@
       "ts": 1789040128.692232,
       "settled": 1,
       "pnl": -42.937917120839685
-    },
-    {
-      "id": 1396,
-      "slug": "btc-updown-5m-1789039800",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.41000000000000003,
-      "stake": 39.76855272758028,
-      "fee": 0.6734009033361169,
-      "ts": 1789039829.6376283,
-      "settled": 1,
-      "pnl": -40.441953630916395
     }
   ]
 }
