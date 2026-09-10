@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1789016100",
-  "signal_side": "DOWN",
-  "confidence": 0.6880915967121959,
-  "spot": 78311.465,
-  "tte": 274.4732549190521,
-  "updated": "2026-09-10T04:55:25Z",
-  "bankroll": 4001.7349680056736,
-  "settle_count": 1355,
+  "slug": "btc-updown-5m-1789016400",
+  "signal_side": "UP",
+  "confidence": 0.5670544689492296,
+  "spot": 78364.165,
+  "tte": 268.9545156955719,
+  "updated": "2026-09-10T05:00:31Z",
+  "bankroll": 3963.0661426293445,
+  "settle_count": 1356,
   "open_count": 1,
   "wins": 674,
-  "losses": 681,
-  "hit_rate": 0.4974169741697417,
-  "pnl": 3001.734968005674,
-  "fees": 1008.6727266989409,
-  "avg_fill": 0.48183025830258336,
-  "resolved_windows": 1778,
-  "labeled_feat": 1831,
+  "losses": 682,
+  "hit_rate": 0.4970501474926254,
+  "pnl": 2963.0661426293454,
+  "fees": 1009.3061305732147,
+  "avg_fill": 0.4817625368731567,
+  "resolved_windows": 1779,
+  "labeled_feat": 1832,
   "recent_trades": [
+    {
+      "id": 1357,
+      "slug": "btc-updown-5m-1789016400",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.35000000000000003,
+      "stake": 33.83045950587222,
+      "fee": 0.5387500676310152,
+      "ts": 1789016431.2402992,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1356,
       "slug": "btc-updown-5m-1789016100",
@@ -28,8 +40,8 @@
       "stake": 38.03542150205511,
       "fee": 0.6334038742737238,
       "ts": 1789016125.7726195,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -38.66882537632883
     },
     {
       "id": 1355,
@@ -150,18 +162,6 @@
       "ts": 1789009526.8118453,
       "settled": 1,
       "pnl": -42.262731387334505
-    },
-    {
-      "id": 1345,
-      "slug": "btc-updown-5m-1789008900",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.56,
-      "stake": 41.23453416952937,
-      "fee": 0.7112132453560425,
-      "ts": 1789008925.1361542,
-      "settled": 1,
-      "pnl": 31.68734931641702
     }
   ]
 }
