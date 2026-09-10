@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1789067700",
-  "signal_side": "UP",
-  "confidence": 0.6029871777625823,
-  "spot": 77153.655,
-  "tte": 270.36418533325195,
-  "updated": "2026-09-10T19:15:30Z",
-  "bankroll": 4245.579928655285,
-  "settle_count": 1445,
+  "slug": "btc-updown-5m-1789068000",
+  "signal_side": "DOWN",
+  "confidence": 0.6767002603191379,
+  "spot": 77121.875,
+  "tte": 273.72233748435974,
+  "updated": "2026-09-10T19:20:26Z",
+  "bankroll": 4207.4683279845285,
+  "settle_count": 1446,
   "open_count": 1,
   "wins": 712,
-  "losses": 733,
-  "hit_rate": 0.49273356401384083,
-  "pnl": 3245.5799286552847,
-  "fees": 1067.9545619688026,
-  "avg_fill": 0.47776470588235326,
-  "resolved_windows": 1950,
-  "labeled_feat": 2007,
+  "losses": 734,
+  "hit_rate": 0.49239280774550487,
+  "pnl": 3207.4683279845276,
+  "fees": 1068.603600851776,
+  "avg_fill": 0.4778146611341635,
+  "resolved_windows": 1951,
+  "labeled_feat": 2008,
   "recent_trades": [
+    {
+      "id": 1447,
+      "slug": "btc-updown-5m-1789068000",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.52,
+      "stake": 39.60743261459138,
+      "fee": 0.6920210626421407,
+      "ts": 1789068026.6176767,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1446,
       "slug": "btc-updown-5m-1789067700",
@@ -28,8 +40,8 @@
       "stake": 37.462561787783656,
       "fee": 0.6490388829733519,
       "ts": 1789067730.0378823,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -38.11160067075701
     },
     {
       "id": 1445,
@@ -150,18 +162,6 @@
       "ts": 1789060832.7794642,
       "settled": 1,
       "pnl": -45.616232096229005
-    },
-    {
-      "id": 1435,
-      "slug": "btc-updown-5m-1789060500",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.39,
-      "stake": 44.264541367569166,
-      "fee": 0.7371374073941294,
-      "ts": 1789060530.3185883,
-      "settled": 1,
-      "pnl": -45.001678774963295
     }
   ]
 }
