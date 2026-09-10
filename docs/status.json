@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1789032600",
-  "signal_side": "UP",
-  "confidence": 0.6454676888015295,
-  "spot": 78157.845,
-  "tte": 265.58942699432373,
-  "updated": "2026-09-10T09:30:35Z",
-  "bankroll": 4021.2786370992876,
-  "settle_count": 1380,
+  "slug": "btc-updown-5m-1789032900",
+  "signal_side": "DOWN",
+  "confidence": 0.7528080520607732,
+  "spot": 78085.895,
+  "tte": 274.8092861175537,
+  "updated": "2026-09-10T09:35:25Z",
+  "bankroll": 3983.958178864184,
+  "settle_count": 1381,
   "open_count": 1,
   "wins": 684,
-  "losses": 696,
-  "hit_rate": 0.4956521739130435,
-  "pnl": 3021.278637099289,
-  "fees": 1025.118867686061,
-  "avg_fill": 0.48087681159420326,
-  "resolved_windows": 1833,
-  "labeled_feat": 1887,
+  "losses": 697,
+  "hit_rate": 0.4952932657494569,
+  "pnl": 2983.9581788641854,
+  "fees": 1025.589367949444,
+  "avg_fill": 0.4807023895727737,
+  "resolved_windows": 1834,
+  "labeled_feat": 1888,
   "recent_trades": [
+    {
+      "id": 1382,
+      "slug": "btc-updown-5m-1789032900",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.52,
+      "stake": 39.929079084435394,
+      "fee": 0.6976408697632552,
+      "ts": 1789032925.4840002,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1381,
       "slug": "btc-updown-5m-1789032600",
@@ -28,8 +40,8 @@
       "stake": 36.849957971720684,
       "fee": 0.4705002633829298,
       "ts": 1789032634.7693143,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -37.320458235103615
     },
     {
       "id": 1380,
@@ -150,18 +162,6 @@
       "ts": 1789025728.8172264,
       "settled": 1,
       "pnl": -45.303080527332725
-    },
-    {
-      "id": 1370,
-      "slug": "btc-updown-5m-1789025400",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.43,
-      "stake": 44.06895693098504,
-      "fee": 0.7560910940649104,
-      "ts": 1789025430.638883,
-      "settled": 1,
-      "pnl": 57.66089832607804
     }
   ]
 }
