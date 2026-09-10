@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1789005300",
-  "signal_side": "DOWN",
-  "confidence": 0.7578364581106003,
-  "spot": 78010.875,
-  "tte": 276.0071396827698,
-  "updated": "2026-09-10T01:55:24Z",
-  "bankroll": 4107.58212248448,
-  "settle_count": 1340,
+  "slug": "btc-updown-5m-1789005600",
+  "signal_side": "UP",
+  "confidence": 0.6490485934533141,
+  "spot": 78043.565,
+  "tte": 267.6651494503021,
+  "updated": "2026-09-10T02:00:32Z",
+  "bankroll": 4065.6411901116408,
+  "settle_count": 1341,
   "open_count": 1,
   "wins": 668,
-  "losses": 672,
-  "hit_rate": 0.49850746268656715,
-  "pnl": 3107.582122484481,
-  "fees": 999.3098111653017,
-  "avg_fill": 0.48234328358209,
-  "resolved_windows": 1742,
-  "labeled_feat": 1794,
+  "losses": 673,
+  "hit_rate": 0.4981357196122297,
+  "pnl": 3065.641190111641,
+  "fees": 999.9174111513869,
+  "avg_fill": 0.4822073079791205,
+  "resolved_windows": 1743,
+  "labeled_feat": 1795,
   "recent_trades": [
+    {
+      "id": 1342,
+      "slug": "btc-updown-5m-1789005600",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.29000000000000004,
+      "stake": 37.37295432786911,
+      "fee": 0.5386563907275776,
+      "ts": 1789005632.6006398,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1341,
       "slug": "btc-updown-5m-1789005300",
@@ -28,8 +40,8 @@
       "stake": 41.33333238675441,
       "fee": 0.6075999860852898,
       "ts": 1789005324.176237,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -41.9409323728397
     },
     {
       "id": 1340,
@@ -150,18 +162,6 @@
       "ts": 1788998435.7285829,
       "settled": 1,
       "pnl": 25.21183401291961
-    },
-    {
-      "id": 1330,
-      "slug": "btc-updown-5m-1788998100",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.31,
-      "stake": 39.95276227507438,
-      "fee": 0.5982127095446886,
-      "ts": 1788998128.781281,
-      "settled": 1,
-      "pnl": 88.32890332207249
     }
   ]
 }
