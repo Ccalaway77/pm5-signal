@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1789025700",
-  "signal_side": "DOWN",
-  "confidence": 0.78,
-  "spot": 77910.045,
-  "tte": 271.6382722854614,
-  "updated": "2026-09-10T07:35:28Z",
-  "bankroll": 4361.2699736175855,
-  "settle_count": 1370,
+  "slug": "btc-updown-5m-1789026000",
+  "signal_side": "UP",
+  "confidence": 0.5535084068978997,
+  "spot": 77938.745,
+  "tte": 272.80708146095276,
+  "updated": "2026-09-10T07:40:27Z",
+  "bankroll": 4315.966893090252,
+  "settle_count": 1371,
   "open_count": 1,
   "wins": 683,
-  "losses": 687,
-  "hit_rate": 0.4985401459854015,
-  "pnl": 3361.2699736175864,
-  "fees": 1018.4246552051438,
-  "avg_fill": 0.48132846715328503,
-  "resolved_windows": 1810,
-  "labeled_feat": 1864,
+  "losses": 688,
+  "hit_rate": 0.49817651349380015,
+  "pnl": 3315.9668930902535,
+  "fees": 1019.0683312026325,
+  "avg_fill": 0.48118891320204266,
+  "resolved_windows": 1811,
+  "labeled_feat": 1865,
   "recent_trades": [
+    {
+      "id": 1372,
+      "slug": "btc-updown-5m-1789026000",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.47000000000000003,
+      "stake": 36.37525924610871,
+      "fee": 0.6342753954743978,
+      "ts": 1789026027.391776,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1371,
       "slug": "btc-updown-5m-1789025700",
@@ -28,8 +40,8 @@
       "stake": 44.65940452984408,
       "fee": 0.6436759974886429,
       "ts": 1789025728.8172264,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -45.303080527332725
     },
     {
       "id": 1370,
@@ -150,18 +162,6 @@
       "ts": 1789019428.2670898,
       "settled": 1,
       "pnl": -38.91918299111157
-    },
-    {
-      "id": 1360,
-      "slug": "btc-updown-5m-1789019100",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.58,
-      "stake": 36.78277667313795,
-      "fee": 0.6272199078303485,
-      "ts": 1789019126.6193352,
-      "settled": 1,
-      "pnl": -37.409996580968304
     }
   ]
 }
