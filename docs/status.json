@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1789067400",
-  "signal_side": "DOWN",
-  "confidence": 0.7156027537643603,
-  "spot": 77092.345,
-  "tte": 110.46766781806946,
-  "updated": "2026-09-10T19:13:09Z",
-  "bankroll": 4288.009518449773,
-  "settle_count": 1444,
+  "slug": "btc-updown-5m-1789067700",
+  "signal_side": "UP",
+  "confidence": 0.6029871777625823,
+  "spot": 77153.655,
+  "tte": 270.36418533325195,
+  "updated": "2026-09-10T19:15:30Z",
+  "bankroll": 4245.579928655285,
+  "settle_count": 1445,
   "open_count": 1,
   "wins": 712,
-  "losses": 732,
-  "hit_rate": 0.4930747922437673,
-  "pnl": 3288.0095184497727,
-  "fees": 1067.2251016046773,
-  "avg_fill": 0.4777562326869809,
-  "resolved_windows": 1949,
-  "labeled_feat": 2005,
+  "losses": 733,
+  "hit_rate": 0.49273356401384083,
+  "pnl": 3245.5799286552847,
+  "fees": 1067.9545619688026,
+  "avg_fill": 0.47776470588235326,
+  "resolved_windows": 1950,
+  "labeled_feat": 2007,
   "recent_trades": [
+    {
+      "id": 1446,
+      "slug": "btc-updown-5m-1789067700",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.55,
+      "stake": 37.462561787783656,
+      "fee": 0.6490388829733519,
+      "ts": 1789067730.0378823,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1445,
       "slug": "btc-updown-5m-1789067400",
@@ -28,8 +40,8 @@
       "stake": 41.700129430362665,
       "fee": 0.7294603641253342,
       "ts": 1789067427.4685671,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -42.429589794488
     },
     {
       "id": 1444,
@@ -150,18 +162,6 @@
       "ts": 1789060530.3185883,
       "settled": 1,
       "pnl": -45.001678774963295
-    },
-    {
-      "id": 1434,
-      "slug": "btc-updown-5m-1789060200",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.32,
-      "stake": 39.36347507338339,
-      "fee": 0.5995844523177758,
-      "ts": 1789060229.7355244,
-      "settled": 1,
-      "pnl": 83.04780007862195
     }
   ]
 }
