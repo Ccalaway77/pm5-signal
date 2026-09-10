@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1789060500",
-  "signal_side": "UP",
-  "confidence": 0.7422324185391818,
-  "spot": 77111.925,
-  "tte": 270.04135370254517,
-  "updated": "2026-09-10T17:15:30Z",
-  "bankroll": 4454.132405796351,
-  "settle_count": 1434,
+  "slug": "btc-updown-5m-1789060800",
+  "signal_side": "DOWN",
+  "confidence": 0.7710246713801614,
+  "spot": 77105.105,
+  "tte": 267.4581482410431,
+  "updated": "2026-09-10T17:20:32Z",
+  "bankroll": 4409.130727021387,
+  "settle_count": 1435,
   "open_count": 1,
   "wins": 710,
-  "losses": 724,
-  "hit_rate": 0.49511854951185497,
-  "pnl": 3454.132405796351,
-  "fees": 1060.5756372761132,
-  "avg_fill": 0.4785146443514648,
-  "resolved_windows": 1926,
-  "labeled_feat": 1982,
+  "losses": 725,
+  "hit_rate": 0.49477351916376305,
+  "pnl": 3409.130727021388,
+  "fees": 1061.3127746835073,
+  "avg_fill": 0.4784529616724742,
+  "resolved_windows": 1927,
+  "labeled_feat": 1983,
   "recent_trades": [
+    {
+      "id": 1436,
+      "slug": "btc-updown-5m-1789060800",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.52,
+      "stake": 44.83291146707625,
+      "fee": 0.7833206291527564,
+      "ts": 1789060832.7794642,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1435,
       "slug": "btc-updown-5m-1789060500",
@@ -28,8 +40,8 @@
       "stake": 44.264541367569166,
       "fee": 0.7371374073941294,
       "ts": 1789060530.3185883,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -45.001678774963295
     },
     {
       "id": 1434,
@@ -150,18 +162,6 @@
       "ts": 1789054235.9336283,
       "settled": 1,
       "pnl": -40.10823064337336
-    },
-    {
-      "id": 1424,
-      "slug": "btc-updown-5m-1789053600",
-      "market_key": "btc",
-      "side": "UP",
-      "fill_price": 0.3,
-      "stake": 35.68921353681864,
-      "fee": 0.524631438991234,
-      "ts": 1789053634.1100156,
-      "settled": 1,
-      "pnl": -36.21384497580988
     }
   ]
 }
