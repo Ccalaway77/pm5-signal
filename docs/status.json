@@ -1,24 +1,36 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1789030500",
-  "signal_side": "UP",
-  "confidence": 0.78,
-  "spot": 78112.335,
-  "tte": 272.8117434978485,
-  "updated": "2026-09-10T08:55:27Z",
-  "bankroll": 4185.04327112263,
-  "settle_count": 1376,
+  "slug": "btc-updown-5m-1789030800",
+  "signal_side": "DOWN",
+  "confidence": 0.7637402222040476,
+  "spot": 78089.015,
+  "tte": 264.9449977874756,
+  "updated": "2026-09-10T09:00:35Z",
+  "bankroll": 4141.597159756135,
+  "settle_count": 1377,
   "open_count": 1,
   "wins": 684,
-  "losses": 692,
-  "hit_rate": 0.49709302325581395,
-  "pnl": 3185.0432711226317,
-  "fees": 1022.4997622063427,
-  "avg_fill": 0.48111918604651194,
-  "resolved_windows": 1826,
-  "labeled_feat": 1880,
+  "losses": 693,
+  "hit_rate": 0.49673202614379086,
+  "pnl": 3141.5971597561365,
+  "fees": 1023.0910304765423,
+  "avg_fill": 0.4809658678286132,
+  "resolved_windows": 1827,
+  "labeled_feat": 1881,
   "recent_trades": [
+    {
+      "id": 1378,
+      "slug": "btc-updown-5m-1789030800",
+      "market_key": "btc",
+      "side": "DOWN",
+      "fill_price": 0.39,
+      "stake": 41.87122331959896,
+      "fee": 0.6972814819412816,
+      "ts": 1789030835.4203646,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1377,
       "slug": "btc-updown-5m-1789030500",
@@ -28,8 +40,8 @@
       "stake": 42.85484309629574,
       "fee": 0.5912682701995924,
       "ts": 1789030527.5233772,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -43.44611136649533
     },
     {
       "id": 1376,
@@ -150,18 +162,6 @@
       "ts": 1789024236.1347814,
       "settled": 1,
       "pnl": 142.59829784917127
-    },
-    {
-      "id": 1366,
-      "slug": "btc-updown-5m-1789023300",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.29000000000000004,
-      "stake": 36.842476962949654,
-      "fee": 0.5310106204669935,
-      "ts": 1789023362.7266889,
-      "settled": 1,
-      "pnl": 89.66953642675458
     }
   ]
 }
