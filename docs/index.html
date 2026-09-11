@@ -30,7 +30,6 @@
   .mono{font-family:'IBM Plex Mono',monospace;}
   a{color:inherit;}
 
-  /* ---------- header ---------- */
   header{
     display:flex; align-items:center; justify-content:space-between;
     padding:18px 20px 14px; border-bottom:1px solid var(--line);
@@ -41,7 +40,6 @@
   .brand .name{font-weight:800; font-size:18px; letter-spacing:-0.02em;}
   .brand .sub{font-size:11px; color:var(--muted); font-family:'IBM Plex Mono',monospace;}
 
-  /* live pulse badge — the signature element */
   .pulse-badge{
     display:flex; align-items:center; gap:8px;
     background:var(--surface); border:1px solid var(--line);
@@ -60,9 +58,27 @@
     100%{stroke-dashoffset:-120;}
   }
 
+  .tape{
+    position:sticky; top:57px; z-index:9;
+    display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+    padding:12px 20px;
+    border-bottom:1px solid var(--line);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+  }
+  .tape.take{background:#1a2a0e; color:var(--up);}
+  .tape.skip{background:#1a1510; color:var(--amber);}
+  .tape.stale-tape{background:#2a1218; color:var(--down);}
+  .tape-tag{
+    font-weight:800; letter-spacing:0.12em; font-size:14px;
+    padding:4px 10px; border-radius:6px;
+    background:rgba(255,255,255,0.06);
+  }
+  .tape-msg{flex:1; min-width:180px; font-weight:500;}
+  .tape-meta{color:var(--muted); font-size:11px;}
+
   main{max-width:920px; margin:0 auto; padding:20px;}
 
-  /* ---------- current market hero ---------- */
   .hero{
     background:var(--surface); border:1px solid var(--line); border-radius:16px;
     padding:22px; margin-bottom:18px;
@@ -88,7 +104,6 @@
   .conf-bar{height:4px; background:var(--line); border-radius:2px; margin-top:10px; overflow:hidden;}
   .conf-fill{height:100%; background:var(--amber);}
 
-  /* ---------- stat tiles ---------- */
   .stats-grid{
     display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:18px;
   }
@@ -104,9 +119,9 @@
   @media (max-width:560px){
     .stats-grid{grid-template-columns:repeat(2,1fr);}
     .hero-price{font-size:26px;}
+    .tape{top:56px; font-size:12px;}
   }
 
-  /* ---------- sample-quality banner ---------- */
   .banner{
     background:rgba(255,176,32,0.08); border:1px solid rgba(255,176,32,0.35);
     border-radius:12px; padding:12px 14px; font-size:12.5px; color:var(--amber);
@@ -114,7 +129,6 @@
   }
   .banner b{color:var(--text);}
 
-  /* ---------- recent trades ---------- */
   .section-title{font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted); margin:22px 0 10px;}
   .trade-row{
     display:grid; grid-template-columns:70px 1fr 90px 90px; gap:8px; align-items:center;
@@ -149,6 +163,12 @@
     <span class="pulse-label" id="pulse-label">LIVE</span>
   </div>
 </header>
+
+<div class="tape skip" id="tape">
+  <span class="tape-tag" id="tape-tag">SKIP</span>
+  <span class="tape-msg" id="tape-msg">waiting for harvest</span>
+  <span class="tape-meta" id="tape-meta"></span>
+</div>
 
 <main>
   <div class="banner" id="sample-banner" style="display:none;">
@@ -193,23 +213,22 @@
 
 <footer>
   updated <span id="updated-at">—</span> · resolved windows: <span id="resolved-windows">—</span> · labeled rows: <span id="labeled-feat">—</span>
+  · tape is display only — paper harvest does not place live orders
 </footer>
 
 <script>
 const STALE_SECONDS = 12 * 60;
 
-// Demo fallback so the page never looks broken while wiring up real data.
 const DEMO = {
   ok:true, slug:"btc-updown-5m-demo", signal_side:"UP", confidence:0.62,
   spot: 78041.93, tte: 214, updated: new Date().toISOString(),
   wins: 8, losses: 3, settle_count: 11, hit_rate: 0.727,
   bankroll: 1042.30, pnl: 42.30, resolved_windows: 41, labeled_feat: 11,
+  tape_action: "SKIP", tape_reason: "offline — demo data",
   recent_trades: []
 };
 
 async function fetchJSON(path){
-  // Retry once after a short delay before giving up — a single transient
-  // network blip or CDN hiccup shouldn't be enough to fall back to demo data.
   for (let attempt = 0; attempt < 2; attempt++) {
     try{
       const res = await fetch(path, {cache:"no-store"});
@@ -232,29 +251,54 @@ function setPulse(updatedIso, isDemo){
   const badge = document.getElementById("pulse-badge");
   const label = document.getElementById("pulse-label");
   if(isDemo){
-    // Unmistakably different from LIVE/STALE — this is placeholder data,
-    // not a real (if outdated) reading, and should never be confused for one.
     badge.className = "pulse-badge stale";
     label.textContent = "OFFLINE — DEMO DATA";
-    return;
+    return false;
   }
   const secondsAgo = (Date.now() - new Date(updatedIso).getTime()) / 1000;
   if(isFinite(secondsAgo) && secondsAgo <= STALE_SECONDS){
     badge.className = "pulse-badge live";
     label.textContent = "LIVE";
-  } else {
-    badge.className = "pulse-badge stale";
-    label.textContent = "STALE";
+    return true;
   }
+  badge.className = "pulse-badge stale";
+  label.textContent = "STALE";
+  return false;
+}
+
+function renderTape(status, isLive){
+  const el = document.getElementById("tape");
+  const tag = document.getElementById("tape-tag");
+  const msg = document.getElementById("tape-msg");
+  const meta = document.getElementById("tape-meta");
+  const action = (status.tape_action || "SKIP").toUpperCase();
+  const reason = status.tape_reason || "no tape this tick";
+  if(!isLive){
+    el.className = "tape stale-tape";
+    tag.textContent = "STALE";
+    msg.textContent = "board is stale — do not tail this print";
+    meta.textContent = "";
+    return;
+  }
+  el.className = "tape " + (action === "TAKE" ? "take" : "skip");
+  tag.textContent = action;
+  msg.textContent = reason;
+  const bits = [];
+  if(status.tape_ask != null) bits.push("ask " + Number(status.tape_ask).toFixed(2));
+  if(status.tape_fill != null) bits.push("fill " + Number(status.tape_fill).toFixed(2));
+  if(status.tte != null) bits.push(Math.max(0, Math.round(status.tte)) + "s left");
+  meta.textContent = bits.join(" · ");
 }
 
 function hasValue(v){ return v !== null && v !== undefined; }
 
 function render(status, isDemo){
+  const isLive = setPulse(status.updated, isDemo);
+  renderTape(status, isLive && !isDemo);
+
   document.getElementById("slug-label").textContent = isDemo ? "no connection to status.json" : (status.slug || "—");
   document.getElementById("spot-price").textContent = hasValue(status.spot) ? "$" + Number(status.spot).toLocaleString(undefined,{maximumFractionDigits:2}) : "—";
   document.getElementById("tte").textContent = hasValue(status.tte) ? Math.max(0, Math.round(status.tte)) + "s" : "—";
-  setPulse(status.updated, isDemo);
   document.getElementById("updated-at").textContent = status.updated ? new Date(status.updated).toLocaleTimeString() : "—";
   document.getElementById("resolved-windows").textContent = status.resolved_windows ?? "—";
   document.getElementById("labeled-feat").textContent = status.labeled_feat ?? "—";
@@ -277,7 +321,6 @@ function render(status, isDemo){
   document.getElementById("stat-hitrate").textContent = hasValue(status.hit_rate) ? (status.hit_rate*100).toFixed(0) + "%" : "—";
   document.getElementById("stat-settled").textContent = (status.wins ?? 0) + "-" + (status.losses ?? 0);
 
-  // Sample-quality banner — flags small-n so the dashboard never overstates confidence
   const settled = status.settle_count ?? 0;
   const banner = document.getElementById("sample-banner");
   if(settled > 0 && settled < 50){
@@ -311,7 +354,7 @@ async function tick(){
 }
 
 tick();
-setInterval(tick, 15000); // refresh every 15s while the tab is open
+setInterval(tick, 15000);
 </script>
 
 </body>
