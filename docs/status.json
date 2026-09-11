@@ -1,28 +1,40 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1789152900",
-  "signal_side": "DOWN",
-  "confidence": 0.78,
-  "spot": 76942.025,
-  "tte": 273.272584438324,
-  "updated": "2026-09-11T18:55:27Z",
-  "bankroll": 5133.411937089576,
+  "slug": "btc-updown-5m-1789153200",
+  "signal_side": "UP",
+  "confidence": 0.6611118528986142,
+  "spot": 77032.285,
+  "tte": 265.88657426834106,
+  "updated": "2026-09-11T19:00:34Z",
+  "bankroll": 5080.008683102375,
   "tape_action": "TAKE",
-  "tape_reason": "DOWN @ 0.35 (ask 0.34)",
-  "tape_ask": 0.34,
-  "tape_fill": 0.35000000000000003,
-  "settle_count": 1563,
+  "tape_reason": "UP @ 0.53 (ask 0.52)",
+  "tape_ask": 0.52,
+  "tape_fill": 0.53,
+  "settle_count": 1564,
   "open_count": 1,
   "wins": 762,
-  "losses": 801,
-  "hit_rate": 0.4875239923224568,
-  "pnl": 4133.411937089578,
-  "fees": 1155.779295105292,
-  "avg_fill": 0.47189379398592474,
-  "resolved_windows": 2234,
-  "labeled_feat": 2298,
+  "losses": 802,
+  "hit_rate": 0.48721227621483376,
+  "pnl": 4080.0086831023755,
+  "fees": 1156.616410856697,
+  "avg_fill": 0.4718158567774939,
+  "resolved_windows": 2235,
+  "labeled_feat": 2299,
   "recent_trades": [
+    {
+      "id": 1565,
+      "slug": "btc-updown-5m-1789153200",
+      "market_key": "btc",
+      "side": "UP",
+      "fill_price": 0.53,
+      "stake": 47.18766635822438,
+      "fee": 0.8228113382883585,
+      "ts": 1789153234.410209,
+      "settled": 0,
+      "pnl": null
+    },
     {
       "id": 1564,
       "slug": "btc-updown-5m-1789152900",
@@ -32,8 +44,8 @@
       "stake": 52.56613823579726,
       "fee": 0.8371157514050714,
       "ts": 1789152927.2003868,
-      "settled": 0,
-      "pnl": null
+      "settled": 1,
+      "pnl": -53.40325398720233
     },
     {
       "id": 1563,
@@ -154,18 +166,6 @@
       "ts": 1789147829.8583908,
       "settled": 1,
       "pnl": -53.13103669158426
-    },
-    {
-      "id": 1553,
-      "slug": "btc-updown-5m-1789146900",
-      "market_key": "btc",
-      "side": "DOWN",
-      "fill_price": 0.52,
-      "stake": 52.77027732760393,
-      "fee": 0.9220022854678959,
-      "ts": 1789146927.0425978,
-      "settled": 1,
-      "pnl": -53.692279613071825
     }
   ]
 }
