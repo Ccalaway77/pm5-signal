@@ -5,8 +5,8 @@ paper:
   starting_bankroll: 1000.0
   min_stake_pct: 0.004         # was 0.01 — stop 3% tickets on a swollen book
   max_stake_pct: 0.012         # was 0.03
-  ask_price_cutoff: 0.58       # was 0.70 — 0.50–0.70 bucket ate the peak
-  ask_price_cutoff_high_conf: 0.58  # do not raise cutoff just because conf is high
+  ask_price_cutoff: 0.52       # was 0.58 — skip 0.53–0.58 coin-flip payouts
+  ask_price_cutoff_high_conf: 0.52  # do not raise cutoff just because conf is high
   high_conf_threshold: 0.80
   slippage_ticks: 1
   tick_size: 0.01
