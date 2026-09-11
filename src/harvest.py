@@ -80,7 +80,10 @@ def run_market_tick(conn, market_config, cfg):
 
     spot_now, _venue = spot.get_spot_price(market_config)
     if spot_now is None:
-        return {"slug": slug, "side": "NO_TRADE", "confidence": 0.0, "error": "no_spot_price"}
+        return {
+            "slug": slug, "side": "NO_TRADE", "confidence": 0.0, "error": "no_spot_price",
+            "tape_action": "SKIP", "tape_reason": "no spot price", "tape_ask": None, "tape_fill": None,
+        }
 
     db.upsert_window(conn, slug, market_config.key, slot_start, window_end, spot_now)
 
@@ -109,13 +112,18 @@ def run_market_tick(conn, market_config, cfg):
     p_up_blend = engine.blended_p_up(engine_side, engine_conf, p_up, trusted and features is not None, cfg)
 
     tte = window_end - time.time()
-    pick = {"slug": slug, "side": side, "confidence": conf, "spot": spot_now, "tte": tte}
+    pick = {
+        "slug": slug, "side": side, "confidence": conf, "spot": spot_now, "tte": tte,
+        "tape_action": "SKIP", "tape_reason": "waiting", "tape_ask": None, "tape_fill": None,
+    }
     print(f"[harvest] {market_config.key} {slug}: signal={side} conf={conf:.3f} spot={spot_now} tte={tte:.0f}s "
           f"learner={which} trusted={trusted}")
 
     if side == "NO_TRADE":
+        pick["tape_reason"] = "no trade — confidence below lock"
         print(f"[harvest] {market_config.key}: NO_TRADE this tick, skipping Polymarket lookup")
     elif tte <= cfg["engine"]["paper_cutoff_sec"]:
+        pick["tape_reason"] = f"too late — {tte:.0f}s left"
         print(f"[harvest] {market_config.key}: only {tte:.0f}s left in window, too late to enter, skipping")
     else:
         market_dict = poly.get_current_market(market_config)
@@ -125,10 +133,14 @@ def run_market_tick(conn, market_config, cfg):
             if token_id:
                 ask_price = poly.get_best_ask(token_id)
             else:
+                pick["tape_reason"] = f"no token mapped for {side}"
                 print(f"[harvest] {market_config.key}: no token mapped for side={side} on {slug} — refusing trade")
 
         if ask_price is not None:
+            pick["tape_ask"] = ask_price
             if db.has_any_trade_for_slug(conn, slug):
+                pick["tape_action"] = "TAKE"
+                pick["tape_reason"] = f"paper already filled this window — {side} ask {ask_price:.2f}"
                 print(f"[harvest] {market_config.key}: already traded {slug} this window — skipping duplicate")
             else:
                 bankroll = db.compute_bankroll(conn, market_config.key, cfg["paper"]["starting_bankroll"])
@@ -139,10 +151,16 @@ def run_market_tick(conn, market_config, cfg):
                         conn, slug, market_config.key, side,
                         sized["fill_price"], sized["stake"], sized["fee"],
                     )
+                    pick["tape_action"] = "TAKE"
+                    pick["tape_fill"] = sized["fill_price"]
+                    pick["tape_reason"] = f"{side} @ {sized['fill_price']:.2f} (ask {ask_price:.2f})"
                     print(f"[harvest] {market_config.key}: TRADE placed — {side} @ {sized['fill_price']:.3f}, "
                           f"stake ${sized['stake']:.2f}")
                 else:
+                    pick["tape_reason"] = f"SKIP {side} — ask {ask_price:.2f} failed EV or cutoff"
                     print(f"[harvest] {market_config.key}: ask {ask_price} rejected by risk.decide_size (no edge or too expensive)")
+        elif pick["tape_reason"] == "waiting":
+            pick["tape_reason"] = "no ask on the book"
 
     if features is not None:
         db.insert_feat_row(conn, slug, market_config.key, features)
@@ -164,7 +182,10 @@ def main():
             pick = run_market_tick(conn, market_config, cfg)
         except Exception:
             print(f"[tick:{market_config.key}] error:\n{traceback.format_exc()}")
-            pick = {"slug": None, "side": "NO_TRADE", "confidence": 0.0, "error": "exception"}
+            pick = {
+                "slug": None, "side": "NO_TRADE", "confidence": 0.0, "error": "exception",
+                "tape_action": "SKIP", "tape_reason": "harvest error", "tape_ask": None, "tape_fill": None,
+            }
         try:
             board.write_outputs(conn, market_config, pick, cfg)
         except Exception:

@@ -28,6 +28,10 @@ def write_outputs(conn, market_config, current_pick: dict, cfg: dict, out_dir: s
         "tte": current_pick.get("tte"),
         "updated": _iso_now(),
         "bankroll": bankroll,
+        "tape_action": current_pick.get("tape_action", "SKIP"),
+        "tape_reason": current_pick.get("tape_reason", "no tape this tick"),
+        "tape_ask": current_pick.get("tape_ask"),
+        "tape_fill": current_pick.get("tape_fill"),
         **stats,
         "recent_trades": db.recent_trades(conn, market_config.key),
     }
