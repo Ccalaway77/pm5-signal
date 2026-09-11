@@ -1,12 +1,12 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1789142100",
+  "slug": "btc-updown-5m-1789142400",
   "signal_side": "NO_TRADE",
   "confidence": 0.5065000000000001,
-  "spot": 77630.265,
-  "tte": 271.06237959861755,
-  "updated": "2026-09-11T15:55:28Z",
+  "spot": 77778.995,
+  "tte": 265.241739988327,
+  "updated": "2026-09-11T16:00:34Z",
   "bankroll": 5262.731527212149,
   "tape_action": "SKIP",
   "tape_reason": "no trade \u2014 confidence below lock",
@@ -20,8 +20,8 @@
   "pnl": 4262.7315272121505,
   "fees": 1143.3261496569653,
   "avg_fill": 0.4721640826873387,
-  "resolved_windows": 2198,
-  "labeled_feat": 2261,
+  "resolved_windows": 2199,
+  "labeled_feat": 2262,
   "recent_trades": [
     {
       "id": 1548,
