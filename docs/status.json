@@ -1,12 +1,12 @@
 {
   "ok": true,
   "market": "btc",
-  "slug": "btc-updown-5m-1789245900",
+  "slug": "btc-updown-5m-1789246200",
   "signal_side": "UP",
-  "confidence": 0.6698429650016159,
-  "spot": 77163.065,
-  "tte": 269.61264204978943,
-  "updated": "2026-09-12T20:45:30Z",
+  "confidence": 0.5665572632938947,
+  "spot": 77192.79,
+  "tte": 274.1231429576874,
+  "updated": "2026-09-12T20:50:26Z",
   "bankroll": 7467.294326904473,
   "tape_action": "SKIP",
   "tape_reason": "SKIP UP \u2014 ask 0.75 failed EV or cutoff",
@@ -20,8 +20,8 @@
   "pnl": 6467.2943269044745,
   "fees": 1288.9754299753092,
   "avg_fill": 0.4674646226415097,
-  "resolved_windows": 2543,
-  "labeled_feat": 2616,
+  "resolved_windows": 2544,
+  "labeled_feat": 2617,
   "recent_trades": [
     {
       "id": 1696,
