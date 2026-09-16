@@ -1,12 +1,12 @@
 {
-  "settle_count": 2021,
+  "settle_count": 2022,
   "open_count": 1,
-  "wins": 970,
+  "wins": 971,
   "losses": 1051,
-  "hit_rate": 0.47996041563582387,
-  "pnl": 11650.299130112715,
-  "fees": 1754.9297355456558,
-  "avg_fill": 0.455061850569026,
-  "resolved_windows": 3315,
-  "labeled_feat": 3406
+  "hit_rate": 0.480217606330366,
+  "pnl": 12017.242600658457,
+  "fees": 1756.6743676473836,
+  "avg_fill": 0.4549653808110789,
+  "resolved_windows": 3316,
+  "labeled_feat": 3407
 }
